@@ -1,2 +1,0 @@
-filmname	petname	director	editor	nation	language	showtime	minutes	picname	body	
-阿甘正传	阿甘	啊啊	啊啊	美国	英语	2018-10-30	120	C:\\Users\\lenovo\\Desktop\\5.jpg	影片讲的是阿甘					
