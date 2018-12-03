@@ -7,7 +7,7 @@
         <methods>
           <include name="doBeforeSuite"/>
           <include name="doAfterMethod"/>
-          <include name="loginfail"/>
+          <include name="loginfail2"/>
           <include name="setup"/>
         </methods>
       </class> <!-- com.webtest.demo.Login -->
