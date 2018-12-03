@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="test" parallel="true">
+
+   <listeners>
+
+       <listener class-name="com.core.WebTestListener" />
+     
+   </listeners>
+
+   <test name="test" preserver-order="true">
+       <classes>
+       <class name="com.edu.test.Auto_test"/>
+       </classes>
+   </test> <!-- Test -->
+</suite> <!-- Suite -->

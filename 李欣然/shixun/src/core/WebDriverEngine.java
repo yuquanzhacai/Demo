@@ -272,7 +272,10 @@ public class WebDriverEngine {
 	
 		action.sendKeys(Keys.TAB).perform();;
 	}
-	
+	public void ENTERClick(){
+		
+		action.sendKeys(Keys.ENTER).perform();;
+	}
 	public void tapType(String content){
 		
 			action.sendKeys(content).perform();
