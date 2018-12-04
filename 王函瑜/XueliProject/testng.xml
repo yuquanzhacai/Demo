@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="test" parallel="true">
+<suite name="test" parallel="tests">
 
    <listeners>
 
-       <listener class-name="com.core.WebTestListener" />
+       <listener class-name="com.edu.core.WebTestListener" />
+       <listener class-name="com.edu.core.WebTestListener2" />
      
    </listeners>
-
+  
    <test name="test" preserver-order="true">
-       <classes>
-       <class name="com.edu.test.Auto_test"/>
-       </classes>
-   </test> <!-- Test -->
+       <classes>    
+       <class name="com.edu.test.Own_Message_Test">
+           <method>
+              <include name="own_Message"></include>
+              <include name="edit_Message"></include>
+              <include name="exit"></include>
+           </method>
+         </class> 
+          <class name="com.edu.test.Work_Submit_Test">
+          <method>
+              <include name="change_txtAll"></include>
+          </method>
+         </class>
+      </classes>
+   </test>
+ 
 </suite> <!-- Suite -->

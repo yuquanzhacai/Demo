@@ -1,64 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="14" total="18" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2018-12-03T07:08:58Z" name="Default suite" finished-at="2018-12-03T07:09:13Z" duration-ms="15014">
+  <suite started-at="2018-12-04T10:41:01Z" name="test" finished-at="2018-12-04T10:42:16Z" duration-ms="74992">
     <groups>
     </groups>
-    <test started-at="2018-12-03T07:08:58Z" name="Default test" finished-at="2018-12-03T07:09:13Z" duration-ms="15014">
-      <class name="com.edu.test.TestListener">
-        <test-method is-config="true" signature="doBeforeSuite()[pri:0, instance:com.edu.test.TestListener@741a8937]" started-at="2018-12-03T07:08:58Z" name="doBeforeSuite" finished-at="2018-12-03T07:09:03Z" duration-ms="5087" status="PASS">
+    <test started-at="2018-12-04T10:41:01Z" name="test" finished-at="2018-12-04T10:42:16Z" duration-ms="74992">
+      <class name="com.edu.test.Own_Message_Test">
+        <test-method is-config="true" signature="doBeforeSuite()[pri:0, instance:com.edu.test.Own_Message_Test@53ce1329]" started-at="2018-12-04T10:41:01Z" name="doBeforeSuite" finished-at="2018-12-04T10:41:05Z" duration-ms="3649" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doBeforeSuite -->
-        <test-method signature="before_Login()[pri:0, instance:com.edu.test.TestListener@741a8937]" started-at="2018-12-03T07:09:03Z" name="before_Login" finished-at="2018-12-03T07:09:12Z" duration-ms="9013" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertTrue(Assert.java:44)
-at org.testng.Assert.assertTrue(Assert.java:54)
-at com.edu.test.TestListener.before_Login(TestListener.java:37)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method is-config="true" signature="before_Login()[pri:0, instance:com.edu.test.Own_Message_Test@53ce1329]" started-at="2018-12-04T10:41:05Z" name="before_Login" finished-at="2018-12-04T10:41:14Z" duration-ms="9144" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- before_Login -->
-        <test-method is-config="true" signature="doAfterMethod()[pri:0, instance:com.edu.test.TestListener@741a8937]" started-at="2018-12-03T07:09:12Z" name="doAfterMethod" finished-at="2018-12-03T07:09:13Z" duration-ms="704" status="PASS">
+        <test-method is-config="true" signature="own_Beg()[pri:0, instance:com.edu.test.Own_Message_Test@53ce1329]" started-at="2018-12-04T10:41:14Z" name="own_Beg" finished-at="2018-12-04T10:41:17Z" duration-ms="3150" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- own_Beg -->
+        <test-method signature="edit_Message()[pri:0, instance:com.edu.test.Own_Message_Test@53ce1329]" started-at="2018-12-04T10:41:17Z" name="edit_Message" finished-at="2018-12-04T10:41:47Z" duration-ms="29411" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- edit_Message -->
+        <test-method is-config="true" signature="own_Beg()[pri:0, instance:com.edu.test.Own_Message_Test@53ce1329]" started-at="2018-12-04T10:41:47Z" name="own_Beg" finished-at="2018-12-04T10:41:50Z" duration-ms="3140" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- own_Beg -->
+        <test-method signature="exit()[pri:0, instance:com.edu.test.Own_Message_Test@53ce1329]" started-at="2018-12-04T10:41:50Z" name="exit" finished-at="2018-12-04T10:41:54Z" duration-ms="4382" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- exit -->
+        <test-method is-config="true" signature="own_Beg()[pri:0, instance:com.edu.test.Own_Message_Test@53ce1329]" started-at="2018-12-04T10:41:54Z" name="own_Beg" finished-at="2018-12-04T10:41:54Z" duration-ms="30" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- own_Beg -->
+        <test-method signature="own_Message()[pri:0, instance:com.edu.test.Own_Message_Test@53ce1329]" started-at="2018-12-04T10:41:54Z" name="own_Message" finished-at="2018-12-04T10:41:54Z" duration-ms="20" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- own_Message -->
+        <test-method is-config="true" signature="doAfterMethod()[pri:0, instance:com.edu.test.Own_Message_Test@53ce1329]" started-at="2018-12-04T10:41:54Z" name="doAfterMethod" finished-at="2018-12-04T10:41:55Z" duration-ms="521" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doAfterMethod -->
-      </class> <!-- com.edu.test.TestListener -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.edu.test.Own_Message_Test -->
+      <class name="com.edu.test.Work_Submit_Test">
+        <test-method is-config="true" signature="doBeforeSuite()[pri:0, instance:com.edu.test.Work_Submit_Test@316bcf94]" started-at="2018-12-04T10:41:55Z" name="doBeforeSuite" finished-at="2018-12-04T10:41:58Z" duration-ms="2807" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doBeforeSuite -->
+        <test-method is-config="true" signature="before_Login()[pri:0, instance:com.edu.test.Work_Submit_Test@316bcf94]" started-at="2018-12-04T10:41:58Z" name="before_Login" finished-at="2018-12-04T10:42:07Z" duration-ms="9195" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before_Login -->
+        <test-method signature="change_txtAll()[pri:0, instance:com.edu.test.Work_Submit_Test@316bcf94]" started-at="2018-12-04T10:42:07Z" name="change_txtAll" finished-at="2018-12-04T10:42:16Z" duration-ms="9062" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- change_txtAll -->
+        <test-method is-config="true" signature="doAfterMethod()[pri:0, instance:com.edu.test.Work_Submit_Test@316bcf94]" started-at="2018-12-04T10:42:16Z" name="doAfterMethod" finished-at="2018-12-04T10:42:16Z" duration-ms="461" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doAfterMethod -->
+      </class> <!-- com.edu.test.Work_Submit_Test -->
+    </test> <!-- test -->
+  </suite> <!-- test -->
 </testng-results>

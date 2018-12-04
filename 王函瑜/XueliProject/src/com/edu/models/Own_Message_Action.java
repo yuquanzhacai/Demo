@@ -9,9 +9,9 @@ import com.edu.core.BaseTest;
 import com.edu.core.WebDriverEngine;
 
 
-public class Auto_test_action {
+public class Own_Message_Action {
 	private WebDriverEngine webtest;
-	public Auto_test_action(WebDriverEngine webtest) {
+	public Own_Message_Action(WebDriverEngine webtest) {
 		  this.webtest=webtest;
 	
 		  //System.out.println("构造方法");

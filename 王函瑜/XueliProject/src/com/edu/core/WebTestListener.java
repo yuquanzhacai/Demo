@@ -95,14 +95,12 @@ public class WebTestListener extends TestListenerAdapter {
 	public void onFinish(ITestContext testContext) {
 		// TODO Auto-generated method stub
 		super.onFinish(testContext);
-		//System.out.println("所有的测试用例执行完毕 ");
-	
 
 		try {
 			if(ReadProperties.getPropertyValue("enable_email").equals("true"))
 			{
 				String emailContent=this.writeResultToMailTemplate();
-				String emailTitle="测试报告----"+this.getTime();
+				String emailTitle="娴嬭瘯鎶ュ憡----"+this.getTime();
 				String toMail=ReadProperties.getPropertyValue("to_mail");
 				String file=PicSend.Zip();
 				try {

@@ -13,18 +13,18 @@ import org.testng.annotations.Test;
 import com.edu.core.WebTestListener;
 import com.edu.core.WebTestListener2;
 import com.edu.core.BaseTest;
-import com.edu.models.Auto_test_action;
+
 import com.edu.models.Login_Action;
+import com.edu.models.Own_Message_Action;
 
 
-@Listeners({WebTestListener2.class,WebTestListener.class})
-public class Auto_test extends BaseTest{
+public class Own_Message_Test extends BaseTest{
 
-	Auto_test_action Auaction=null;
+	Own_Message_Action Auaction=null;
 	Login_Action la=null;
 	@BeforeClass
 	public void before_Login() throws InterruptedException {
-		Auaction=new Auto_test_action(webtest);
+		Auaction=new Own_Message_Action(webtest);
 		la=new Login_Action(webtest);
 		//打开页面
 		webtest.open("http://10.7.10.7/login");
@@ -35,45 +35,56 @@ public class Auto_test extends BaseTest{
 	
 	@BeforeMethod
 	public void own_Beg() throws InterruptedException {
-		webtest.mouseFloat("xpath=//img[@src='/static/img/m.png']");
+		webtest.mouseFloat("xpath=//a[@class='avatar']");
+
 	}
 	
-	@Test(priority=0)
+	@Test//(priority=0)
 	public void own_Message() throws InterruptedException{
 		webtest.click("xpath=//a[contains(.,'个人主页')]");	
-		Assert.assertTrue(webtest.isTextPresent("粉丝"));
+		Assert.assertTrue(webtest.isTextPresent("同步课"));
 	
 	}
 	
-	@Test(priority=1)
+	@Test//(priority=1)
 	public void edit_Message() throws InterruptedException {
 		webtest.click("xpath=//a[@href='/settings/']");
 		Auaction.set_Massage("E:\\8.jpg","2016011713","8-王函瑜-8-8","12weerhrjtkiy3");
 		Assert.assertTrue(webtest.isTextPresent("个人信息更新成功！"));
 	}
 	
-	@Test(enabled=false)//(priority=2)
+	@Test(enabled=false)//(priority=2)////
 	public void edit_Password() throws InterruptedException {
 		webtest.click("xpath=//a[@href='/settings/']");	
 		Thread.sleep(2000);
 		webtest.runJs("window.scrollTo(0,document.body.scrollHeight)");
-		Auaction.set_Password("Whymm1314","Whymm13145","Whymm13145");
+		Auaction.set_Password("Whymm13145","Whymm1314","Whymm1314");
 		Assert.assertTrue(webtest.isTextPresent("登录 "));
 	}
 	
-	@Test(enabled=false)//(priority=3)
+	@Test(enabled=false)//(priority=3)//
 	public void edit_PasswordFailed() throws InterruptedException {
 		webtest.click("xpath=//a[@href='/settings/']");	
 		Thread.sleep(2000);
 		webtest.runJs("window.scrollTo(0,document.body.scrollHeight)");
-		Auaction.set_Password("Whymm1314","Whymm13145","Whymm1314");
+		Auaction.set_Password("Whymm13145","Whymm13145","Whymm1314");
 		Thread.sleep(2000);
-		Assert.assertTrue(webtest.isTextPresent("登录 "));
-		
-		
+		Assert.assertTrue(webtest.isTextPresent("失败"));
+			
 	}
 	
-	@Test(priority=4)
+	@Test(enabled=false)//(priority=3)//
+	public void edit_PasswordFailed2() throws InterruptedException {
+		webtest.click("xpath=//a[@href='/settings/']");	
+		Thread.sleep(2000);
+		webtest.runJs("window.scrollTo(0,document.body.scrollHeight)");
+		Auaction.set_Password("Whymm13145","Whymm13145","Whymm13145");
+		Thread.sleep(2000);
+		Assert.assertTrue(webtest.isTextPresent("失败"));
+			
+	}
+	
+	@Test//(priority=3)
 	public void exit() {
 		webtest.click("xpath=//a[@href='/logout/']");
 		Assert.assertTrue(webtest.isTextPresent("注册雪梨教育"));

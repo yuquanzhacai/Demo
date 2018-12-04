@@ -290,6 +290,12 @@ public class WebDriverEngine {
 	
 		action.sendKeys(Keys.TAB).perform();;
 	}
+//*	//
+    public void ENTERClick(){
+		
+		action.sendKeys(Keys.ENTER).perform();;
+	}
+	
 ////*	//鼠标悬浮
 	public void mouseFloat(String locator) {
 		WebElement element = finder.findElement(locator);

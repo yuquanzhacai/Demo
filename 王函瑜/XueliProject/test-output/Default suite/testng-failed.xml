@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.edu.test.TestListener">
+      <class name="com.edu.test.Own_Message_Test">
         <methods>
           <include name="doAfterMethod"/>
-          <include name="before_Login"/>
           <include name="doBeforeSuite"/>
+          <include name="own_Message"/>
+          <include name="own_Beg"/>
+          <include name="before_Login"/>
         </methods>
-      </class> <!-- com.edu.test.TestListener -->
+      </class> <!-- com.edu.test.Own_Message_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
