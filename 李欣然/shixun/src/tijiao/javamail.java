@@ -50,20 +50,36 @@ ts.sendMessage(message, message.getAllRecipients());
 	* @Method: createSimpleMail
 	* @Description: 创建一封只包含文本的邮件
 */
-public static MimeMessage createSimpleMail(Session session)
-	throws Exception {
-	// 创建邮件对象
-MimeMessage message = new MimeMessage(session);
-	// 指明邮件的发件人
-message.setFrom(new InternetAddress("952184149@qq.com"));
-	// 指明邮件的收件人，现在发件人和收件人是一样的，那就是自己给自己发
-message.setRecipient(Message.RecipientType.TO, new InternetAddress("952184149@qq.com"));
-	// 邮件的标题
-message.setSubject("实训测试用例运行结果");
-	// 邮件的文本内容
-message.setContent("JavaMail发送邮件成功！", "text/html;charset=UTF-8");
+//public static MimeMessage createSimpleMail(Session session)
+//	throws Exception {
+//	// 创建邮件对象
+//MimeMessage message = new MimeMessage(session);
+//	// 指明邮件的发件人
+//message.setFrom(new InternetAddress("952184149@qq.com"));
+//	// 指明邮件的收件人，现在发件人和收件人是一样的，那就是自己给自己发
+//message.setRecipient(Message.RecipientType.TO, new InternetAddress("952184149@qq.com"));
+//	// 邮件的标题
+//message.setSubject("实训测试用例运行结果");
+//	// 邮件的文本内容
+//message.setContent("JavaMail发送邮件成功！", "text/html;charset=UTF-8");
+//
+//	// 返回创建好的邮件对象
+//return message;
+//	}
+	public static MimeMessage createSimpleMail(Session session)throws Exception {
+			// 创建邮件对象
+		MimeMessage message = new MimeMessage(session);
+			// 指明邮件的发件人
+		message.setFrom(new InternetAddress("952184149@qq.com"));
+			// 指明邮件的收件人，现在发件人和收件人是一样的，那就是自己给自己发
+		message.setRecipient(Message.RecipientType.TO, new InternetAddress("952184149@qq.com"));
+			// 邮件的标题
+		message.setSubject("实训测试用例运行结果");
+			// 邮件的文本内容
+		message.setContent("JavaMail发送邮件成功！", "text/html;charset=UTF-8");
 
-	// 返回创建好的邮件对象
-return message;
-	}
+			// 返回创建好的邮件对象
+		return message;
+			}
+
 }

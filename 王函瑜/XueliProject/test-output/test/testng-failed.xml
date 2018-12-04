@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="methods" name="Failed suite [test]">
+  <listeners>
+    <listener class-name="com.core.WebTestListener"/>
+  </listeners>
+  <test thread-count="5" parallel="methods" name="test(failed)">
+    <classes>
+      <class name="com.edu.test.Auto_test">
+        <methods>
+          <include name="edit_Password"/>
+          <include name="own_Beg"/>
+          <include name="doBeforeSuite"/>
+          <include name="doAfterMethod"/>
+        </methods>
+      </class> <!-- com.edu.test.Auto_test -->
+    </classes>
+  </test> <!-- test(failed) -->
+</suite> <!-- Failed suite [test] -->

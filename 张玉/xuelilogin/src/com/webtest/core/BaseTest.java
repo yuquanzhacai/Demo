@@ -30,6 +30,8 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.ITestContext;
+import org.testng.TestRunner;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
@@ -83,17 +85,17 @@ public class BaseTest {
 
 
 	@BeforeSuite
-	public void doBeforeSuite() throws Exception {
-
+	public void doBeforeSuite(ITestContext context) throws Exception {
+		TestRunner runner = (TestRunner) context;
+	    runner.addListener(new WebTestListener());
+		
 		driverType=ReadProperties.getPropertyValue("driverType");
 		driver = this.newWebDriver(driverType);
 		driver.manage().window().maximize();
 		Log.info(driverType);
 		webtest = new WebDriverEngine(driver);
-	
-	
-	
 	}
+
 
 
 	@AfterSuite
@@ -104,52 +106,53 @@ public class BaseTest {
 			}
 		Log.info("Quitted Browser");
 		
-		Thread.sleep(3000);
 		
-		//发邮件
-		//设置邮件
-				Properties props = new Properties();
-				props.put("mail.smtp.host", "smtp.qq.com");
-				props.put("mail.smtp.socketFactory.port", "465");
-				props.put("mail.smtp.socketFactory.class","javax.net.ssl.SSLSocketFactory");
-		 
-				// 身份验证
-				props.put("mail.smtp.auth", "true");
-				props.put("mail.smtp.port", "25");
-				Session session = Session.getDefaultInstance(props, new javax.mail.Authenticator() {
-		 
-					protected PasswordAuthentication getPasswordAuthentication() {
-					return new PasswordAuthentication("1336448191@qq.com", "dtxyecxyvqodhdef");
-					}
-				});
-		 
-				try {
-		 
-					// 设置收发
-					Message message = new MimeMessage(session);
-					message.setFrom(new InternetAddress("1336448191@qq.com"));
-					message.setRecipients(Message.RecipientType.TO,InternetAddress.parse("1336448191@qq.com"));
-					message.setSubject("测试报告");
-					BodyPart messageBodyPart1 = new MimeBodyPart();
-					messageBodyPart1.setText("正文部分");
-					MimeBodyPart messageBodyPart2 = new MimeBodyPart();
-					String filename = ".\\test-output\\index1.html";
-					DataSource source = new FileDataSource(filename);
-					messageBodyPart2.setDataHandler(new DataHandler(source));
-					messageBodyPart2.setFileName(filename);
-					Multipart multipart = new MimeMultipart();
-					multipart.addBodyPart(messageBodyPart1);
-					multipart.addBodyPart(messageBodyPart2);
-					message.setContent(multipart);
-					//发送
-					Transport.send(message);
-					System.out.println("=====邮件已经发送=====");
-		 
-				} catch (MessagingException e) {
-		 
-					   throw new RuntimeException(e);
-		 
-				}
+		/*//发邮件
+				//设置邮件
+						Properties props = new Properties();
+						props.put("mail.smtp.host", "smtp.qq.com");
+						props.put("mail.smtp.socketFactory.port", "465");
+						props.put("mail.smtp.socketFactory.class","javax.net.ssl.SSLSocketFactory");
+				 
+						// 身份验证
+						props.put("mail.smtp.auth", "true");
+						props.put("mail.smtp.port", "25");
+						Session session = Session.getDefaultInstance(props, new javax.mail.Authenticator() {
+				 
+							protected PasswordAuthentication getPasswordAuthentication() {
+							return new PasswordAuthentication("1336448191@qq.com", "dtxyecxyvqodhdef");
+							}
+						});
+				 
+						try {
+				 
+							// 设置收发
+							MimeMessage message = new MimeMessage(session);
+							message.setFrom(new InternetAddress("1336448191@qq.com"));
+							message.setRecipients(Message.RecipientType.TO,InternetAddress.parse("1336448191@qq.com"));
+							message.setSubject("测试报告","GB2312");
+							BodyPart messageBodyPart1 = new MimeBodyPart();
+							//messageBodyPart1.setText("正文部分");
+							messageBodyPart1.setContent("正文部分", "text/html;charset=GB2312");
+							
+							MimeBodyPart messageBodyPart2 = new MimeBodyPart();
+							String filename = ".\\test-output\\index1.html";
+							DataSource source = new FileDataSource(filename);
+							messageBodyPart2.setDataHandler(new DataHandler(source));
+							messageBodyPart2.setFileName(filename);
+							Multipart multipart = new MimeMultipart();
+							multipart.addBodyPart(messageBodyPart1);
+							multipart.addBodyPart(messageBodyPart2);
+							message.setContent(multipart);
+							//发送
+							Transport.send(message);
+							System.out.println("=====邮件已经发送=====");
+				 
+						} catch (MessagingException e) {
+				 
+							   throw new RuntimeException(e);
+				 
+						}*/
 	}
 	
 

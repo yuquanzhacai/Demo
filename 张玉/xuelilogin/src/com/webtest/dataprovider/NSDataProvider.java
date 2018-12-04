@@ -9,7 +9,7 @@ public class NSDataProvider {
 	
 	@DataProvider(name="txt")
 	public  Object[][] getTxtData() throws IOException{
-		return new  TxtDataProvider().getTxtUser("data/user.cvs");
+		return new  TxtDataProvider().getTxtUser("data/name.cvs");
 	}
 
 	@DataProvider(name="excel")
