@@ -14,7 +14,9 @@ import org.testng.ITestNGMethod;
 import org.testng.ITestResult;
 import org.testng.TestListenerAdapter;
 
-
+/*
+ * 监听器发送邮件
+ */
 
 public class WebTestListener extends TestListenerAdapter {
 

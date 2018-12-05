@@ -32,13 +32,13 @@ public class Work_Submit_Action {
       webtest.click("xpath=//option[@value='java']");
       webtest.click("xpath=//textarea[@class='cke_dialog_ui_input_textarea cke_source']");
       webtest.type("class=cke_dialog_ui_input_textarea", code);
-      webtest.click("xpath=//span[contains(.,'È·¶¨')]");
+      webtest.click("xpath=//span[contains(.,'ç¡®å®š')]");
   }
   public void workCheck() {
 	  webtest.click("xpath=//a[@href='/task/list/checked/']");
 	  webtest.click("xpath=//i[@class='icon icon-eye-open']");
   }
-  //ÔÚÔ­ÓĞ»ù´¡ÉÏ½øĞĞĞŞ¸Ä
+  //åœ¨åŸæœ‰åŸºç¡€ä¸Šè¿›è¡Œä¿®æ”¹
   public void workEdit(String txt) throws InterruptedException {
 	  webtest.click("xpath=//a[@href='/task/list/finished/']");
 	  webtest.click("xpath=//i[@class='icon icon-file-text']");
@@ -49,7 +49,7 @@ public class Work_Submit_Action {
 	  webtest.click("xpath=//button[@class='btn btn-primary btn-sm td-preview']");
 	  webtest.click("xpath=//button[@class='btn btn-primary td-submit']");
   }
-  //½«Ô­ÎÄ±¾ÄÚÈİÉ¾³ı£¬½øĞĞĞŞ¸Ä
+  //å°†åŸæ–‡æœ¬å†…å®¹åˆ é™¤ï¼Œè¿›è¡Œä¿®æ”¹
   public void workChange(String txt) throws InterruptedException {
 	  webtest.click("xpath=//a[@href='/task/list/finished/']");
 	  webtest.click("xpath=//i[@class='icon icon-file-text']");
@@ -81,11 +81,11 @@ public class Work_Submit_Action {
 	  webtest.click("class=cke_wysiwyg_frame");
 	  webtest.ENTERClick();
 	  Thread.sleep(3000);
-	  webtest.click("xpath=//label[contains(.,'´úÂëÄÚÈİ')]");
+	  webtest.click("xpath=//label[contains(.,'ä»£ç å†…å®¹')]");
 	  webtest.type("class=cke_dialog_ui_input_textarea", code);
-	  webtest.click("xpath=//a[@title='È·¶¨']");
+	  webtest.click("xpath=//a[@title='ç¡®å®š']");
 	  webtest.click("xpath=//button[contains(@class,'btn btn-primary btn-sm td-preview')]");
-	  webtest.click("xpath=//button[contains(.,'È·ÈÏÌá½»')]");
+	  webtest.click("xpath=//button[contains(.,'ç¡®è®¤æäº¤')]");
   }
   
   public void codeAdd(String code) throws InterruptedException{  
@@ -97,7 +97,7 @@ public class Work_Submit_Action {
       webtest.click("xpath=//option[@value='java']");
       webtest.click("xpath=//textarea[@class='cke_dialog_ui_input_textarea cke_source']");
       webtest.type("class=cke_dialog_ui_input_textarea", code);
-      webtest.click("xpath=//span[contains(.,'È·¶¨')]");
+      webtest.click("xpath=//span[contains(.,'ç¡®å®š')]");
   }
 
 }

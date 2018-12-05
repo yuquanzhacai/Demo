@@ -10,11 +10,11 @@ public class Login_Action {
 	  
 	  public void login(String email,String password) 
 	  {
-	
-			//webtest.click("link=µÇÂ¼");
+		  
+			//æ‰“å¼€ç½‘é¡µ
+			webtest.open("http://10.7.10.7/login");
 			webtest.type("name=username", email);
 			webtest.type("name=password", password);
-			//webtest.click("xpath=//input[@value='ÂíÉÏµÇÂ¼']");
 			webtest.click("xpath=//button[@type='submit']");
 		
 	  }

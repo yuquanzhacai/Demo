@@ -20,7 +20,7 @@ public class WebTestListener2 extends TestListenerAdapter {
 	  @Override
 	  public void onTestFailure(ITestResult tr) {
 		  
-		  System.out.println(tr.getInstanceName()+"-"+tr.getName()+"ÔËĞĞÊ§°Ü£¬ĞèÒª½ØÆÁ");
+		  System.out.println(tr.getInstanceName()+"-"+tr.getName()+"è¿è¡Œå¤±è´¥ï¼Œéœ€è¦æˆªå±");
 		  
 		  BaseTest tb = (BaseTest) tr.getInstance();
           WebDriver driver = tb.getDriver();    
