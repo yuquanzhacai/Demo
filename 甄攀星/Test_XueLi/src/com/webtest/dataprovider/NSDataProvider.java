@@ -22,5 +22,10 @@ public class NSDataProvider {
 		return new MysqlDataProvider().getTestDataByMysql("SELECT filmname, petname\r\n" + 
 				"FROM `mm_movie` ");
 	}
-	
+	//创建课程的数据驱动
+	@DataProvider(name="cctxt")
+	public Object[][] getCCTxtData() throws IOException
+	{
+		return new  TxtDataProvider().getTxtUser("data/cctxt.txt");	
+	}
 }

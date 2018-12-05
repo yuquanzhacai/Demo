@@ -80,7 +80,7 @@ public class PostMailHtml {
 		//MimeBodyPart对象2,存放附件
 		BodyPart mimeBodyPart2=new MimeBodyPart();
 		// 设置邮件中附件文件的路径
-		String filename = "D:\\demo\\loginuser.txt";
+		String filename = "D:\\Program Files\\Demo-eclipse\\Test_XueLi\\test-output\\emailable-report.html";
 		// 创建一个datasource对象，并传递文件
 		DataSource source = new FileDataSource(filename);
 		//设置handler
