@@ -55,14 +55,13 @@ public class Login_Action {
 		}
 		public void throughAllAudit() throws InterruptedException
 		{
-
 //			driver.findElement(By.xpath("//span[@class='notification-box']"));
 //			boolean str=webtest.panduan("//span[@class='notification-box']");
+//			webtest.mouseLong();
+//			webtest.mouseFloat("//i[@class='icon icon-bell']");
 				webtest.open("http://10.7.10.7/u/teams/");
 				Thread.sleep(3000);
-				webtest.mouseLong();
-				webtest.mouseFloat("//i[@class='icon icon-bell']");
-				//driver.findElement(By.xpath("//span[@class='notification-box']"));
+				webtest.runJs("xpath=//span[@class='notification-box']");
 				webtest.click("//a[@href='/u/teams/applications/']");
 				webtest.click("//th[@class='check-all check-btn']");
 				webtest.click("//button[contains(.,'批量通过')]");
@@ -89,6 +88,28 @@ public class Login_Action {
 //			webtest.click("//button[contains(.,'批量通过')]");
 //			System.out.println("执行了点击申请");
 		}
+		public void checkandclassAction()
+		  {
+			  	webtest.runJs("arguments[0].click();","link=收到的赞");
+				webtest.click("xpath=//a[@data-toggle='dropdown']");
+				webtest.click("xpath=//a[@data-toggle='dropdown']");
+				webtest.click("xpath=//a[contains(.,'收到的评论')]");
+				webtest.click("xpath=//a[@data-toggle='dropdown']");
+				webtest.click("xpath=//a[contains(.,'发出的评论')]");
+				webtest.click("xpath=//a[contains(.,'首页')]");
+				webtest.click("xpath=//a[@class='cursor-pointer']");
+				webtest.click("xpath=//a[@href='/u/courses/']");
+				webtest.click("xpath=//a[@href='/u/courses/attention/']");
+				webtest.click("xpath=//a[@href='/u/courses/interest/']");
+				webtest.click("xpath=//a[contains(@href,'/course/')]");
+				webtest.runJs("arguments[0].click();","link=课程分类");
+				webtest.click("xpath=//a[@href='/course/category/5']");
+				webtest.runJs("arguments[0].click();","link=课程体系");
+				webtest.click("xpath=//a[contains(.,'软件测试工程师')]");
+				webtest.click("xpath=//button[@data-interested='10']");
+				webtest.click("xpath=//a[@class='cursor-pointer']");
+				webtest.click("xpath=//a[@class='cursor-pointer']");
+		  }
 }
 
 

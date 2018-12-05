@@ -40,13 +40,19 @@ public class Login extends BaseTest{
 //		}
 //	}
 	
-	@Test(description="申请同步课的同学通过审核",priority=2)
-	public void through_audit() throws InterruptedException
+//	@Test(description="申请同步课的同学通过审核",priority=2)
+//	public void through_audit() throws InterruptedException
+//	{
+////		webtest.mouseLong();
+////		action.throughSelectAudit("zpx");
+////		action.throughAllAudit();
+//		action.throughAllAudit();
+//		System.out.println("qq");
+//	}
+	@Test(description="查看左侧菜单栏的通知和课程",priority=3)
+	public void checkandclass()
 	{
-//		webtest.mouseLong();
-//		action.throughSelectAudit("zpx");
-		action.throughAllAudit();
-		System.out.println("qq");
+		action.checkandclassAction();
 	}
 //	
 //	@Test
