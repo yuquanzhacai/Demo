@@ -26,10 +26,9 @@ public class Own_Message_Test extends BaseTest{
 	public void before_Login() throws InterruptedException {
 		Auaction=new Own_Message_Action(webtest);
 		la=new Login_Action(webtest);
-		//´ò¿ªÒ³Ãæ
-		webtest.open("http://10.7.10.7/login");
 
-		la.login("2798011643@qq.com","Whymm13145");
+
+		la.login("2798011643@qq.com","Whymm1314");
 
 	}
 	
@@ -39,54 +38,65 @@ public class Own_Message_Test extends BaseTest{
 
 	}
 	
-	@Test//(priority=0)
+	@Test(priority=0)
 	public void own_Message() throws InterruptedException{
-		webtest.click("xpath=//a[contains(.,'¸öÈËÖ÷Ò³')]");	
-		Assert.assertTrue(webtest.isTextPresent("Í¬²½¿Î"));
+		webtest.click("xpath=//a[contains(.,'ä¸ªäººä¸»é¡µ')]");	
+		Assert.assertTrue(webtest.isTextPresent("Í¬åŒæ­¥è¯¾"));
 	
 	}
 	
-	@Test//(priority=1)
+	@Test(priority=1)
 	public void edit_Message() throws InterruptedException {
 		webtest.click("xpath=//a[@href='/settings/']");
-		Auaction.set_Massage("E:\\8.jpg","2016011713","8-Íõº¯è¤-8-8","12weerhrjtkiy3");
-		Assert.assertTrue(webtest.isTextPresent("¸öÈËĞÅÏ¢¸üĞÂ³É¹¦£¡"));
+		Auaction.set_Massage("E:\\8.jpg","2016011713","8-ç‹å‡½ç‘œ-8-8","12weerhrjtkiy3");
+		Assert.assertTrue(webtest.isTextPresent("ä¸ªäººä¿¡æ¯æ›´æ–°æˆåŠŸï¼"));
 	}
 	
-	@Test(enabled=false)//(priority=2)////
-	public void edit_Password() throws InterruptedException {
-		webtest.click("xpath=//a[@href='/settings/']");	
-		Thread.sleep(2000);
-		webtest.runJs("window.scrollTo(0,document.body.scrollHeight)");
-		Auaction.set_Password("Whymm13145","Whymm1314","Whymm1314");
-		Assert.assertTrue(webtest.isTextPresent("µÇÂ¼ "));
-	}
-	
-	@Test(enabled=false)//(priority=3)//
+	@Test(priority=2)//(enabled=false)//æ–°å¯†ç ä¸ç¡®è®¤å¯†ç ä¸åŒ
 	public void edit_PasswordFailed() throws InterruptedException {
 		webtest.click("xpath=//a[@href='/settings/']");	
 		Thread.sleep(2000);
 		webtest.runJs("window.scrollTo(0,document.body.scrollHeight)");
-		Auaction.set_Password("Whymm13145","Whymm13145","Whymm1314");
+		Auaction.set_Password("Whymm1314","Whymm13145","Whymm131455");
 		Thread.sleep(2000);
-		Assert.assertTrue(webtest.isTextPresent("Ê§°Ü"));
+		Assert.assertTrue(webtest.isTextPresent("å¤±è´¥"));
 			
 	}
 	
-	@Test(enabled=false)//(priority=3)//
+	@Test(priority=3)//(enabled=false)//æ–°æ—§å¯†ç ç›¸åŒ
 	public void edit_PasswordFailed2() throws InterruptedException {
 		webtest.click("xpath=//a[@href='/settings/']");	
 		Thread.sleep(2000);
 		webtest.runJs("window.scrollTo(0,document.body.scrollHeight)");
-		Auaction.set_Password("Whymm13145","Whymm13145","Whymm13145");
+		Auaction.set_Password("Whymm1314","Whymm1314","Whymm1314");
 		Thread.sleep(2000);
-		Assert.assertTrue(webtest.isTextPresent("Ê§°Ü"));
+		Assert.assertTrue(webtest.isTextPresent("å¤±è´¥"));
 			
 	}
 	
-	@Test//(priority=3)
+	@Test(priority=4)//(enabled=false)//æ—§å¯†ç é”™è¯¯
+	public void edit_PasswordFailed3() throws InterruptedException {
+		webtest.click("xpath=//a[@href='/settings/']");	
+		Thread.sleep(2000);
+		webtest.runJs("window.scrollTo(0,document.body.scrollHeight)");
+		Auaction.set_Password("Whymm13145","Whymm131456","Whymm131456");
+		Thread.sleep(2000);
+		Assert.assertTrue(webtest.isTextPresent("å¤±è´¥"));
+			
+	}
+	
+	@Test(priority=5)//(enabled=false)//æ›´æ–°æˆåŠŸ
+	public void edit_Password() throws InterruptedException {
+		webtest.click("xpath=//a[@href='/settings/']");	
+		Thread.sleep(2000);
+		webtest.runJs("window.scrollTo(0,document.body.scrollHeight)");
+		Auaction.set_Password("Whymm1314","Whymm13145","Whymm13145");
+		Assert.assertTrue(webtest.isTextPresent("ç™»å½•"));
+	}
+	
+	@Test(priority=6)
 	public void exit() {
 		webtest.click("xpath=//a[@href='/logout/']");
-		Assert.assertTrue(webtest.isTextPresent("×¢²áÑ©Àæ½ÌÓı"));
+		Assert.assertTrue(webtest.isTextPresent("æ³¨å†Œé›ªæ¢¨æ•™è‚²"));
 	}
 }

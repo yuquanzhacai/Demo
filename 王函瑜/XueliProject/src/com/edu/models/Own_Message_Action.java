@@ -14,7 +14,7 @@ public class Own_Message_Action {
 	public Own_Message_Action(WebDriverEngine webtest) {
 		  this.webtest=webtest;
 	
-		  //System.out.println("¹¹Ôì·½·¨");
+		  //System.out.println("æž„é€ æ–¹æ³•");
 	}
 	
 	public void set_Massage(String pic,String num,String name,String message) throws InterruptedException {

@@ -24,7 +24,7 @@ import org.testng.annotations.BeforeSuite;
 
 /**
  * author:lihuanzhen
- * 初始化浏览器
+ * 鍒濆鍖栨祻瑙堝櫒
  */
 
 
@@ -71,7 +71,7 @@ public class BaseTest {
 	@BeforeClass
 	public void doBeforeSuite() throws Exception {
 
-		//System.out.println("实例化webtest");
+
 		driverType=ReadProperties.getPropertyValue("driverType");
 		driver = this.newWebDriver(driverType);
 		driver.manage().window().maximize();

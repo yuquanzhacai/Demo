@@ -21,76 +21,74 @@ public class Work_Submit_Test extends BaseTest{
 	public void before_Login() throws InterruptedException {
 		wsaction=new Work_Submit_Action(webtest);
 		action=new Login_Action(webtest);
-		//´ò¿ªÒ³Ãæ
-		webtest.open("http://10.7.10.7/login");
 		action.login("2798011643@qq.com","Whymm13145");
 
 	}
-//ÀÏÊ¦ÏÈ´´½¨¶à¸öÈÎÎñ£¡£¡£¡
+	//è€å¸ˆå…ˆåˆ›å»ºå¤šä¸ªä»»åŠ¡ï¼ï¼ï¼
 	
 	@Test(enabled=false)
 	public void txt() throws Exception  {
-		wsaction.workSubmit("Ìá½»×÷Òµ");
-		Assert.assertTrue(webtest.isTextPresent("Ìá½»³É¹¦"));
+		wsaction.workSubmit("æäº¤ä½œä¸š");
+		Assert.assertTrue(webtest.isTextPresent("æäº¤æˆåŠŸ"));
 	}
 	@Test(enabled=false)  //fail
 	public void file() throws Exception  {
 		wsaction.flieSubmit("E:\\8.jpg");
-		Assert.assertTrue(webtest.isTextPresent("ÇëÌîĞ´ÄÚÈİ"));
+		Assert.assertTrue(webtest.isTextPresent("è¯·å¡«å†™å†…å®¹"));
 	}
 	@Test(enabled=false)
 	public void code() throws Exception  {
 		wsaction.codeSubmit("java");
-		Assert.assertTrue(webtest.isTextPresent("Ìá½»³É¹¦"));
+		Assert.assertTrue(webtest.isTextPresent("æäº¤æˆåŠŸ"));
 	}	
 	@Test(enabled=false)
 	public void file_txt() throws Exception  {
 		wsaction.flieSubmit("E:\\8.jpg");
-		wsaction.workSubmit("Ìá½»×÷Òµ");
-		Assert.assertTrue(webtest.isTextPresent("Ìá½»³É¹¦"));
+		wsaction.workSubmit("æäº¤ä½œä¸š");
+		Assert.assertTrue(webtest.isTextPresent("æäº¤æˆåŠŸ"));
 	}
 	@Test(enabled=false)
 	public void code_txt() throws Exception  {
 		wsaction.codeSubmit("java");
-		wsaction.workSubmit("Ìá½»×÷Òµ");
-		Assert.assertTrue(webtest.isTextPresent("Ìá½»³É¹¦"));
+		wsaction.workSubmit("ï¿½á½»ï¿½ï¿½Òµ");
+		Assert.assertTrue(webtest.isTextPresent("ï¿½á½»ï¿½É¹ï¿½"));
 	}	
 
 	@Test(enabled=false)
 	public void code_file() throws Exception  {
 		wsaction.codeSubmit("java");
 		wsaction.flieSubmit("E:\\8.jpg");
-		Assert.assertTrue(webtest.isTextPresent("Ìá½»³É¹¦"));
-	}
-	
-	@Test(enabled=false)
-	public void change_txt() throws InterruptedException {
-	    wsaction.workEdit("ĞŞ¸Ä×÷Òµ");
-	    Assert.assertTrue(webtest.isTextPresent("ÒÑÍê³É"));
+		Assert.assertTrue(webtest.isTextPresent("æäº¤æˆåŠŸ"));
 	}
 	
 	@Test//(enabled=false)
+	public void change_txt() throws InterruptedException {
+	    wsaction.workEdit("ä¿®æ”¹ä½œä¸š");
+	    Assert.assertTrue(webtest.isTextPresent("å·²å®Œæˆ"));
+	}
+	
+	@Test(enabled=false)
 	public void change_txtAll() throws InterruptedException {
-	    wsaction.workChange("ĞŞ¸Ä×÷Òµ");
-	    Assert.assertTrue(webtest.isTextPresent("ÒÑÍê³É"));
+	    wsaction.workChange("ä¿®æ”¹ä½œä¸š");
+	    Assert.assertTrue(webtest.isTextPresent("å·²å®Œæˆ"));
 	}
 	
 	@Test(enabled=false)
 	public void change_flie() throws InterruptedException {
 	    wsaction.fileEdit("E:\\8.jpg");
-	    Assert.assertTrue(webtest.isTextPresent("ÒÑÍê³É"));
+	    Assert.assertTrue(webtest.isTextPresent("å·²å®Œæˆ"));
 	}
 	
 	@Test(enabled=false)
 	public void change_code() throws InterruptedException {
 		wsaction.codeEdit("javaxiugai");
-		Assert.assertTrue(webtest.isTextPresent("ÒÑÍê³É"));
+		Assert.assertTrue(webtest.isTextPresent("å·²å®Œæˆ"));
 	}
 	
 	@Test(enabled=false)
 	public void add_code() throws InterruptedException {
 		wsaction.codeAdd("javaxiugai");
-		Assert.assertTrue(webtest.isTextPresent("ÒÑÍê³É"));
+		Assert.assertTrue(webtest.isTextPresent("å·²å®Œæˆ"));
 	}
 	
 	

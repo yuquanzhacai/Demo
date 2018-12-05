@@ -23,7 +23,7 @@ public class MailUtil {
 
     static String server = "smtp.qq.com";
     static String file=PicSend.Zip();
-    static String from = "Íõº¯è¤";
+    static String from = "ç‹å‡½ç‘œ";
     static String user = "2798011643@qq.com";
     static String password = "asysdorgmwguddej";
 
@@ -57,31 +57,30 @@ public class MailUtil {
             msg.addRecipients(Message.RecipientType.TO, toAddress);
             msg.setSubject(subject, "UTF-8");   
             
-          //´´½¨Ò»¸öMimeBodyPartµÄ¶ÔÏó£¬ÒÔ±ãÌí¼ÓÄÚÈİ
+          //åˆ›å»ºä¸€ä¸ªMimeBodyPartçš„å¯¹è±¡ï¼Œä»¥ä¾¿æ·»åŠ å†…å®¹
     		
-    		//MimeBodyPart¶ÔÏó,´æ·Å¸½¼ş
+    		//MimeBodyPartå¯¹è±¡,å­˜æ”¾é™„ä»¶
     		BodyPart mimeBodyPart=new MimeBodyPart();
-    		// ÉèÖÃÓÊ¼şÖĞ¸½¼şÎÄ¼şµÄÂ·¾¶
+    		// è®¾ç½®é‚®ä»¶ä¸­é™„ä»¶æ–‡ä»¶çš„è·¯å¾„
     		String filename = file;
-    		// ´´½¨Ò»¸ödatasource¶ÔÏó£¬²¢´«µİÎÄ¼ş
+    		//åˆ›å»ºä¸€ä¸ªdatasourceå¯¹è±¡ï¼Œå¹¶ä¼ é€’æ–‡ä»¶
     		DataSource source = new FileDataSource(filename);
-    		//ÉèÖÃhandler
+    		//è®¾ç½®handler
     		mimeBodyPart.setDataHandler(new DataHandler(source));
-    		// ¼ÓÔØÎÄ¼ş
+    		//åŠ è½½æ–‡ä»¶
     		mimeBodyPart.setFileName(filename);
             
-    		//´´½¨Ò»¸öMimeBodyPartµÄ¶ÔÏó£¬ÒÔ±ãÌí¼ÓÄÚÈİ
+    		//åˆ›å»ºä¸€ä¸ªMimeBodyPartçš„å¯¹è±¡ï¼Œä»¥ä¾¿æ·»åŠ å†…å®¹
     		BodyPart mimeBodyPart2=new MimeBodyPart();
-    		//Ìí¼ÓHTML¸ñÊ½ÓÊ¼şÕıÎÄ
+    		//æ·»åŠ HTMLæ ¼å¼é‚®ä»¶æ­£æ–‡
     		mimeBodyPart2.setContent(body,"text/html;charset=utf-8");
     		
-    		// ´´½¨Ò»¸öMimeMultipartÀàµÄÊµÀı¶ÔÏó
+    		// åˆ›å»ºä¸€ä¸ªMimeMultipartç±»çš„å®ä¾‹å¯¹è±¡
     		MimeMultipart mimeMultipart=new MimeMultipart();
-    		// Ìí¼ÓÕıÎÄÄÚÈİ
-    		// Ìí¼ÓÕıÎÄÄÚÈİ
+    		// æ·»åŠ æ­£æ–‡å†…å®¹
     		mimeMultipart.addBodyPart(mimeBodyPart);
     		mimeMultipart.addBodyPart(mimeBodyPart2);
-    		// ÉèÖÃÄÚÈİ
+    		// è®¾ç½®å†…å®¹
     		msg.setContent(mimeMultipart);
             msg.saveChanges();
             transport.sendMessage(msg, msg.getAllRecipients());

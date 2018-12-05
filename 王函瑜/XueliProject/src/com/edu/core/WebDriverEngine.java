@@ -27,7 +27,7 @@ import org.testng.annotations.Test;
 
 /**
  * author:lihuanzhen
- * 页面对象操作�?
+ * 页面对象操作类
  */
 public class WebDriverEngine {
 
@@ -266,7 +266,11 @@ public class WebDriverEngine {
 		j.executeScript(js);
 	}
 
-
+	public void runJs(String js,String locator) {
+		JavascriptExecutor j = (JavascriptExecutor) driver;
+		j.executeScript(js,finder.findElement(locator));
+	}
+	
 	public void mouseoverElement(String locator) throws InterruptedException {
 		Actions action = new Actions(driver);
 		action.moveToElement(finder.findElement(locator)).perform();
@@ -324,7 +328,28 @@ public class WebDriverEngine {
 		return driver.getPageSource().contains(content);
 	}
 	
+	public void mouseLong() throws InterruptedException {
 
+		action.clickAndHold().moveByOffset(20, 20).release().perform();
+	}
+	
+//!	
+	//判断是否打开
+	public boolean panduan(String locator) {
+
+		WebElement element = finder.findElement(locator);
+
+		String str=element.getText();
+
+		if(str.equals("首页"))
+
+			return true;
+
+		else
+
+			return false;
+
+	}
 	
 	
 	

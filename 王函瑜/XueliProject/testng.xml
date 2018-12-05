@@ -19,7 +19,7 @@
          </class> 
           <class name="com.edu.test.Work_Submit_Test">
           <method>
-              <include name="change_txtAll"></include>
+              <include name="change_txt"></include>
           </method>
          </class>
       </classes>

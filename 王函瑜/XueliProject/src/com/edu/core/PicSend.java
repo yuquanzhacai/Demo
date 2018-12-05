@@ -1,6 +1,9 @@
 package com.edu.core;
 
-
+/*
+ * author：wanghanyu
+ * 对失败截屏文件夹进行压缩
+ */
 
 public class PicSend {
     public static String getTime()

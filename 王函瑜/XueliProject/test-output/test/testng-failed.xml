@@ -7,16 +7,14 @@
   </listeners>
   <test thread-count="5" parallel="tests" name="test(failed)">
     <classes>
-      <class name="com.edu.test.Own_Message_Test">
+      <class name="com.edu.test.Work_Submit_Test">
         <methods>
           <include name="doAfterMethod"/>
-          <include name="exit"/>
+          <include name="change_txtAll"/>
           <include name="doBeforeSuite"/>
-          <include name="own_Message"/>
-          <include name="own_Beg"/>
           <include name="before_Login"/>
         </methods>
-      </class> <!-- com.edu.test.Own_Message_Test -->
+      </class> <!-- com.edu.test.Work_Submit_Test -->
     </classes>
   </test> <!-- test(failed) -->
 </suite> <!-- Failed suite [test] -->

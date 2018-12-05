@@ -13,7 +13,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 /**
  * author:lihaunzhen
- * ½ØÆÁÀà
+ * æˆªå±ç±»
  */
 public class SeleniumScreenShot {
     public WebDriver driver;

@@ -6,8 +6,8 @@
       <class name="com.edu.test.Own_Message_Test">
         <methods>
           <include name="doAfterMethod"/>
+          <include name="exit"/>
           <include name="doBeforeSuite"/>
-          <include name="own_Message"/>
           <include name="own_Beg"/>
           <include name="before_Login"/>
         </methods>
