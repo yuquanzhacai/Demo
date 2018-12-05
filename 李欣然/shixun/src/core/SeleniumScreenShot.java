@@ -26,7 +26,7 @@ public class SeleniumScreenShot {
 		File s_file=((TakesScreenshot)driver).
 				getScreenshotAs(OutputType.FILE);
 		try {
-			FileUtils.copyFile(s_file, new File("D:\\demo\\"+nowDateTime+".jpg"));
+			FileUtils.copyFile(s_file, new File("F:\\jieping\\"+nowDateTime+".jpg"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

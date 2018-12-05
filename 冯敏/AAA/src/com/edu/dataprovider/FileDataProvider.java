@@ -27,10 +27,10 @@ public class FileDataProvider {
 		try {
 			fis = new FileInputStream(file);
 			isreader = new InputStreamReader(fis, "UTF-8");
-			// 设定utf-8,使用带缓冲区的字符输入流BufferedReader读取文件内容
+			// 锟借定utf-8,使锟矫达拷锟斤拷锟斤拷锟斤拷锟斤拷锟街凤拷锟斤拷锟斤拷锟斤拷BufferedReader锟斤拷取锟侥硷拷锟斤拷锟斤拷
 			breader = new BufferedReader(isreader);
 			int cols = 0;
-			// 忽略第一行
+			// 锟斤拷锟皆碉拷一锟斤拷
 			record = breader.readLine();
 			if (null == record) {
 				return null;
@@ -38,7 +38,6 @@ public class FileDataProvider {
 				cols = record.split("\t").length;
 			}
 			List<String> datalist = new ArrayList<String>();
-			// 遍历读取文件除第一行外的所有内容，储存在名为datalist的ArrayList中
 			while ((record = breader.readLine()) != null) {
 				datalist.add(record);
 			}

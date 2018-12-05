@@ -37,10 +37,9 @@
         <fileset dir="${lib.dir}" includes="*.jar" />
     </path>
     <target name="transform" >
-        <!-- 需要根据自己的环境进行配置（将E:/workspace/testNG/替换成你自己project的目录） -->
         <xslt in="D:/JS/另外一个/eg/xuelilogin/test-output/testng-results.xml" style="D:/JS/另外一个/eg/xuelilogin/test-output/testng-results.xsl"
-  out="D:/JS/另外一个/eg/xuelilogin/test-output/index1.html" >
-             <!-- 需要根据自己的环境进行配置（将E:/workspace/testNG/替换成你自己project的目录） -->
+  		out="D:/JS/另外一个/eg/xuelilogin/test-output/index1.html" >
+             
             <param name="testNgXslt.outputDir" expression="D:/JS/另外一个/eg/xuelilogin/test-output/" />
             <classpath refid="test.classpath" />
         </xslt>

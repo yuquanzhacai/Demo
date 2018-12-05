@@ -2,28 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2018-11-26T09:53:04Z" name="Default suite" finished-at="2018-11-26T09:53:32Z" duration-ms="27962">
+  <suite started-at="2018-12-03T06:46:14Z" name="Default suite" finished-at="2018-12-03T06:46:29Z" duration-ms="14980">
     <groups>
     </groups>
-    <test started-at="2018-11-26T09:53:04Z" name="Default test" finished-at="2018-11-26T09:53:32Z" duration-ms="27962">
-      <class name="demo.test">
-        <test-method is-config="true" signature="doBeforeSuite()[pri:0, instance:demo.test@21e360a]" started-at="2018-11-26T09:52:56Z" name="doBeforeSuite" finished-at="2018-11-26T09:53:04Z" duration-ms="8240" status="PASS">
+    <test started-at="2018-12-03T06:46:14Z" name="Default test" finished-at="2018-12-03T06:46:29Z" duration-ms="14980">
+      <class name="tijiao.xiugai">
+        <test-method signature="dingwei()[pri:0, instance:tijiao.xiugai@611889f4]" started-at="2018-12-03T06:46:14Z" name="dingwei" finished-at="2018-12-03T06:46:29Z" duration-ms="14953" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- doBeforeSuite -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:demo.test@21e360a]" started-at="2018-11-26T09:53:04Z" name="setup" finished-at="2018-11-26T09:53:04Z" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="test1()[pri:0, instance:demo.test@21e360a]" started-at="2018-11-26T09:53:04Z" name="test1" finished-at="2018-11-26T09:53:32Z" duration-ms="27930" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test1 -->
-        <test-method is-config="true" signature="doAfterMethod()[pri:0, instance:demo.test@21e360a]" started-at="2018-11-26T09:53:32Z" name="doAfterMethod" finished-at="2018-11-26T09:53:33Z" duration-ms="971" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- doAfterMethod -->
-      </class> <!-- demo.test -->
+        </test-method> <!-- dingwei -->
+      </class> <!-- tijiao.xiugai -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

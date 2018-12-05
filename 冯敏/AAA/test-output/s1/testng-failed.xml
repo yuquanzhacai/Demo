@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [s1]">
+<suite name="Failed suite [s1]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="com.webtest.core.WebTestListener"/>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
   </listeners>
   <test thread-count="5" name="test1(failed)">
     <classes>
-      <class name="com.webtest.demo.Front_Login_Test">
+      <class name="aaacom.AddRenwu">
         <methods>
-          <include name="testLogin"/>
           <include name="doBeforeSuite"/>
-          <include name="setup"/>
+          <include name="addListener"/>
+          <include name="addRenwu"/>
         </methods>
-      </class> <!-- com.webtest.demo.Front_Login_Test -->
+      </class> <!-- aaacom.AddRenwu -->
     </classes>
   </test> <!-- test1(failed) -->
 </suite> <!-- Failed suite [s1] -->
