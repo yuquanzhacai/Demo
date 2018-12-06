@@ -26,6 +26,8 @@ import org.testng.annotations.BeforeSuite;
 import com.webtest.utils.Log;
 import com.webtest.utils.ReadProperties;
 
+import aaacom.WebTestListener;
+
 /**
  * author:lihuanzhen
  * ��ʼ�������
@@ -35,7 +37,7 @@ import com.webtest.utils.ReadProperties;
 public class BaseTest {
 
 	public  WebDriverEngine webtest;
-	private WebDriver driver;
+	protected WebDriver driver;
 	public String driverType;
 
 	
@@ -71,8 +73,8 @@ public class BaseTest {
 	@BeforeSuite
 	public void addListener(ITestContext context)
 			throws Exception {
-		TestRunner runner = (TestRunner) context;
-	    runner.addListener(new WebTestListener());
+//		TestRunner runner = (TestRunner) context;
+//	    runner.addListener(new WebTestListener());
 	   
 	}
 

@@ -25,10 +25,11 @@
     	    <!--<testng outputdir="${testng.report.dir}" classpathref="classes" > 
     	  	 <xmlfileset dir="." includes="testng.xml"/>
     	  	</testng>-->
-    	<testng classpathref="runpath" outputDir="test-output">
-    	  haltonfailure="true"
+    	<!--<testng classpathref="runpath" outputDir="test-output">-->
+    	<testng outputdir="${testng.report.dir}" classpathref="classes" > 
+    	  <!--haltonfailure="true"
     		useDefaultListeners="false"
-    		listeners="org.uncommons.reportng.HTMLReporter,org.testng.reportersFailedReporter"
+    		listeners="org.uncommons.reportng.HTMLReporter,org.testng.reportersFailedReporter"-->
     		<xmlfileset dir="." includes="testng.xml"/>
     		<jvmarg value="-Dfile.encoding=utf-8"/>
     		<sysproperty key="org.uncommons.reportng.title" value="AutoMation TestReport"/>
