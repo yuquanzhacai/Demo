@@ -10,7 +10,7 @@ public class Login_Action {
 	  
 	  public void login(String username,String password) 
 	  {
-	
+
 			webtest.click("link=µÇÂ¼");
 			webtest.type("name=username", username);
 			webtest.type("name=password", password);
