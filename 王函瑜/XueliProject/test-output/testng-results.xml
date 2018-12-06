@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2018-12-05T08:18:37Z" name="Default suite" finished-at="2018-12-05T08:19:32Z" duration-ms="54265">
+    <groups>
+    </groups>
+    <test started-at="2018-12-05T08:18:37Z" name="Default test" finished-at="2018-12-05T08:19:32Z" duration-ms="54265">
+      <class name="com.edu.tec_test.Login">
+        <test-method is-config="true" signature="doBeforeSuite()[pri:0, instance:com.edu.tec_test.Login@209da20d]" started-at="2018-12-05T08:18:37Z" name="doBeforeSuite" finished-at="2018-12-05T08:18:46Z" duration-ms="8319" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doBeforeSuite -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.edu.tec_test.Login@209da20d]" started-at="2018-12-05T08:18:46Z" name="setup" finished-at="2018-12-05T08:18:59Z" duration-ms="13060" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="create_class()[pri:0, instance:com.edu.tec_test.Login@209da20d]" started-at="2018-12-05T08:18:59Z" name="create_class" description="���Դ���ͬ���γɹ�����" finished-at="2018-12-05T08:19:30Z" duration-ms="31616" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- create_class -->
+        <test-method is-config="true" signature="doAfterMethod()[pri:0, instance:com.edu.tec_test.Login@209da20d]" started-at="2018-12-05T08:19:30Z" name="doAfterMethod" finished-at="2018-12-05T08:19:32Z" duration-ms="1176" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doAfterMethod -->
+      </class> <!-- com.edu.tec_test.Login -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

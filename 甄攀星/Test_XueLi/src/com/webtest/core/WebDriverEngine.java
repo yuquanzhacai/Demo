@@ -253,8 +253,6 @@ public class WebDriverEngine {
 		JavascriptExecutor j = (JavascriptExecutor) driver;
 		j.executeScript(js);
 	}
-
-
 	public void mouseoverElement(String locator) throws InterruptedException {
 		Actions action = new Actions(driver);
 		action.moveToElement(finder.findElement(locator)).perform();
@@ -297,8 +295,64 @@ public class WebDriverEngine {
 		return driver.getPageSource().contains(content);
 	}
 	
+	public void type(String locator,String s,String s2,String value)
+	{
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		WebElement element=finder.findElement(locator);
+		js.executeScript("arguments[0].setAttribute(arguments[1],arguments[2])", element,s,s2);
+		if(element!=null)
+		{
+			element.sendKeys(value);
+		}
+	}
+	public void mouseLong() throws InterruptedException {
 
-	
-	
-	
+		action.clickAndHold().moveByOffset(20, 20).release().perform();
+
+	}
+	//判断是否打开
+	public boolean panduan(String locator) {
+
+		WebElement element = finder.findElement(locator);
+
+		String str=element.getText();
+
+		if(str.equals("首页"))
+
+			return true;
+
+		else
+
+			return false;
+
+	}
+
+////*	//鼠标悬浮
+
+	public void mouseFloat(String locator) {
+
+		WebElement element = finder.findElement(locator);
+
+		if(element!=null) {
+
+			  action.moveToElement(element).perform();
+
+		      this.pause(3000);
+
+	    }
+
+	}
+
+	public void click() {
+	action.click();
+	}
+		
+	public void runJs(String js,String locator) {
+
+		JavascriptExecutor j = (JavascriptExecutor) driver;
+
+		j.executeScript(js,finder.findElement(locator));
+
+	}
+
 }

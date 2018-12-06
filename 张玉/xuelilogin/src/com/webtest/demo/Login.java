@@ -24,6 +24,7 @@ import org.testng.annotations.Test;
 
 import com.webtest.core.BaseTest;
 import com.webtest.core.WebTestListener;
+import com.webtest.dataprovider.NSDataProvider;
 
 
 //截屏监听器：经测试可运行
@@ -37,9 +38,7 @@ public class Login extends BaseTest{
 		action=new Login_Action(webtest);
 	}
 
-	//设置txt所在路径
-	 private static final String fileName="data\\name.txt";
-	@Test(dataProvider="data")
+	 @Test(dataProvider="txt",dataProviderClass=NSDataProvider.class)
 	//在txt驱动下输入正确的用户名和密码登录
 	public void loginSuccess(String s1,String s2) throws Exception  {
 		webtest.open("http://10.7.10.7/");
@@ -83,48 +82,39 @@ public class Login extends BaseTest{
 				
 	}
 	
-	
-	
-	
-	
-	//以下为参数化所需
-	@DataProvider(name="data")
-	public static Object[][] getData() throws IOException{
-		return getTestData(fileName);
+	@Test(dataProvider="excel",dataProviderClass=NSDataProvider.class)
+	//使用excel进行数据驱动 
+	public void loginfail2(String s1,String s2) throws InterruptedException {
+		webtest.open("http://10.7.10.7/");
+		action.login(s1, s2);
+				
+		boolean str=webtest.panduan("xpath=html/body/header/nav/div[2]/ul/li[1]/a");
+		if(str==true) {
+			webtest.mouseLong();
+			webtest.mouseoverElement("xpath=//a[@class='avatar']");
+			webtest.click("link=退出");
+		}else {
+			System.out.println("未能成功登录");
+		}
 	}
-	//获取txt内容
-	public static Object[][] getTestData(String filepath) throws IOException{
-		BufferedReader br=new BufferedReader(new InputStreamReader(new FileInputStream(filepath), "GBK"));
-		
-		 String s=null;
-
-	       List<Object[]> listData=new ArrayList<Object[]>();
-
-	       while ((s=br.readLine())!=null) {
-
-	         listData.add(s.split(","));
-
-	         System.out.println(s.split(",")[0].toString());
-
-	      }
-
-	       br.close();
-
-	       Object[][]results=new Object[listData.size()][];
-
-	       for(int i=0;i<listData.size();i++)
-
-	       {
-
-	          results[i]=listData.get(i);
-
-	          System.out.println(results[i][0].toString());
-
-	       }
-
-	       return results;
-		
-	}
-
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

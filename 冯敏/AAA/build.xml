@@ -18,12 +18,22 @@
     <!-- 编译 src目录 -->
     <target name="compile"  depends ="clean">
         <mkdir dir ="${dest}"/>
-    	  <javac srcdir="src" destdir="${dest}"  classpathref="classes" includeantruntime="on" encoding='UTF-8'/>
+    	  <javac srcdir="src" destdir="${dest}"  classpathref="classes" includeantruntime="on" encoding='utf-8'/>
     </target>
     <!-- 运行 -->
     <target name="run"  depends ="compile">
-    	    <testng outputdir="${testng.report.dir}" classpathref="classes" > 
+    	    <!--<testng outputdir="${testng.report.dir}" classpathref="classes" > 
     	  	 <xmlfileset dir="." includes="testng.xml"/>
-    	  	</testng>
+    	  	</testng>-->
+    	<testng classpathref="runpath" outputDir="test-output">
+    	  haltonfailure="true"
+    		useDefaultListeners="false"
+    		listeners="org.uncommons.reportng.HTMLReporter,org.testng.reportersFailedReporter"
+    		<xmlfileset dir="." includes="testng.xml"/>
+    		<jvmarg value="-Dfile.encoding=utf-8"/>
+    		<sysproperty key="org.uncommons.reportng.title" value="AutoMation TestReport"/>
+    	</testng>
     </target>
+	
+	
 </project>

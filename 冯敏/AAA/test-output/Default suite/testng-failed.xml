@@ -6,8 +6,8 @@
       <class name="aaacom.AddRenwu">
         <methods>
           <include name="doBeforeSuite"/>
+          <include name="addListener"/>
           <include name="addRenwu"/>
-          <include name="cc"/>
         </methods>
       </class> <!-- aaacom.AddRenwu -->
     </classes>

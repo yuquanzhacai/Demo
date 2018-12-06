@@ -15,6 +15,8 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.ITestContext;
+import org.testng.TestRunner;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
@@ -66,7 +68,14 @@ public class BaseTest {
 	}
 
 
-	
+	@BeforeSuite
+	public void addListener(ITestContext context)
+			throws Exception {
+		TestRunner runner = (TestRunner) context;
+	    runner.addListener(new WebTestListener());
+	   
+	}
+
 
 
 	@BeforeClass
@@ -83,7 +92,7 @@ public class BaseTest {
 	}
 
 
-//	@AfterClasss
+//	@AfterClass
 //	public void doAfterMethod() {
 //		if(this.driver != null){
 //			this.driver.quit();

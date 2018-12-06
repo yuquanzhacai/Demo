@@ -23,9 +23,16 @@ public class CreateClass {
 		driver.findElement(By.xpath("//input[@id='id_username']")).sendKeys("2784038315@qq.com");
 		driver.findElement(By.xpath("//input[@id='id_password']")).sendKeys("Zhen0820");
 		driver.findElement(By.xpath("//button[@id='submit']")).click();
-		driver.findElement(By.xpath("//i[contains(@class,'icon icon-plus')]")).click();
-		driver.findElement(By.xpath("//input[@id='id_name']")).sendKeys("中国近代史");
-		driver.findElement(By.xpath("//input[@type='file']")).sendKeys("C:\\Users\\zhen\\Desktop\\timg.jpg");
+		//修改之前点击创建同步课
+//		driver.findElement(By.xpath("//i[contains(@class,'icon icon-plus')]")).click();
+		//修改之后点击创建同步课
+		driver.findElement(By.className("create-button")).click();
+		
+		driver.findElement(By.xpath("//input[@id='id_name']")).sendKeys("中文");
+		//修改前上传图片
+//		driver.findElement(By.xpath("//input[@type='file']")).sendKeys("C:\\Users\\zhen\\Desktop\\timg.jpg");
+		//修改后上传图片
+		driver.findElement(By.name("icon")).sendKeys("C:\\Users\\zhen\\Desktop\\timg.jpg");
 		driver.findElement(By.xpath("//input[@id='id_check_type_0']")).click();
 		driver.findElement(By.className("ke-edit-iframe")).sendKeys("中国近代史");
 		driver.findElement(By.xpath("//input[contains(@id,'0')]")).click();

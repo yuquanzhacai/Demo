@@ -29,16 +29,16 @@ public class TestNGDataProvider {
 	public void frontendLogin(String u_name,String u_pwd) throws InterruptedException {
 		
 		driver.get("http://localhost:8032/mymovie/");
-		if(driver.getPageSource().contains("ÍË³ö")) {
-			driver.findElement(By.linkText("ÍË³ö")).click();
+		if(driver.getPageSource().contains("é€€å‡º")) {
+			driver.findElement(By.linkText("é€€å‡º")).click();
 			Thread.sleep(3000);
 		}
-		driver.findElement(By.linkText("µÇÂ¼")).click();
+		driver.findElement(By.linkText("ç™»å½•")).click();
 		Thread.sleep(3000);
 		driver.findElement(By.name("username")).sendKeys(u_name);
 		driver.findElement(By.name("password")).sendKeys(u_pwd);
 //		driver.findElement(By.xpath("//input[@type='submit'][2]")).click();
-		driver.findElement(By.xpath("//input[@value='ÂíÉÏµÇÂ¼']")).click();
+		driver.findElement(By.xpath("//input[@value='æäº¤']")).click();
 		Thread.sleep(6000);
 		Assert.assertTrue(driver.getPageSource().contains(u_name));
 		

@@ -8,7 +8,6 @@ public class Log {
 
 	public static void startTestCase() {
 		logger.info("----------------------");
-
 	}
 
 	public static void endTestCase() {
