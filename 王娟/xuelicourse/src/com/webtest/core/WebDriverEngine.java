@@ -144,7 +144,7 @@ public class WebDriverEngine {
 		WebElement element = finder.findElement(locator);
 		if (element != null) {
 			element.click();
-			this.pause(3000);
+			this.pause(1000);
 		}
 	}
 
@@ -154,7 +154,7 @@ public class WebDriverEngine {
 		if (element != null) {
 			runJs("window.scrollTo(0," + element.getLocation().x + ")");
 			element.click();
-			this.pause(3000);
+			this.pause(1000);
 		}
 	}
 

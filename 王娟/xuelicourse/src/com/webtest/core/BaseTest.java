@@ -41,7 +41,7 @@ public class BaseTest {
 	
 	
 
-	private WebDriver newWebDriver(String driverType) throws IOException {
+	protected WebDriver newWebDriver(String driverType) throws IOException {
 		WebDriver driver = null;
 	 if (driverType.equalsIgnoreCase("firefox")) {
 		    String firefox_driver =ReadProperties.getPropertyValue("gecko_driver");
@@ -73,21 +73,21 @@ public class BaseTest {
 		TestRunner runner = (TestRunner) context;
 	    runner.addListener(new WebTestListener());
 
-//		driverType=ReadProperties.getPropertyValue("driverType");
-//		driver = this.newWebDriver(driverType);
-//		driver.manage().window().maximize();
-//		Log.info(driverType);
-//		webtest = new WebDriverEngine(driver);
+		driverType=ReadProperties.getPropertyValue("driverType");
+		driver = this.newWebDriver(driverType);
+		driver.manage().window().maximize();
+		Log.info(driverType);
+		webtest = new WebDriverEngine(driver);
 		   
 		}
 	
-//	@AfterSuite
-//	public void doAfterMethod() {
-//		if(this.driver != null){
-//			this.driver.quit();
-//			}
-//		Log.info("Quitted Browser");
-//	}
+	@AfterSuite
+	public void doAfterMethod() {
+		if(this.driver != null){
+			this.driver.quit();
+			}
+		Log.info("Quitted Browser");
+	}
 	
 
 	

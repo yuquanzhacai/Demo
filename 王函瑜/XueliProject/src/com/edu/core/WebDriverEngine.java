@@ -334,7 +334,7 @@ public class WebDriverEngine {
 	}
 	
 //!	
-	//判断是否打开
+	//判断是否登录成功
 	public boolean panduan(String locator) {
 
 		WebElement element = finder.findElement(locator);

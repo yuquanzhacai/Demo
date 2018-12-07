@@ -78,8 +78,6 @@ public class BaseTest {
 		Log.info(driverType);
 		webtest = new WebDriverEngine(driver);
 	
-	
-	
 	}
 
 
