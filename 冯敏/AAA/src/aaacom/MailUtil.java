@@ -23,8 +23,8 @@ public class MailUtil {
 
     static String from = "冯敏";
 
-    static String user = "2680326511@qq.com";
-    static String password = "ywroakeqycskdjdg";
+    static String user = "fm2680326511@qq.com";
+    static String password = "fengmin123";
 
     
 
@@ -67,7 +67,7 @@ public class MailUtil {
     public static void main(String args[]) throws UnsupportedEncodingException
     {
     	
-    	MailUtil.sendEmail("test2014123@126.com", "ceshi", "ce");
+    	MailUtil.sendEmail("2680326511@qq.com", "ceshi", "ce");
 //		if(System.getProperty("os.name").contains("w"))
 //		{
 //			System.out.println(System.getProperty("os.name"));

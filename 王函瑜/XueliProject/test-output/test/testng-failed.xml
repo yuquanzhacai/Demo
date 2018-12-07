@@ -10,9 +10,9 @@
       <class name="com.edu.test.Work_Submit_Test">
         <methods>
           <include name="doAfterMethod"/>
-          <include name="change_txtAll"/>
           <include name="doBeforeSuite"/>
           <include name="before_Login"/>
+          <include name="code_file_txt"/>
         </methods>
       </class> <!-- com.edu.test.Work_Submit_Test -->
     </classes>

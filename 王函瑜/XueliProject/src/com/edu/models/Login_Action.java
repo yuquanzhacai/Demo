@@ -10,7 +10,6 @@ public class Login_Action {
 	  
 	  public void login(String email,String password) 
 	  {
-		  
 			//打开网页
 			webtest.open("http://10.7.10.7/login");
 			webtest.type("name=username", email);

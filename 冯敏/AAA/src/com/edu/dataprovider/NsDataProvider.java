@@ -9,7 +9,7 @@ public class NsDataProvider {
 	
 	@DataProvider(name="txt")
 	public  Object[][] getTxtData() throws IOException{
-		return new  TxtDataProvider().getTxtUser(".\\data\\user.cvs");
+		return new  TxtDataProvider().getTxtUser(".\\data\\user.txt");
 	}
 	@DataProvider(name="teacher")
 	public  Object[][] getTeacherData() throws IOException{

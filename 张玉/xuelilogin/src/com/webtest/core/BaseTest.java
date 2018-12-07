@@ -62,7 +62,7 @@ public class BaseTest {
 			System.setProperty("webdriver.gecko.driver", firefox_driver);
 			System.setProperty("webdriver.firefox.bin", firefox_path);
 			driver = new FirefoxDriver();
-	
+
 			Log.info("Using Firefox");
 		}  else if (driverType.equalsIgnoreCase("chrome")) {
 			String chrome_path = ReadProperties.getPropertyValue("chrome_path");

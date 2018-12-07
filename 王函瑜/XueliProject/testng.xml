@@ -9,18 +9,13 @@
    </listeners>
   
    <test name="test" preserver-order="true">
-       <classes>    
-       <class name="com.edu.test.Own_Message_Test">
-           <method>
-              <include name="own_Message"></include>
-              <include name="edit_Message"></include>
-              <include name="exit"></include>
-           </method>
-         </class> 
-          <class name="com.edu.test.Work_Submit_Test">
-          <method>
-              <include name="change_txt"></include>
-          </method>
+      <classes>
+           <class name="com.edu.test.Work_Submit_Test">
+            <method>
+              <include name="code_file_txt"></include>  
+              <include name="change_Work"></include>  
+              <include name="look_work"></include>               
+            </method>
          </class>
       </classes>
    </test>

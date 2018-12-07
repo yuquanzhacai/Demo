@@ -19,7 +19,7 @@ public class Login {
 		this.webtest=webtest;			
 	}
 	public void login(String username,String password) {
-		webtest.type("id=id_usename", username);
+		webtest.type("id=id_username", username);
 		webtest.type("id=id_password", password);
 		webtest.click("xpath=//button[@id='submit']");
 	}
