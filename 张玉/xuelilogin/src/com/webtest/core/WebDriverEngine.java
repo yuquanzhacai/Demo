@@ -161,7 +161,21 @@ public class WebDriverEngine {
 		else
 			return false;
 	}
-	
+	//判断是否搜索成功
+		public String panduan2(String locator) {
+			WebElement element = finder.findElement(locator);
+			String str=element.getText();
+			return str;
+		}
+	//判断是否存在某要素
+		public boolean panduan3(String locator) {
+			WebElement element = finder.findElement(locator);
+			String str=element.getText();
+			if(str.contains("大学"))
+				return true;
+			else
+				return false;
+		}
 
 	public void doubleClick(String locator) throws InterruptedException {
 		WebElement element = finder.findElement(locator);
@@ -268,7 +282,7 @@ public class WebDriverEngine {
 	public void mouseLong() throws InterruptedException {
 		action.clickAndHold().moveByOffset(20, 20).release().perform();
 	}
-	
+
 	
 	//鍒囨崲绐楀彛
 	public void switchWidow(int i){
