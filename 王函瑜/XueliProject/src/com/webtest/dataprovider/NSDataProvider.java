@@ -10,12 +10,12 @@ public class NSDataProvider {
 	
 	@DataProvider(name="txt")
 	public  Object[][] getTxtData() throws IOException{
-		return new  TxtDataProvider().getTxtUser("data/receiver.txt");
+		return new  TxtDataProvider().getTxtUser("data/name.txt");
 	}
 
-	@DataProvider(name="address")
+	@DataProvider(name="excel")
 	public Object[][] getExcelDada() throws IOException{
-		return new ExcelDataProvider().getTestDataByExcel("data/receiver.xlsx","Sheet1");
+		return new ExcelDataProvider().getTestDataByExcel("data/user.xlsx","Sheet1");
 	}
 	
 	@DataProvider(name="mysql")
