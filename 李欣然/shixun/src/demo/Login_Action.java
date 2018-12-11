@@ -1,6 +1,7 @@
 package demo;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 import core.WebDriverEngine;
 
@@ -23,6 +24,15 @@ public class Login_Action {
 	  }
 	  public void tijiaozuoye(String txt) throws InterruptedException {
 		    webtest.click("xpath=//i[@class='icon icon-edit']");
+	    	webtest.click("xpath=//html[contains(@lang,'zh-cn')]");
+	    	webtest.click("class=cke_toolbar");
+	    	webtest.click("class=cke_wysiwyg_frame");
+	    	webtest.type("tag=body", txt);
+	    	Thread.sleep(3000);
+	    	webtest.click("xpath=//button[@class='btn btn-primary btn-sm td-preview']");
+	    	webtest.click("xpath=//button[@class='btn btn-primary td-submit']");
+	    }
+	  public void tijiaozuoye1(String txt) throws InterruptedException {
 	    	webtest.click("xpath=//html[contains(@lang,'zh-cn')]");
 	    	webtest.click("class=cke_toolbar");
 	    	webtest.click("class=cke_wysiwyg_frame");
@@ -74,8 +84,9 @@ public class Login_Action {
 		  webtest.click("xpath=//a[@href='/task/list/finished/']");
 		  webtest.click("xpath=//i[@class='icon icon-file-text']");
 		  Thread.sleep(3000);
-		  webtest.click("class=cke_toolbar");
-		  webtest.click("class=cke_wysiwyg_frame");
+		webtest.click("class=cke_combo_button");
+		  Thread.sleep(3000);
+		  webtest.ENTERClick();
 		  webtest.ENTERClick();
 		  Thread.sleep(3000);
 		  webtest.click("xpath=//label[contains(.,'代码内容')]");
@@ -84,4 +95,48 @@ public class Login_Action {
 		  webtest.click("xpath=//button[contains(@class,'btn btn-primary btn-sm td-preview')]");
 		  webtest.click("xpath=//button[contains(.,'确认提交')]");
 	  }
+	  /*fenjiexiiaoghowghfsjkdslkfjalkdjflakjfawefpwgiaejglksgjadkljgalkgjlakjglaijgiaowejgwaijfpwejfpe*/
+	  public void pinglun(String pl) throws InterruptedException {
+			 webtest.click("xpath=//a[contains(@href,'/u/gossip/')]");
+			  Thread.sleep(3000);
+			  webtest.click("class=ke-edit-iframe");
+			  webtest.type("tag=body", pl);
+			  Thread.sleep(3000);
+			 webtest.click("xpath=//button[@class='btn btn-sm btn-primary pull-right']");
+			  }
+		  
+	  public void pinglundaima(String code) throws InterruptedException {
+			 webtest.click("xpath=//a[contains(@href,'/u/gossip/')]");
+			  Thread.sleep(3000);
+			  webtest.click("class=ke-icon-code");
+			  webtest.click("xpath=//option[@value='java']");
+			  webtest.click("xpath=//textarea[@class='ke-textarea']");
+			  webtest.type("class=ke-textarea", code);
+			  webtest.click("xpath=//input[@value='确定']");
+			  Thread.sleep(3000);
+			  webtest.click("xpath=//button[@class='btn btn-sm btn-primary pull-right']");
+			  }
+	  public void pingluntupian(String add) throws InterruptedException {
+			 webtest.click("xpath=//a[contains(@href,'/u/gossip/')]");
+			  Thread.sleep(3000);
+			  webtest.click("class=ke-icon-image");
+			  webtest.click("xpath=//*[@class='ke-tabs']/ul/li[2]");
+			  webtest.type("xpath=//input[@name='imgFile']", add);
+			  webtest.click("xpath=//input[@value='确定']");
+			  webtest.click("xpath=//button[contains(.,'发布')]");
+	  }
+	  public void fachengwen(String add,String title,String body) throws InterruptedException {
+			 webtest.click("xpath=//a[contains(@href,'/u/gossip/')]");
+			  Thread.sleep(3000);
+			  webtest.click("xpath=//a[@class='gossip-create-article']");
+			  webtest.getAllWindowTitles();
+			  boolean t = webtest.ifContains("发布长文");
+			  webtest.switchWidow(1);
+			  webtest.type("xpath=//input[@accept='image/*']", "style", "display:block", add);
+			  webtest.type("xpath=//input[@maxlength='32']", title);
+			  webtest.click("id=cke_6_text");
+			  webtest.click("class=cke_wysiwyg_frame");
+			  webtest.type("tag=body",body);
+			  webtest.click("xpath=//input[@type='submit']");
+			  }
 }
