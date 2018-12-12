@@ -66,12 +66,12 @@ public class WebDriverEngine {
 	}
 
 	public void enterFrame(String frameID) {
-		this.pause(3000);
+		this.pause(1000);
 		driver.switchTo().frame(frameID);
 		Log.info("Entered iframe " + frameID);
 	}
 	public void enterFrame(int frameID) {
-		this.pause(3000);
+		this.pause(1000);
 		driver.switchTo().frame(frameID);
 		Log.info("Entered iframe " + frameID);
 	}
@@ -85,7 +85,7 @@ public class WebDriverEngine {
 
 		try {
 			driver.get(url);
-			pause(3000);
+			pause(1000);
 		} catch (Exception e) {
 			e.printStackTrace();
 
@@ -224,7 +224,7 @@ public class WebDriverEngine {
 
 	public void selectByValue(String locator, String value) {
 		getSelect(locator).selectByValue(value);
-		this.pause(5000);
+		this.pause(1000);
 	}
 
 	public void selectByVisibleText(String locator, String value) {
