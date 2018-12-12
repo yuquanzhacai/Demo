@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="测试" parallel="tests">
+
+   <listeners>
+       <listener class-name="com.edu.core.WebTestListener" />
+       <listener class-name="com.edu.core.WebTestListener2" />
+       <listener class-name="org.uncommons.reportng.HTMLReporter" />
+	   <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+       
+   </listeners>
+
+   <test name="个人信息设置" preserve-order="true" >
+      <classes>
+          <class name="com.edu.test.Own_Message_Test">
+           <methods>             
+             <include name="own_Message"></include>
+             <include name="edit_Message"></include>
+             <include name="edit_PasswordFailed"></include>
+             <include name="edit_PasswordFailed2"></include>
+             <include name="edit_PasswordFailed3"></include>
+             <include name="exit"></include>
+             
+ 
+           </methods>
+          </class> 
+      </classes>
+   </test>
+ 
+</suite> <!-- Suite -->

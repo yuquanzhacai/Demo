@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [test]">
+  <listeners>
+    <listener class-name="com.edu.core.WebTestListener2"/>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="test(failed)">
+    <classes>
+      <class name="com.edu.test.TestA">
+        <methods>
+          <include name="doAfterMethod"/>
+          <include name="setup"/>
+          <include name="doBeforeSuite"/>
+          <include name="loginfail"/>
+        </methods>
+      </class> <!-- com.edu.test.TestA -->
+    </classes>
+  </test> <!-- test(failed) -->
+</suite> <!-- Failed suite [test] -->
