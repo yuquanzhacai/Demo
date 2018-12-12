@@ -1,0 +1,14 @@
+eclipse.preferences.version=1
+encoding//conf/config.properties=UTF-8
+encoding//conf/reportTemplate.html=UTF-8
+encoding//src/com=UTF-8
+encoding//src/com/edu=UTF-8
+encoding//src/com/edu/core/WebDriverEngine.java=UTF-8
+encoding//src/com/edu/core/WebTestListener.java=UTF-8
+encoding//src/com/edu/core/ZipCompressor.java=UTF-8
+encoding//src/com/edu/teach_test/CreateClass_Test.java=UTF-8
+encoding//src/com/edu/tec_models/Login_Action.java=UTF-8
+encoding//src/com/edu/test=UTF-8
+encoding//src/com/webtest/dataprovider/ExcelDataProvider.java=UTF-8
+encoding//src/com/webtest/dataprovider/MysqlDataProvider.java=UTF-8
+encoding/<project>=UTF-8

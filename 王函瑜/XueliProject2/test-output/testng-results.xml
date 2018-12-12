@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2018-12-12T11:03:12Z" name="Default suite" finished-at="2018-12-12T11:03:33Z" duration-ms="21339">
+    <groups>
+    </groups>
+    <test started-at="2018-12-12T11:03:12Z" name="Default test" finished-at="2018-12-12T11:03:33Z" duration-ms="21339">
+      <class name="com.edu.test.Search_Test">
+        <test-method is-config="true" signature="doBeforeSuite()[pri:0, instance:com.edu.test.Search_Test@342c38f8]" started-at="2018-12-12T11:03:12Z" name="doBeforeSuite" finished-at="2018-12-12T11:03:19Z" duration-ms="7173" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doBeforeSuite -->
+        <test-method is-config="true" signature="before_Login()[pri:0, instance:com.edu.test.Search_Test@342c38f8]" started-at="2018-12-12T11:03:19Z" name="before_Login" finished-at="2018-12-12T11:03:28Z" duration-ms="9558" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before_Login -->
+        <test-method signature="search_null()[pri:0, instance:com.edu.test.Search_Test@342c38f8]" started-at="2018-12-12T11:03:29Z" name="search_null" finished-at="2018-12-12T11:03:32Z" duration-ms="3394" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- search_null -->
+        <test-method is-config="true" signature="doAfterMethod()[pri:0, instance:com.edu.test.Search_Test@342c38f8]" started-at="2018-12-12T11:03:32Z" name="doAfterMethod" finished-at="2018-12-12T11:03:33Z" duration-ms="1144" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doAfterMethod -->
+      </class> <!-- com.edu.test.Search_Test -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
