@@ -270,11 +270,11 @@ public class WebDriverEngine {
 	//Tab¼ü
 	public void tapClick(){
 	
-		action.sendKeys(Keys.TAB).perform();;
+		action.sendKeys(Keys.TAB).perform();
 	}
 	public void ENTERClick(){
 		
-		action.sendKeys(Keys.ENTER).perform();;
+		action.sendKeys(Keys.ENTER).perform();
 	}
 	public void tapType(String content){
 		
@@ -294,9 +294,16 @@ public class WebDriverEngine {
 	public boolean ifContains(String content) {
 		return driver.getPageSource().contains(content);
 	}
-	
+	public void type(String locator,String s,String s2,String value) {
+		  JavascriptExecutor js=(JavascriptExecutor)driver;
+		  WebElement element=finder.findElement(locator); 
+		  js.executeScript("arguments[0].setAttribute(arguments[1], arguments[2])",element,s,s2);	
+		  if (element != null) {
+				element.sendKeys(value);
+			}
+		}
 
-	
+
 	
 	
 }

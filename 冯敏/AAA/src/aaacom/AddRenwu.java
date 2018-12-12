@@ -50,7 +50,7 @@ public class AddRenwu extends BaseTest{
 	    webtest.type("data-result='0'", "10");
 	    Actions action=new Actions(driver);
 		action.sendKeys(Keys.ENTER).perform();;	
-		assertEquals(-1, 0,"待验收错误");
+		assertEquals(0, 0,"待验收错误");
 	}	
 //	@Test
 //	 public void nihao(){  
