@@ -99,9 +99,12 @@ public class WebTestListener extends TestListenerAdapter {
 			//return;
 		}
 		try {
-			if(ReadProperties.getPropertyValue("enable_email").equals("true"))
+			if(ReadProperties.getPropertyValue("enable_email").equals("true"))				 
 			{
-				String emailContent=this.writeResultToMailTemplate();
+//				List<ITestResult> fail=this.getFailedTests();
+				
+//				String emailContent="D:\\eclipse-workspace\\AAA\\test-output\\html\\index.html";
+				String emailContent=writeResultToMailTemplate();
 				String emailTitle=ReadProperties.getPropertyValue("mail_title")+"----"+this.getTime();
 				String toMail = null;
 				try {

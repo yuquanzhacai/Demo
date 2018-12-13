@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Nov 30 19:03:03 CST 2018</td>
+<td>Started on:</td><td>Wed Dec 12 21:38:25 CST 2018</td>
 </tr>
-<tr><td>Total time:</td><td>7 seconds (7857 ms)</td>
+<tr><td>Total time:</td><td>62 seconds (62841 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,21 +75,24 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='aaacom.AddRenwu.addRenwu()'><b>addRenwu</b><br>Test class: aaacom.AddRenwu<br>Test method: 发布任务</td>
-<td><div><pre>org.testng.TestNGException: 
-Cannot inject @Test annotated Method [addRenwu] with [class java.lang.String, class java.lang.String].
-For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
-... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace269244031", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace269244031'><pre>org.testng.TestNGException: 
-Cannot inject @Test annotated Method [addRenwu] with [class java.lang.String, class java.lang.String].
-For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
-	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:407)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:635)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:769)
-	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
-	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:923)
+<td title='aaacom.AddRenwu1.piyue()'><b>piyue</b><br>Test class: aaacom.AddRenwu1<br>Test method: 批阅作业</td>
+<td><div><pre>java.lang.AssertionError: 待验收错误 expected [0] but found [-1]
+	at aaacom.AddRenwu1.piyue(AddRenwu1.java:64)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1776312161", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1776312161'><pre>java.lang.AssertionError: 待验收错误 expected [0] but found [-1]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at aaacom.AddRenwu1.piyue(AddRenwu1.java:64)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
 	at org.testng.TestRunner.privateRun(TestRunner.java:648)
@@ -108,8 +111,8 @@ For more information on native dependency injection please refer to http://testn
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>0</td>
-<td>aaacom.AddRenwu@6f01b95f</td></tr>
+<td>10</td>
+<td>aaacom.AddRenwu1@59505b48</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -119,10 +122,10 @@ For more information on native dependency injection please refer to http://testn
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='aaacom.AddRenwu.nihao()'><b>nihao</b><br>Test class: aaacom.AddRenwu</td>
+<td title='aaacom.AddRenwu1.addRenwu()'><b>addRenwu</b><br>Test class: aaacom.AddRenwu1<br>Test method: 发布任务<br>Parameters: 作业, 20, 2019-01-01 00:00:00</td>
 <td></td>
-<td>0</td>
-<td>aaacom.AddRenwu@6f01b95f</td></tr>
+<td>13</td>
+<td>aaacom.AddRenwu1@59505b48</td></tr>
 </table><p>
 </body>
 </html>

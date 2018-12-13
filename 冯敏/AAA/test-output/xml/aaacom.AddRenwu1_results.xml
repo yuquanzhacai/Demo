@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test1"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="25.313">
+  <properties />
+  
+  
+            <testcase name="piyue" time="11.617" classname="aaacom.AddRenwu1" />
+                <testcase name="addRenwu" time="13.696" classname="aaacom.AddRenwu1" />
+      
+</testsuite>

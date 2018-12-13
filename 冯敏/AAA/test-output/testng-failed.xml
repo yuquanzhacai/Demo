@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [s1]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.webtest.core.WebTestListener"/>
+    <listener class-name="aaacom.WebTestListener"/>
+  </listeners>
+  <test thread-count="5" name="test1(failed)">
     <classes>
-      <class name="aaacom.AddRenwu">
+      <class name="aaacom.AddRenwu1">
         <methods>
           <include name="doBeforeSuite"/>
-          <include name="addListener"/>
-          <include name="addRenwu"/>
+          <include name="denglu"/>
+          <include name="ke"/>
           <include name="piyue"/>
         </methods>
-      </class> <!-- aaacom.AddRenwu -->
+      </class> <!-- aaacom.AddRenwu1 -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- test1(failed) -->
+</suite> <!-- Failed suite [s1] -->

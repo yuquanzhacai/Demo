@@ -143,6 +143,10 @@ public class WebDriverEngine {
 		}
 	}
 
+	public void click() {
+
+		action.click();
+	}
 	public void clickLonger(String locator) {
 
 		WebElement element = finder.findElement(locator);
@@ -163,7 +167,7 @@ public class WebDriverEngine {
 
 		WebElement element = finder.findElement(locator);
 		if (element != null) {
-			System.out.println(element.isDisplayed());
+			System.out.println("是否显示"+element.isDisplayed());
 		}
 	}
 
@@ -251,6 +255,7 @@ public class WebDriverEngine {
 	}
 
 
+
 	public void mouseoverElement(String locator) throws InterruptedException {
 		Actions action = new Actions(driver);
 		action.moveToElement(finder.findElement(locator)).perform();
@@ -305,7 +310,18 @@ public class WebDriverEngine {
 //		return false;
 //	}
 
-	
+	public void runJs(String js,String locator) {
+
+		JavascriptExecutor j = (JavascriptExecutor) driver;
+
+		j.executeScript(js,finder.findElement(locator));
+
+	}
+
+	public char[] getId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 	
 	
