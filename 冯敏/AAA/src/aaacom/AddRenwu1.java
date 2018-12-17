@@ -26,26 +26,27 @@ public class AddRenwu1 extends BaseTest{
 		webtest.click("xpath=//h1[contains(.,'嗯嗯')]");
 	}
 	@Test(description="发布任务",dataProvider="txt",dataProviderClass=NsDataProvider.class)
-	  public void addRenwu(String title,String body,String body2,String point,String time) {				
+	  public void addRenwu(String title,String point,String time) {				
 		webtest.click("xpath=//button[contains(.,'发布任务')]");
 		webtest.type("name=title",title);
-//		Actions action=new Actions(driver);
 		webtest.tapClick();
-//		action.sendKeys(Keys.TAB).perform();	
-		webtest.enterFrame(webtest.getValue("xpath=//iframe[@class='cke_wysiwyg_frame cke_reset']"));
-//		driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']")));
-		webtest.type("tagName=body",body);
-//		driver.findElement(By.tagName("body")).sendKeys("任务描述");
-//		driver.switchTo().defaultContent();	
-		webtest.leaveFrame();
-//		action.sendKeys(Keys.TAB).perform();
+/*任务描述*/		
+//		webtest.enterFrame(driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']")));
+		driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']")));
+//		webtest.type("tagName=body","任务描述");
+		driver.findElement(By.tagName("body")).sendKeys("任务描述");
+//		webtest.leaveFrame();
+		driver.switchTo().defaultContent();
 		webtest.tapClick();
-		webtest.type("tagName=body",body2);
-//		driver.findElement(By.tagName("body")).sendKeys("答案解析");
+/*答案解析*/		
+//		webtest.enterFrame(driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']")));
+//		webtest.type("tagName=body","答案解析");
+		driver.findElement(By.tagName("body")).sendKeys("答案解析");
+//		driver.switchTo().defaultContent();		
 		webtest.type("id=id_grade_point",point);
 		webtest.type("id=id_end_at",time);
 		webtest.click("xpath=//input[@id='id_submit']");
-		assertTrue(webtest.ifContains("作业2"));
+		assertTrue(webtest.ifContains("作业"));
 	}
 
 	@Test(description="批阅作业")
