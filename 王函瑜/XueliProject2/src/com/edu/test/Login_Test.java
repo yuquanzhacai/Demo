@@ -39,7 +39,7 @@ public class Login_Test extends BaseTest{
 	}
 
 	//在txt驱动下输入正确的用户名和密码登录
-	 @Test(dataProvider="txt",dataProviderClass=NSDataProvider.class)
+	 @Test(dataProvider="txt",dataProviderClass=NSDataProvider.class,description="TXT驱动登录")
 	public void loginSuccess(String s1,String s2) throws Exception  {
 		action.login(s1, s2);			
 		//判断是否登录成功,不成功则输出不成功的信息
@@ -56,7 +56,7 @@ public class Login_Test extends BaseTest{
 	}
 	
 	//登录失败用例
-	@Test
+	@Test(description="失败登录")
 	public void loginfail() throws InterruptedException {
 		action.login("13364191@qq.com","ZHANGyu1");
 		//判断是否登录成功,不成功则输出不成功的信息
@@ -73,7 +73,7 @@ public class Login_Test extends BaseTest{
 	}
 	
 	//使用excel进行数据驱动 
-	@Test(dataProvider="excel",dataProviderClass=NSDataProvider.class)
+	@Test(dataProvider="excel",dataProviderClass=NSDataProvider.class,description="excel驱动登录")
 	public void loginSuccess2(String s1,String s2) throws InterruptedException {
 		action.login(s1, s2);				
 		boolean str=webtest.panduan("xpath=html/body/header/nav/div[2]/ul/li[1]/a");

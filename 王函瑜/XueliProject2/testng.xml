@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="测试" parallel="tests">
+<suite name="雪梨教育测试项目" parallel="tests">
 
    <listeners>
        <listener class-name="com.edu.core.WebTestListener" />
@@ -9,9 +9,97 @@
        
    </listeners>
 
-   <test name="个人信息设置" preserve-order="true" >
+   <test name="学生部分" preserve-order="true" >
       <classes>
-          <class name="com.edu.test.Own_Message_Test">
+          
+          <class name="com.edu.test.Login_Test">
+           <methods>             
+             <include name="loginSuccess"></include>
+             <include name="loginSuccess2"></include>
+             <include name="loginfail"></include>
+           </methods>
+          </class> 
+          
+          <class name="com.edu.test.Search_Test">
+           <methods>             
+             <include name="search_success"></include>
+             <include name="search_fail"></include>
+             <include name="search_null"></include>
+           </methods>
+          </class>
+          
+          <class name="com.edu.test.Coures_Apply_Test">
+           <methods>             
+             <include name="course"></include>
+             <include name="ownCourse"></include>
+           </methods>
+          </class>
+          
+          <class name="com.edu.test.Course_Test">
+           <methods>             
+             <include name="course_Search"></include>
+             <include name="course_Search2"></include>
+             <include name="course_Search3"></include>
+             <include name="course_Look"></include>
+           </methods>
+         </class> 
+          
+         <class name="com.edu.test.Community_Test">
+           <methods>             
+             <include name="community"></include>
+           </methods>
+         </class> 
+          
+         <class name="com.edu.test.Notice_Test">
+           <methods>             
+             <include name="notice"></include>
+             <include name="praise"></include>
+             <include name="comment"></include>
+           </methods>
+         </class> 
+         
+         <class name="com.edu.test.Work_Submit_Test">
+           <methods>             
+             <include name="txt"></include>
+             <include name="file"></include>
+             <include name="code"></include>
+             <include name="file_txt"></include>
+             <include name="code_txt"></include>
+             <include name="code_file"></include>
+             <include name="code_file_txt"></include>
+           </methods>
+         </class>
+         
+         <class name="com.edu.test.Work_Change_Test">
+           <methods>             
+             <include name="change_txt"></include>
+             <include name="change_txtAll"></include>
+             <include name="add_file"></include>
+             <include name="add_code"></include>
+             <include name="change_flie"></include>
+             <include name="change_code"></include>
+           </methods>
+         </class>
+         
+         <class name="com.edu.test.OverWork_Check_Test">
+           <methods>             
+             <include name="look_work"></include>
+           </methods>
+         </class>
+          
+         <class name="com.edu.test.QieShuo_Test">
+           <methods>             
+             <include name="comment"></include>
+             <include name="commentCode"></include>
+             <include name="commentPic"></include>
+             <include name="commentLong"></include>
+             <include name="commentLong_Fail1"></include>
+             <include name="commentLong_Fail2"></include>
+             <include name="commentLong_Fail3"></include>
+           </methods>
+         </class>
+         
+         <class name="com.edu.test.Own_Message_Test">
            <methods>             
              <include name="own_Message"></include>
              <include name="edit_Message"></include>
@@ -19,10 +107,10 @@
              <include name="edit_PasswordFailed2"></include>
              <include name="edit_PasswordFailed3"></include>
              <include name="exit"></include>
-             
- 
            </methods>
-          </class> 
+         </class>
+          
+          
       </classes>
    </test>
  

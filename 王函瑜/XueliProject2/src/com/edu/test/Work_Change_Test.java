@@ -30,7 +30,7 @@ public class Work_Change_Test extends BaseTest{
 		webtest.click("xpath=//i[@class='icon icon-file-text']");
 	}
 	
-	@Test
+	@Test(description="修改文本")
 	public void change_txt() throws InterruptedException {
 	    wsaction.workEdit("修改作业");
 	    webtest.click("xpath=//button[@class='btn btn-primary btn-sm td-preview']");
@@ -39,32 +39,32 @@ public class Work_Change_Test extends BaseTest{
 	    Assert.assertTrue(webtest.isTextPresent("提交"));
 	}
 	
-	@Test
+	@Test(description="重写文本")
 	public void change_txtAll() throws InterruptedException {
-	    wsaction.workChange("修改作业");
+	    wsaction.workChange("清空作业，重新修改作业");
 	    
 	    Assert.assertTrue(webtest.isTextPresent("提交"));
 	}
 	
-	@Test
+	@Test(description="修改文件")
 	public void change_flie() throws InterruptedException {
 	    wsaction.fileEdit("E:\\8.jpg");
 	    Assert.assertTrue(webtest.isTextPresent("提交"));
 	}
 	
-	@Test
+	@Test(description="修改代码")
 	public void change_code() throws InterruptedException {
 		wsaction.codeEdit("javaxiugai123456");
 		Assert.assertTrue(webtest.isTextPresent("提交"));
 	}
 	
-	@Test
+	@Test(description="增加代码")
 	public void add_code() throws InterruptedException {
 		wsaction.codeAdd("javaxiugai");
 		Assert.assertTrue(webtest.isTextPresent("提交"));
 	}
 	
-	@Test
+	@Test(description="增加附件")
 	public void add_file() throws InterruptedException {
 		wsaction.Addfile("E:\\8.jpg");
 		

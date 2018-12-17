@@ -19,8 +19,8 @@ import com.edu.models.Own_Message_Action;
 
 public class Own_Message_Test extends BaseTest{
 
-	Own_Message_Action Auaction=null;
-	Login_Action la=null;
+	private Own_Message_Action Auaction;
+	private Login_Action la;
 	@BeforeClass
 	public void before_Login() throws InterruptedException {
 		Auaction=new Own_Message_Action(webtest);
@@ -37,7 +37,7 @@ public class Own_Message_Test extends BaseTest{
 		Thread.sleep(2000);
 	}
 	
-	@Test  //查看个人主页
+	@Test(description="查看个人主页")  //查看个人主页
 	public void own_Message() throws InterruptedException{
 		webtest.click("xpath=//a[contains(.,'个人主页')]");	
 		Thread.sleep(2000);		
@@ -45,14 +45,14 @@ public class Own_Message_Test extends BaseTest{
 	
 	}
 	
-	@Test  //修改个人简介
+	@Test(description="修改个人简介")   //修改个人简介
 	public void edit_Message() throws InterruptedException {
 		webtest.click("xpath=//a[@href='/settings/']");
 		Auaction.set_Massage("E:\\8.jpg","2016011713","2016-测试","个人简介");
 		Assert.assertTrue(webtest.isTextPresent("个人信息更新成功！"));
 	}
 	
-	@Test  //新密码与确认密码不同
+	@Test(description="修改密码失败-新密码与确认密码不同")   //新密码与确认密码不同
 	public void edit_PasswordFailed() throws InterruptedException {
 		webtest.click("xpath=//a[@href='/settings/']");	
 		Thread.sleep(2000);
@@ -63,7 +63,7 @@ public class Own_Message_Test extends BaseTest{
 			
 	}
 	
-	@Test  //新旧密码相同
+	@Test(description="修改密码失败-新旧密码相同")   //新旧密码相同
 	public void edit_PasswordFailed2() throws InterruptedException {
 		webtest.click("xpath=//a[@href='/settings/']");	
 		Thread.sleep(2000);
@@ -74,7 +74,7 @@ public class Own_Message_Test extends BaseTest{
 			
 	}
 	
-	@Test  //旧密码错误
+	@Test(description="修改密码失败-旧密码错误")   //旧密码错误
 	public void edit_PasswordFailed3() throws InterruptedException {
 		webtest.click("xpath=//a[@href='/settings/']");	
 		Thread.sleep(2000);
@@ -85,7 +85,7 @@ public class Own_Message_Test extends BaseTest{
 			
 	}
 	
-	@Test(enabled=false)  //更新密码成功
+	@Test(description="修改密码成功")   //更新密码成功
 	public void edit_Password() throws InterruptedException {
 		webtest.click("xpath=//a[@href='/settings/']");	
 		Thread.sleep(2000);
@@ -94,7 +94,7 @@ public class Own_Message_Test extends BaseTest{
 		Assert.assertTrue(webtest.isTextPresent("登录"));
 	}
 	
-	@Test //退出
+	@Test(description="退出")  //退出
 	public void exit() {
 		webtest.click("xpath=//a[@href='/logout/']");
 		Assert.assertTrue(webtest.isTextPresent("注册雪梨教育"));

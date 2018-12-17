@@ -40,31 +40,31 @@ public class Work_Submit_Test extends BaseTest{
 
 	//老师先创建多个任务！！！
 	
-	@Test //提交文本
+	@Test(description="提交文本") //提交文本
 	public void txt() throws Exception  {
 		wsaction.workSubmit("提交作业");
 		webtest.click("xpath=//button[@class='btn btn-primary btn-sm td-preview']");
     	webtest.click("xpath=//button[@class='btn btn-primary td-submit']");
 		Assert.assertTrue(webtest.isTextPresent("提交"));
 	}
-	@Test  //只提交附件
+	@Test(description="只提交附件")  //只提交附件
 	public void file() throws Exception  {
 		wsaction.flieSubmit("E:\\8.jpg");
 		webtest.click("xpath=//button[@class='btn btn-primary btn-sm td-preview']");
 		Assert.assertTrue(webtest.isTextPresent("请填写内容"));
 	}
-	@Test //提交代码
+	@Test(description="提交代码") //提交代码
 	public void code() throws Exception  {
 		wsaction.codeSubmit("java");
 		Assert.assertTrue(webtest.isTextPresent("提交"));
 	}	
-	@Test //提交附件+文本
+	@Test(description="提交附件+文本") //提交附件+文本
 	public void file_txt() throws Exception  {
 		wsaction.flieSubmit("E:\\8.jpg");
 		wsaction.workSubmit("提交作业");
 		Assert.assertTrue(webtest.isTextPresent("提交"));
 	}
-	@Test //提交代码+文本
+	@Test(description="提交代码+文本") //提交代码+文本
 	public void code_txt() throws Exception  {
 		wsaction.codeSubmit("java");
 		wsaction.workSubmit("java作业");
@@ -72,14 +72,14 @@ public class Work_Submit_Test extends BaseTest{
 		Assert.assertTrue(webtest.isTextPresent("提交"));
 	}	
 
-	@Test //提交代码+附件
+	@Test(description="提交代码+附件") //提交代码+附件
 	public void code_file() throws Exception  {
 		wsaction.codeSubmit("java");
 		wsaction.flieSubmit("E:\\8.jpg");
 		Assert.assertTrue(webtest.isTextPresent("提交"));
 	}
 	
-	@Test //提交附件文本代码
+	@Test(description="提交附件文本代码") //提交附件文本代码
 	public void code_file_txt() throws Exception  {		
 		wsaction.codeSubmit("java");
 		wsaction.workSubmit("java作业");

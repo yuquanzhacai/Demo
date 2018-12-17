@@ -21,7 +21,7 @@ public class OverWork_Check_Test extends BaseTest{
 
 	}
 	
-	@Test
+	@Test(description="已完结课程查看")
 	public void look_work() {
 	    wsaction.workCheck();
 	}

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="个人信息设置"
+<testsuite name="学生部分"
            tests="6"
            failures="0"
            errors="0"
            skipped="0"
-           time="96.683">
+           time="98.948">
   <properties />
   
   
-            <testcase name="edit_PasswordFailed2" time="18.938" classname="com.edu.test.Own_Message_Test" />
-                <testcase name="edit_PasswordFailed" time="18.931" classname="com.edu.test.Own_Message_Test" />
-                <testcase name="edit_Message" time="29.354" classname="com.edu.test.Own_Message_Test" />
-                <testcase name="own_Message" time="6.335" classname="com.edu.test.Own_Message_Test" />
-                <testcase name="exit" time="4.199" classname="com.edu.test.Own_Message_Test" />
-                <testcase name="edit_PasswordFailed3" time="18.926" classname="com.edu.test.Own_Message_Test" />
+            <testcase name="edit_PasswordFailed2" time="18.914" classname="com.edu.test.Own_Message_Test" />
+                <testcase name="exit" time="4.488" classname="com.edu.test.Own_Message_Test" />
+                <testcase name="edit_Message" time="31.200" classname="com.edu.test.Own_Message_Test" />
+                <testcase name="own_Message" time="6.539" classname="com.edu.test.Own_Message_Test" />
+                <testcase name="edit_PasswordFailed3" time="18.778" classname="com.edu.test.Own_Message_Test" />
+                <testcase name="edit_PasswordFailed" time="19.029" classname="com.edu.test.Own_Message_Test" />
       
 </testsuite>

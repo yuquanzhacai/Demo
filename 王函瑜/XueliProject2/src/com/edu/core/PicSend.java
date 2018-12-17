@@ -12,11 +12,11 @@ public class PicSend {
 //        java.text.SimpleDateFormat f=new java.text.SimpleDateFormat("yyyyMMdd");    
 //       	return  f.format(c.getTime());    
 //    }
-	
+	private static String file;
     public static String Zip() {
         ZipCompressor zc = new  ZipCompressor("D:\\测试报告.zip");  
         zc.compressExe("E:\\Java\\work\\XueliProject2\\test-output\\html");
-        String file = "D:\\测试报告.zip";
+        file = "D:\\测试报告.zip";
         return file;
      }
 }

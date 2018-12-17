@@ -25,7 +25,7 @@ public class Search_Test extends BaseTest {
 	}
 	
 	
-	@Test
+	@Test(description="正常搜索")
 	public void search_success() throws InterruptedException {		
 		webtest.type("xpath=.//*[@id='q']", "大学英语");
 		webtest.click("xpath=.//*[@id='search-button']");
@@ -34,7 +34,7 @@ public class Search_Test extends BaseTest {
 	}
 	
 	//输入不存在内容
-	@Test
+	@Test(description="搜索不存在的内容")
 	public void search_fail() {
 		
 		webtest.type("xpath=.//*[@id='q']", "dagareharbhav");
@@ -44,7 +44,7 @@ public class Search_Test extends BaseTest {
 	}
 	
 	//输入为空时的搜索
-	@Test
+	@Test(description="搜索空内容")
 	public void search_null() {		
 		webtest.click("xpath=.//*[@id='search-button']");
 		Assert.assertTrue(webtest.isTextPresent("请输入要搜索的信息"));

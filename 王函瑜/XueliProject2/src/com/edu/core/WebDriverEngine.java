@@ -369,5 +369,10 @@ public class WebDriverEngine {
 	}
 	
 	
+///!
+	public void close() {
+		driver.close();
+	}
+	
 	
 }
