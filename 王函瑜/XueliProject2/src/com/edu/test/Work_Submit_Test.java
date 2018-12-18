@@ -29,7 +29,7 @@ public class Work_Submit_Test extends BaseTest{
 		wcsaction=new Work_Change_Action(webtest);
 		wcesaction=new Work_Check_Action(webtest);
 		action=new Login_Action(webtest);
-		action.login("2798011643@qq.com","Whymm13145");
+		action.login("why2798011643@126.com","Whymm13145");
 
 	}
 	@BeforeMethod

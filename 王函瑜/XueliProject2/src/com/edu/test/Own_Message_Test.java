@@ -37,6 +37,13 @@ public class Own_Message_Test extends BaseTest{
 		Thread.sleep(2000);
 	}
 	
+	@Test(description="点击个人头像")
+	public void own_Check() {
+		webtest.click("xpath=//a[@class='avatar']");
+		Assert.assertTrue(webtest.isTextPresent("动态"));
+		
+	}
+	
 	@Test(description="查看个人主页")  //查看个人主页
 	public void own_Message() throws InterruptedException{
 		webtest.click("xpath=//a[contains(.,'个人主页')]");	
@@ -90,8 +97,10 @@ public class Own_Message_Test extends BaseTest{
 		webtest.click("xpath=//a[@href='/settings/']");	
 		Thread.sleep(2000);
 		webtest.runJs("window.scrollTo(0,document.body.scrollHeight)");
-		Auaction.set_Password("Whymm1314","Whymm13145","Whymm13145");
+		Auaction.set_Password("Whymm13145","Whymm1314","Whymm1314");
 		Assert.assertTrue(webtest.isTextPresent("登录"));
+		la.login("why2798011643@126.com","Whymm1314");
+		Thread.sleep(2000);
 	}
 	
 	@Test(description="退出")  //退出

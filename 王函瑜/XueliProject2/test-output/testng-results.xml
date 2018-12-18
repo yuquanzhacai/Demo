@@ -1,73 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="7" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2018-12-14T03:05:57Z" name="雪梨教育测试项目" finished-at="2018-12-14T03:08:23Z" duration-ms="145914">
+  <suite started-at="2018-12-18T07:16:22Z" name="雪梨教育测试项目-学生部分" finished-at="2018-12-18T07:17:48Z" duration-ms="86272">
     <groups>
     </groups>
-    <test started-at="2018-12-14T03:05:57Z" name="学生部分" finished-at="2018-12-14T03:08:23Z" duration-ms="145914">
-      <class name="com.edu.test.Own_Message_Test">
-        <test-method is-config="true" signature="doBeforeSuite()[pri:0, instance:com.edu.test.Own_Message_Test@24569dba]" started-at="2018-12-14T03:05:58Z" name="doBeforeSuite" finished-at="2018-12-14T03:06:02Z" duration-ms="4978" status="PASS">
+    <test started-at="2018-12-18T07:16:22Z" name="登录" finished-at="2018-12-18T07:17:48Z" duration-ms="86272">
+      <class name="com.edu.test.Login_Test">
+        <test-method is-config="true" signature="doBeforeSuite()[pri:0, instance:com.edu.test.Login_Test@7d9d0818]" started-at="2018-12-18T07:16:22Z" name="doBeforeSuite" finished-at="2018-12-18T07:16:27Z" duration-ms="4746" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doBeforeSuite -->
-        <test-method is-config="true" signature="before_Login()[pri:0, instance:com.edu.test.Own_Message_Test@24569dba]" started-at="2018-12-14T03:06:02Z" name="before_Login" finished-at="2018-12-14T03:06:12Z" duration-ms="9795" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.edu.test.Login_Test@7d9d0818]" started-at="2018-12-18T07:16:27Z" name="setup" finished-at="2018-12-18T07:16:27Z" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- before_Login -->
-        <test-method is-config="true" signature="own_Beg()[pri:0, instance:com.edu.test.Own_Message_Test@24569dba]" started-at="2018-12-14T03:06:12Z" name="own_Beg" finished-at="2018-12-14T03:06:18Z" duration-ms="5190" status="PASS">
+        </test-method> <!-- setup -->
+        <test-method signature="loginSuccess(java.lang.String, java.lang.String)[pri:0, instance:com.edu.test.Login_Test@7d9d0818]" started-at="2018-12-18T07:16:27Z" name="loginSuccess" description="TXT驱动登录" data-provider="txt" finished-at="2018-12-18T07:16:46Z" duration-ms="19343" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1336448191@qq.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ZHANGyu123]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- own_Beg -->
-        <test-method signature="own_Message()[pri:0, instance:com.edu.test.Own_Message_Test@24569dba]" started-at="2018-12-14T03:06:18Z" name="own_Message" description="查看个人主页" finished-at="2018-12-14T03:06:24Z" duration-ms="6539" status="PASS">
+        </test-method> <!-- loginSuccess -->
+        <test-method signature="loginSuccess(java.lang.String, java.lang.String)[pri:0, instance:com.edu.test.Login_Test@7d9d0818]" started-at="2018-12-18T07:16:46Z" name="loginSuccess" description="TXT驱动登录" data-provider="txt" finished-at="2018-12-18T07:17:05Z" duration-ms="18836" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2798011643@qq.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Whymm13145]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- own_Message -->
-        <test-method is-config="true" signature="own_Beg()[pri:0, instance:com.edu.test.Own_Message_Test@24569dba]" started-at="2018-12-14T03:06:24Z" name="own_Beg" finished-at="2018-12-14T03:06:29Z" duration-ms="5140" status="PASS">
+        </test-method> <!-- loginSuccess -->
+        <test-method signature="loginSuccess2(java.lang.String, java.lang.String)[pri:0, instance:com.edu.test.Login_Test@7d9d0818]" started-at="2018-12-18T07:17:06Z" name="loginSuccess2" description="excel驱动登录" data-provider="excel" finished-at="2018-12-18T07:17:23Z" duration-ms="17127" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2798011643@qq.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Whymm13145]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- own_Beg -->
-        <test-method signature="edit_Message()[pri:0, instance:com.edu.test.Own_Message_Test@24569dba]" started-at="2018-12-14T03:06:29Z" name="edit_Message" finished-at="2018-12-14T03:07:00Z" duration-ms="31200" status="PASS">
+        </test-method> <!-- loginSuccess2 -->
+        <test-method signature="loginSuccess2(java.lang.String, java.lang.String)[pri:0, instance:com.edu.test.Login_Test@7d9d0818]" started-at="2018-12-18T07:17:23Z" name="loginSuccess2" description="excel驱动登录" data-provider="excel" finished-at="2018-12-18T07:17:40Z" duration-ms="16868" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[why2798011643@126.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Whymm13145]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- edit_Message -->
-        <test-method is-config="true" signature="own_Beg()[pri:0, instance:com.edu.test.Own_Message_Test@24569dba]" started-at="2018-12-14T03:07:00Z" name="own_Beg" finished-at="2018-12-14T03:07:06Z" duration-ms="5132" status="PASS">
+        </test-method> <!-- loginSuccess2 -->
+        <test-method signature="loginfail()[pri:0, instance:com.edu.test.Login_Test@7d9d0818]" started-at="2018-12-18T07:17:40Z" name="loginfail" description="失败登录" finished-at="2018-12-18T07:17:48Z" duration-ms="8248" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- own_Beg -->
-        <test-method signature="edit_PasswordFailed()[pri:0, instance:com.edu.test.Own_Message_Test@24569dba]" started-at="2018-12-14T03:07:06Z" name="edit_PasswordFailed" finished-at="2018-12-14T03:07:25Z" duration-ms="19029" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- edit_PasswordFailed -->
-        <test-method is-config="true" signature="own_Beg()[pri:0, instance:com.edu.test.Own_Message_Test@24569dba]" started-at="2018-12-14T03:07:25Z" name="own_Beg" finished-at="2018-12-14T03:07:30Z" duration-ms="5130" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- own_Beg -->
-        <test-method signature="edit_PasswordFailed2()[pri:0, instance:com.edu.test.Own_Message_Test@24569dba]" started-at="2018-12-14T03:07:30Z" name="edit_PasswordFailed2" finished-at="2018-12-14T03:07:49Z" duration-ms="18914" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- edit_PasswordFailed2 -->
-        <test-method is-config="true" signature="own_Beg()[pri:0, instance:com.edu.test.Own_Message_Test@24569dba]" started-at="2018-12-14T03:07:49Z" name="own_Beg" finished-at="2018-12-14T03:07:54Z" duration-ms="5137" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- own_Beg -->
-        <test-method signature="edit_PasswordFailed3()[pri:0, instance:com.edu.test.Own_Message_Test@24569dba]" started-at="2018-12-14T03:07:54Z" name="edit_PasswordFailed3" finished-at="2018-12-14T03:08:13Z" duration-ms="18778" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- edit_PasswordFailed3 -->
-        <test-method is-config="true" signature="own_Beg()[pri:0, instance:com.edu.test.Own_Message_Test@24569dba]" started-at="2018-12-14T03:08:13Z" name="own_Beg" finished-at="2018-12-14T03:08:18Z" duration-ms="5132" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- own_Beg -->
-        <test-method signature="exit()[pri:0, instance:com.edu.test.Own_Message_Test@24569dba]" started-at="2018-12-14T03:08:18Z" name="exit" finished-at="2018-12-14T03:08:22Z" duration-ms="4488" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- exit -->
-        <test-method is-config="true" signature="doAfterMethod()[pri:0, instance:com.edu.test.Own_Message_Test@24569dba]" started-at="2018-12-14T03:08:22Z" name="doAfterMethod" finished-at="2018-12-14T03:08:23Z" duration-ms="1260" status="PASS">
+        </test-method> <!-- loginfail -->
+        <test-method is-config="true" signature="doAfterMethod()[pri:0, instance:com.edu.test.Login_Test@7d9d0818]" started-at="2018-12-18T07:17:48Z" name="doAfterMethod" finished-at="2018-12-18T07:17:48Z" duration-ms="553" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doAfterMethod -->
-      </class> <!-- com.edu.test.Own_Message_Test -->
-    </test> <!-- 学生部分 -->
-  </suite> <!-- 雪梨教育测试项目 -->
+      </class> <!-- com.edu.test.Login_Test -->
+    </test> <!-- 登录 -->
+  </suite> <!-- 雪梨教育测试项目-学生部分 -->
 </testng-results>

@@ -43,14 +43,16 @@ public class Login_Test extends BaseTest{
 	public void loginSuccess(String s1,String s2) throws Exception  {
 		action.login(s1, s2);			
 		//判断是否登录成功,不成功则输出不成功的信息
-		boolean str=webtest.panduan("xpath=html/body/header/nav/div[2]/ul/li[1]/a");
-		Assert.assertTrue(str);
-		if(str==true) {
+		//boolean str=webtest.panduan("xpath=html/body/header/nav/div[2]/ul/li[1]/a");
+		boolean r=webtest.isTextPresent("任务");
+		Assert.assertTrue(r);
+		if(r==true) {
 			//移动一下鼠标
 			webtest.mouseLong();
 			webtest.mouseoverElement("xpath=//a[@class='avatar']");
+			
 			//点击二级列表
-			//Thread.sleep(2000);
+			Thread.sleep(2000);
 			webtest.click("xpath=//a[@href='/logout/']");
 		}
 	}
@@ -60,25 +62,18 @@ public class Login_Test extends BaseTest{
 	public void loginfail() throws InterruptedException {
 		action.login("13364191@qq.com","ZHANGyu1");
 		//判断是否登录成功,不成功则输出不成功的信息
-		boolean str=webtest.panduan("xpath=html/body/header/nav/div[2]/ul/li[1]/a");
+		boolean r=webtest.isTextPresent("账号或密码错误");
 		//如果登录成功就退出，登录失败就截图
-		Assert.assertTrue(webtest.isTextPresent("账号或密码错误"));
-		if(str==true) {
-		  //移动一下鼠标
-		  webtest.mouseLong();
-		  webtest.mouseoverElement("xpath=//a[@class='avatar']");
-		  //点击二级列表
-		  webtest.click("link=退出");
-		}
+		Assert.assertTrue(r);
 	}
 	
 	//使用excel进行数据驱动 
 	@Test(dataProvider="excel",dataProviderClass=NSDataProvider.class,description="excel驱动登录")
 	public void loginSuccess2(String s1,String s2) throws InterruptedException {
 		action.login(s1, s2);				
-		boolean str=webtest.panduan("xpath=html/body/header/nav/div[2]/ul/li[1]/a");
-		Assert.assertTrue(str);
-		if(str==true) {
+		boolean r=webtest.isTextPresent("任务");
+		Assert.assertTrue(r);
+		if(r==true) {
 			webtest.mouseLong();
 			webtest.mouseoverElement("xpath=//a[@class='avatar']");
 			webtest.click("xpath=//a[@href='/logout/']");

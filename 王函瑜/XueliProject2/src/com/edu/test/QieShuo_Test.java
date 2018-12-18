@@ -1,6 +1,7 @@
 package com.edu.test;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -11,7 +12,7 @@ import com.edu.models.QieShuo_Action;
 public class QieShuo_Test extends BaseTest{
 	private Login_Action action;
 	private QieShuo_Action qaction;
-	@BeforeMethod
+	@BeforeClass
 	public void setup()
 	{
 		action=new Login_Action(webtest);
@@ -23,6 +24,13 @@ public class QieShuo_Test extends BaseTest{
     public void comment() throws InterruptedException {        
         qaction.pinglun("#我的话题#发表评论");
     }
+    
+    @Test(description="发表敏感词汇")
+    public void comment2() throws InterruptedException {        
+        qaction.pinglun("测试法轮功敏感词");
+        Assert.assertTrue(webtest.isTextPresent("请重新输入"));
+    }
+    
     @Test(description="发表代码评论")
     public void commentCode() throws InterruptedException {
         qaction.pinglundaima("java");
@@ -40,6 +48,7 @@ public class QieShuo_Test extends BaseTest{
    public void commentLong_Fail1() throws InterruptedException{ 
 	   qaction.fachengwen3("标题","正文");
 	   //Assert.assertTrue(webtest.isTextPresent("请上传封面图片"));
+	   Thread.sleep(2000);
    }
    
    @Test(description="无标题长文")
@@ -52,6 +61,7 @@ public class QieShuo_Test extends BaseTest{
    public void commentLong_Fail3() throws InterruptedException{ 
 	   qaction.fachengwen2("E:\\1.png","标题","");
 	   Assert.assertTrue(webtest.isTextPresent("请输入正文"));
+	   webtest.close();
    }
 
 }

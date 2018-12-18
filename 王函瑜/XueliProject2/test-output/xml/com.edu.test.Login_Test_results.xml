@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="登录"
+           tests="5"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="80.422">
+  <properties />
+  
+  
+            <testcase name="loginSuccess2" time="17.127" classname="com.edu.test.Login_Test" />
+                <testcase name="loginSuccess" time="19.343" classname="com.edu.test.Login_Test" />
+                <testcase name="loginfail" time="8.248" classname="com.edu.test.Login_Test" />
+                <testcase name="loginSuccess" time="18.836" classname="com.edu.test.Login_Test" />
+                <testcase name="loginSuccess2" time="16.868" classname="com.edu.test.Login_Test" />
+      
+</testsuite>
