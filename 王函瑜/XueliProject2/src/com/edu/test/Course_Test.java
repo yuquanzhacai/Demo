@@ -42,7 +42,7 @@ public class Course_Test extends BaseTest{
 	
 	}
 	
-	@Test(description="搜索分类体系课程，并关注")
+	@Test(description="搜索具体分类体系课程，并关注")
 	public void  course_Search3() throws Exception{
 		//课程
 		webtest.click("xpath=//a[contains(@href,'/course/')]");
@@ -62,7 +62,7 @@ public class Course_Test extends BaseTest{
 	@Test(description="查看我的课程")
 	public void  course_Look() throws Exception{		
 		//首页查看
-		//webtest.click("xpath=//a[contains(.,'首页')]");
+		webtest.click("xpath=//a[contains(.,'首页')]");
 		webtest.click("xpath=//a[@class='cursor-pointer']");
 		webtest.click("xpath=//a[@href='/u/courses/']");
 		Assert.assertTrue(webtest.isTextPresent("正在学习"));

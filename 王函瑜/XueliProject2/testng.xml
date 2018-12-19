@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="雪梨教育测试项目" parallel="tests">
+<suite name="雪梨教育测试项目-学生部分" parallel="false">
 
    <listeners>
        <listener class-name="com.edu.core.WebTestListener" />
@@ -9,17 +9,20 @@
        
    </listeners>
 
-   <test name="学生部分" preserve-order="true" >
-      <classes>
-          
+   <test name="登录" preserve-order="true" >
+      <classes>         
           <class name="com.edu.test.Login_Test">
            <methods>             
              <include name="loginSuccess"></include>
              <include name="loginSuccess2"></include>
              <include name="loginfail"></include>
            </methods>
-          </class> 
-          
+          </class>
+      </classes>
+   </test>
+   
+   <test name="搜索框" preserve-order="true" >  
+        <classes>      
           <class name="com.edu.test.Search_Test">
            <methods>             
              <include name="search_success"></include>
@@ -27,14 +30,23 @@
              <include name="search_null"></include>
            </methods>
           </class>
+         </classes>
+   </test> 
           
+   <test name="同步课" preserve-order="true" >  
+        <classes>                
           <class name="com.edu.test.Coures_Apply_Test">
            <methods>             
              <include name="course"></include>
+             <include name="course2"></include>
              <include name="ownCourse"></include>
            </methods>
           </class>
-          
+        </classes>
+   </test>
+   
+   <test name="课程" preserve-order="true" >  
+        <classes>           
           <class name="com.edu.test.Course_Test">
            <methods>             
              <include name="course_Search"></include>
@@ -43,13 +55,11 @@
              <include name="course_Look"></include>
            </methods>
          </class> 
-          
-         <class name="com.edu.test.Community_Test">
-           <methods>             
-             <include name="community"></include>
-           </methods>
-         </class> 
-          
+       </classes>
+   </test>
+   
+   <test name="通知" preserve-order="true" >  
+        <classes>  
          <class name="com.edu.test.Notice_Test">
            <methods>             
              <include name="notice"></include>
@@ -57,7 +67,11 @@
              <include name="comment"></include>
            </methods>
          </class> 
-         
+        </classes>
+   </test>
+     
+   <test name="任务提交" preserve-order="true" >  
+        <classes>   
          <class name="com.edu.test.Work_Submit_Test">
            <methods>             
              <include name="txt"></include>
@@ -69,7 +83,11 @@
              <include name="code_file_txt"></include>
            </methods>
          </class>
-         
+        </classes>
+   </test>
+   
+    <test name="修改作业" preserve-order="true" >  
+        <classes> 
          <class name="com.edu.test.Work_Change_Test">
            <methods>             
              <include name="change_txt"></include>
@@ -80,17 +98,26 @@
              <include name="change_code"></include>
            </methods>
          </class>
-         
+         </classes>
+   </test>
+   
+   <test name="查看作业" preserve-order="true" >  
+        <classes>  
          <class name="com.edu.test.OverWork_Check_Test">
            <methods>             
              <include name="look_work"></include>
            </methods>
          </class>
-          
+        </classes>
+   </test> 
+   
+   <test name="且说" preserve-order="true" >  
+        <classes>        
          <class name="com.edu.test.QieShuo_Test">
            <methods>             
              <include name="comment"></include>
              <include name="commentCode"></include>
+             <include name="comment2"></include>
              <include name="commentPic"></include>
              <include name="commentLong"></include>
              <include name="commentLong_Fail1"></include>
@@ -98,7 +125,11 @@
              <include name="commentLong_Fail3"></include>
            </methods>
          </class>
-         
+         </classes>
+   </test>
+   
+   <test name="个人信息" preserve-order="true" >  
+        <classes>  
          <class name="com.edu.test.Own_Message_Test">
            <methods>             
              <include name="own_Message"></include>
@@ -106,12 +137,12 @@
              <include name="edit_PasswordFailed"></include>
              <include name="edit_PasswordFailed2"></include>
              <include name="edit_PasswordFailed3"></include>
+             
              <include name="exit"></include>
            </methods>
          </class>
-          
-          
-      </classes>
-   </test>
- 
+    </classes>
+   </test>  
+   
+    
 </suite> <!-- Suite -->

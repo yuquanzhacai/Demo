@@ -58,15 +58,17 @@ public class QieShuo_Action {
 		  webtest.click("xpath=//input[@type='submit']");
 		  Thread.sleep(2000);
 		  webtest.close();
-//		  webtest.switchWidow(0);
+		 // webtest.switchWidow(0);
 		  Thread.sleep(2000);
 	}
      
      public void fachengwen2(String add,String title,String body) throws InterruptedException {
+    	  webtest.getAllWindowTitles();
+    	  webtest.switchWidow(0);
  		  webtest.click("xpath=//a[contains(@href,'/u/gossip/')]");
  		  Thread.sleep(3000);
  		  webtest.click("xpath=//a[@class='gossip-create-article']");
- 		  webtest.getAllWindowTitles();
+ 		  //webtest.getAllWindowTitles();
  		  boolean t = webtest.ifContains("发布长文");
  		  webtest.switchWidow(1);
  		  webtest.type("xpath=//input[@accept='image/*']", "style", "display:block", add);
@@ -75,6 +77,7 @@ public class QieShuo_Action {
  		  webtest.click("class=cke_wysiwyg_frame");
  		  webtest.type("tag=body",body);
  		  webtest.click("xpath=//button[contains(.,'预览')]");
+ 		
  		  Thread.sleep(2000);
  	}
      
@@ -91,6 +94,7 @@ public class QieShuo_Action {
 		  webtest.click("class=cke_wysiwyg_frame");
 		  webtest.type("tag=body",body);
 		  webtest.click("xpath=//button[contains(.,'预览')]");
+//		  webtest.close();
 		  Thread.sleep(2000);
 	}
 }
