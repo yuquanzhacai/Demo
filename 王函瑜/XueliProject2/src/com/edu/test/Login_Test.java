@@ -27,7 +27,11 @@ import com.edu.core.BaseTest;
 import com.edu.models.Login_Action;
 import com.webtest.dataprovider.NSDataProvider;
 
-
+/*
+ * author:zhangyu
+ * 登录
+ * 
+ */
 
 public class Login_Test extends BaseTest{
 	Login_Action action;
@@ -43,7 +47,6 @@ public class Login_Test extends BaseTest{
 	public void loginSuccess(String s1,String s2) throws Exception  {
 		action.login(s1, s2);			
 		//判断是否登录成功,不成功则输出不成功的信息
-		//boolean str=webtest.panduan("xpath=html/body/header/nav/div[2]/ul/li[1]/a");
 		boolean r=webtest.isTextPresent("任务");
 		Assert.assertTrue(r);
 		if(r==true) {

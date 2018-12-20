@@ -13,7 +13,7 @@ import com.edu.models.Login_Action;
  
 /*
  * author:wangjuan
- * 同步课申请
+ * 同步课
  * 关注他人
  */
 
@@ -67,7 +67,7 @@ public class Coures_Apply_Test extends BaseTest{
 		
 	@Test(description="查看已加入的同步课")
 	public void ownCourse() throws InterruptedException {
-		//查看已加入的同步课【新注册的号里没有已加入的同步课，换一个号才能看见】
+		//查看已加入的同步课
 		webtest.click("xpath=//a[contains(.,'首页')]");
 		webtest.click("xpath=//a[@href='/u/teams/']");
 		webtest.click("xpath=//h1[contains(.,'wegr')]");

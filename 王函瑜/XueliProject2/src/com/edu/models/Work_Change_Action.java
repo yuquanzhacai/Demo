@@ -6,6 +6,13 @@ import org.openqa.selenium.WebElement;
 
 import com.edu.core.WebDriverEngine;
 
+/*
+ * author:lixinran
+ * modifier:wanghanyu
+ * 修改作业
+ * 
+ */
+
 public class Work_Change_Action {
 	
 	private WebDriverEngine webtest;
@@ -45,15 +52,6 @@ public class Work_Change_Action {
 	  //修改代码
 	  public void codeEdit(String code) throws InterruptedException {
  
-//		  Thread.sleep(3000);
-//		 // webtest.click("class=cke_wysiwyg_frame");
-//		  //webtest.click("class=cke_widget_wrapper cke_widget_block cke_widget_codeSnippet");
-//		 
-//		  //webtest.enterFrame(0); 
-//		  webtest.click("class=cke_toolbar");
-//		 // webtest.click("class=cke_widget_wrapper cke_widget_block cke_widget_codeSnippet");
-//		  Thread.sleep(1000);
-//		  webtest.ENTERClick();
 		  Thread.sleep(3000);
 		  webtest.click("class=cke_combo_button");
 		  Thread.sleep(3000);

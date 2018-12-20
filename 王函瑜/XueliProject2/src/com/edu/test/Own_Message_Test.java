@@ -17,6 +17,14 @@ import com.edu.core.BaseTest;
 import com.edu.models.Login_Action;
 import com.edu.models.Own_Message_Action;
 
+/*
+ * author:wanghanyu
+ * 个人信息查看、修改
+ * 退出登录
+ * 
+ */
+
+
 public class Own_Message_Test extends BaseTest{
 
 	private Own_Message_Action Auaction;

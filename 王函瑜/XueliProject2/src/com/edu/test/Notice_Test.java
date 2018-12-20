@@ -11,7 +11,7 @@ import com.edu.models.Login_Action;
 
 /*
  * author:wangpenghe
- *通知
+ * 通知
  */
     
 	public class Notice_Test extends BaseTest{

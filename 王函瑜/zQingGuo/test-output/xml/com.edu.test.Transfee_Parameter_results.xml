@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="three"
+           tests="3"
+           failures="1"
+           errors="0"
+           skipped="0"
+           time="0.522">
+  <properties />
+            <testcase name="feeTest1" time="0.351" classname="com.edu.test.Transfee_Parameter">
+                <failure type="org.apache.http.ConnectionClosedException"
+                  message="Premature end of chunk coded message body: closing chunk expected"
+              >
+<![CDATA[org.apache.http.ConnectionClosedException: Premature end of chunk coded message body: closing chunk expected
+  org.apache.http.impl.io.ChunkedInputStream.getChunkSize(ChunkedInputStream.java:266)
+  org.apache.http.impl.io.ChunkedInputStream.nextChunk(ChunkedInputStream.java:225)
+  org.apache.http.impl.io.ChunkedInputStream.read(ChunkedInputStream.java:148)
+  org.apache.http.conn.EofSensorInputStream.read(EofSensorInputStream.java:118)
+  java.base/java.util.zip.CheckedInputStream.read(CheckedInputStream.java:60)
+  java.base/java.util.zip.GZIPInputStream.readUByte(GZIPInputStream.java:267)
+  java.base/java.util.zip.GZIPInputStream.readUShort(GZIPInputStream.java:259)
+  java.base/java.util.zip.GZIPInputStream.readHeader(GZIPInputStream.java:165)
+  java.base/java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:80)
+  java.base/java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:92)
+  org.apache.http.client.entity.GZIPInputStreamFactory.create(GZIPInputStreamFactory.java:61)
+  org.apache.http.client.entity.LazyDecompressingInputStream.initWrapper(LazyDecompressingInputStream.java:51)
+  org.apache.http.client.entity.LazyDecompressingInputStream.read(LazyDecompressingInputStream.java:69)
+  java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+  java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+  java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+  java.base/java.io.InputStreamReader.read(InputStreamReader.java:185)
+  java.base/java.io.Reader.read(Reader.java:140)
+  org.apache.http.util.EntityUtils.toString(EntityUtils.java:227)
+  org.apache.http.util.EntityUtils.toString(EntityUtils.java:270)
+  org.apache.http.util.EntityUtils.toString(EntityUtils.java:290)
+  com.edu.core.HttpDriver.doGet(HttpDriver.java:40)
+  com.edu.test.Transfee_Parameter.feeTest1(Transfee_Parameter.java:21)
+  java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.base/java.lang.reflect.Method.invoke(Method.java:564)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+  org.testng.TestRunner.privateRun(TestRunner.java:648)
+  org.testng.TestRunner.run(TestRunner.java:505)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+  org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+  org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+  org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+  java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+  java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+  java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+  java.base/java.lang.Thread.run(Thread.java:844)
+]]>
+      </failure>
+
+          </testcase>
+  
+  
+            <testcase name="feeTest" time="0.090" classname="com.edu.test.Transfee_Parameter" />
+                <testcase name="feeTest2" time="0.081" classname="com.edu.test.Transfee_Parameter" />
+      
+</testsuite>

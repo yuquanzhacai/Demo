@@ -9,6 +9,13 @@ import com.edu.core.BaseTest;
 import com.edu.models.Login_Action;
 import com.edu.models.QieShuo_Action;
 
+/*
+ * author:lixinran
+ * modifier:wanghanyu
+ * “且说”发表评论
+ * 
+ */
+
 public class QieShuo_Test extends BaseTest{
 	private Login_Action action;
 	private QieShuo_Action qaction;
@@ -47,7 +54,6 @@ public class QieShuo_Test extends BaseTest{
    @Test(description="无封面长文")
    public void commentLong_Fail1() throws InterruptedException{ 
 	   qaction.fachengwen3("标题","正文");
-	   //Assert.assertTrue(webtest.isTextPresent("请上传封面图片"));
 	   Thread.sleep(2000);
    }
    

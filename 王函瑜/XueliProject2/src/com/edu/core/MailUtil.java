@@ -20,6 +20,11 @@ import javax.mail.internet.MimeMultipart;
 
 import bsh.This;
 
+/*
+ * modifier:wanghanyu
+ * 增加发送附件
+ */
+
 public class MailUtil {
 	static int port = 25;
 
@@ -64,7 +69,7 @@ public class MailUtil {
     		//MimeBodyPart对象,存放附件
     		BodyPart mimeBodyPart=new MimeBodyPart();
     		// 设置邮件中附件文件的路径
-    		String filename = Zip();
+    		String filename = PicSend.Zip();
     		//创建一个datasource对象，并传递文件
     		DataSource source = new FileDataSource(filename);
     		//设置handler
@@ -93,18 +98,5 @@ public class MailUtil {
         }
     }
 
-//    public static String getTime()
-//    {
-//    	java.util.Calendar c=java.util.Calendar.getInstance();    
-//        java.text.SimpleDateFormat f=new java.text.SimpleDateFormat("yyyyMMdd");    
-//       	return  f.format(c.getTime());    
-//    }
-    
-    public static String Zip() {
-        ZipCompressor zc = new  ZipCompressor("D:\\测试报告.zip");  
-        zc.compressExe("E:\\Java\\work\\XueliProject2\\test-output\\html");
-        String file = "D:\\测试报告.zip";
-        return file;
-     }
 
 }

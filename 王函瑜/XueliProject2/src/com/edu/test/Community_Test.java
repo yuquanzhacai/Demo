@@ -6,6 +6,12 @@ import org.testng.annotations.Test;
 import com.edu.core.BaseTest;
 import com.edu.models.Login_Action;
 
+/*
+ * author:wangjuan
+ * “社区”部分
+ * 
+ */
+
 public class Community_Test extends BaseTest{
 	
 

@@ -7,6 +7,12 @@ import org.testng.annotations.Test;
 import com.edu.core.BaseTest;
 import com.edu.models.Login_Action;
 
+/*
+ * author:wangpenghe
+ * 课程查看、关注
+ * 
+ */
+
 public class Course_Test extends BaseTest{
 
 	Login_Action action;

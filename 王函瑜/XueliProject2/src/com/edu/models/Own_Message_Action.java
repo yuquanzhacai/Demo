@@ -8,13 +8,16 @@ import org.openqa.selenium.WebElement;
 import com.edu.core.BaseTest;
 import com.edu.core.WebDriverEngine;
 
+/*
+ * author:wanghanyu
+ * 个人信息及密码修改
+ */
 
 public class Own_Message_Action {
 	private WebDriverEngine webtest;
 	public Own_Message_Action(WebDriverEngine webtest) {
 		  this.webtest=webtest;
 	
-		  //System.out.println("构造方法");
 	}
 	
 	public void set_Massage(String pic,String num,String name,String message) throws InterruptedException {

@@ -4,11 +4,18 @@ import org.openqa.selenium.Keys;
 
 import com.edu.core.WebDriverEngine;
 
+/*
+ * author:lixinran
+ * 提交作业
+ * 
+ */
+
 public class Work_Submit_Action {
 	private WebDriverEngine webtest;
 	public Work_Submit_Action(WebDriverEngine webtest) {
 		  this.webtest=webtest;
 	}
+	
 	//提交文本
 	public void workSubmit(String txt) throws InterruptedException {
 		
@@ -18,12 +25,14 @@ public class Work_Submit_Action {
     	webtest.type("tag=body", txt);
     	
     }
+	
 	//提交附件
-  public void flieSubmit(String add) {
+   public void flieSubmit(String add) {
       webtest.type("class=taskdetailAttachmentInput",add);
-  }
-  //提交代码
-  public void codeSubmit(String code) {	  
+   }
+  
+   //提交代码
+   public void codeSubmit(String code) {	  
 	  webtest.click("xpath=//html[contains(@lang,'zh-cn')]");
      // webtest.click("class=cke_toolbar");
       webtest.click("class=cke_wysiwyg_frame");

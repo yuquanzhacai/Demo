@@ -2,6 +2,13 @@ package com.edu.models;
 
 import com.edu.core.WebDriverEngine;
 
+/*
+ * author:lixinran
+ * modifier:wanghanyu
+ * “且说”发表评论
+ * 
+ */
+
 public class QieShuo_Action {
 	
 	private WebDriverEngine webtest;
@@ -43,11 +50,9 @@ public class QieShuo_Action {
 		  Thread.sleep(3000);
 		  webtest.click("xpath=//a[@class='gossip-create-article']");
 		  webtest.getAllWindowTitles();
-		 // boolean t = webtest.ifContains("发布长文");
 		  webtest.switchWidow(1);
 		  webtest.type("xpath=//input[@accept='image/*']", "style", "display:block", add);
 		  webtest.type("xpath=//input[@maxlength='32']", title);
-		  //webtest.click("id=cke_6_text");
 		  webtest.click("class=cke_wysiwyg_frame");
 		  webtest.type("tag=body",body);
 		  webtest.click("xpath=//button[contains(.,'预览')]");
@@ -58,7 +63,6 @@ public class QieShuo_Action {
 		  webtest.click("xpath=//input[@type='submit']");
 		  Thread.sleep(2000);
 		  webtest.close();
-		 // webtest.switchWidow(0);
 		  Thread.sleep(2000);
 	}
      
@@ -88,7 +92,6 @@ public class QieShuo_Action {
 		  webtest.getAllWindowTitles();
 		  boolean t = webtest.ifContains("发布长文");
 		  webtest.switchWidow(1);
-//		  webtest.type("xpath=//input[@accept='image/*']", "style", "display:block", add);
 		  webtest.type("xpath=//input[@maxlength='32']", title);
 		  //webtest.click("id=cke_6_text");
 		  webtest.click("class=cke_wysiwyg_frame");
