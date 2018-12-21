@@ -1,6 +1,6 @@
 import  unittest
-from api2018.Sendhttp import SendHttp
-from api2018 import Common
+from QGLogin_python.Sendhttp import SendHttp
+from QGLogin_python import Common
 class addressList(unittest.TestCase):
 
     def setUp(self):

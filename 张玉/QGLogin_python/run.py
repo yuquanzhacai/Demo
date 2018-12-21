@@ -1,7 +1,7 @@
 import time
 from HTMLTestRunner import HTMLTestRunner
 import unittest
-from api2018 import EmailUtils
+from QGLogin_python import EmailUtils
 
 
 

@@ -1,8 +1,8 @@
 import  unittest
-from api2018.Sendhttp import SendHttp
-from api2018.DataProvider import readExcel
+from QGLogin_python.Sendhttp import SendHttp
+#from api2018.DataProvider import readExcel
 # import api2018.Common
-from api2018 import Common
+from QGLogin_python import Common
 
 class qgLoginTest(unittest.TestCase):
 
