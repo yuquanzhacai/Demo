@@ -23,9 +23,9 @@ public class MailUtil {
 
     static String server = "smtp.qq.com";
     static String file=PicSend.Zip();
-    static String from = "王函瑜";
-    static String user = "2798011643@qq.com";
-    static String password = "asysdorgmwguddej";
+    static String from = "甄攀星";
+    static String user = "913884616@qq.com";
+    static String password = "zkckelpxnxhdbaja";
 
     
 

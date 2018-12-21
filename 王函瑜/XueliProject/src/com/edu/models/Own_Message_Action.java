@@ -7,8 +7,9 @@ import org.openqa.selenium.WebElement;
 
 import com.edu.core.BaseTest;
 import com.edu.core.WebDriverEngine;
-
-
+/*
+ * 函瑜的个人设置
+ */
 public class Own_Message_Action {
 	private WebDriverEngine webtest;
 	public Own_Message_Action(WebDriverEngine webtest) {

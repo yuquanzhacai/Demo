@@ -27,7 +27,9 @@ import com.edu.core.BaseTest;
 import com.edu.models.Login_Action;
 import com.webtest.dataprovider.NSDataProvider;
 
-
+/*
+ * 玉儿的登录
+*/
 
 public class Login_Test extends BaseTest{
 	Login_Action action;
@@ -38,8 +40,9 @@ public class Login_Test extends BaseTest{
 		action=new Login_Action(webtest);
 	}
 
-	//在txt驱动下输入正确的用户名和密码登录
-	 @Test(enabled=false)//(dataProvider="txt",dataProviderClass=NSDataProvider.class)
+	//在txt驱动下输入正确的用户名和密码登录2402370100@qq.com,222328happy
+	//(enabled=false)//
+	 @Test(dataProvider="txt",dataProviderClass=NSDataProvider.class)
 	public void loginSuccess(String s1,String s2) throws Exception  {
 		webtest.open("http://10.7.10.7/");
 		action.login(s1, s2);			
@@ -95,7 +98,15 @@ public class Login_Test extends BaseTest{
 		}
 	}
 }
+/*
+ * 用户名	密码
+1336448191@qq.com	ZHANGyu123
+123@126.com	ZHANGyu12
+987@qq.com	ZHANGyu123
 
+ * 
+ * 
+ * */
 
 
 

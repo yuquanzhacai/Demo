@@ -7,14 +7,14 @@
   </listeners>
   <test thread-count="5" parallel="tests" name="test(failed)">
     <classes>
-      <class name="com.edu.test.Work_Submit_Test">
+      <class name="com.edu.test.Login_Test">
         <methods>
           <include name="doAfterMethod"/>
+          <include name="setup"/>
           <include name="doBeforeSuite"/>
-          <include name="before_Login"/>
-          <include name="code_file_txt"/>
+          <include name="loginSuccess" invocation-numbers="1"/>
         </methods>
-      </class> <!-- com.edu.test.Work_Submit_Test -->
+      </class> <!-- com.edu.test.Login_Test -->
     </classes>
   </test> <!-- test(failed) -->
 </suite> <!-- Failed suite [test] -->

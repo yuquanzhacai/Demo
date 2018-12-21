@@ -13,7 +13,9 @@ import com.edu.models.Work_Change_Action;
 import com.edu.models.Work_Check_Action;
 import com.edu.models.Work_Submit_Action;
 
-
+/*
+ *欣然的提交任务 
+ */
 
 public class Work_Submit_Test extends BaseTest{
 
@@ -47,7 +49,7 @@ public class Work_Submit_Test extends BaseTest{
 	}
 	@Test(enabled=false)  //fail
 	public void file() throws Exception  {
-		wsaction.flieSubmit("E:\\8.jpg");
+		wsaction.flieSubmit("D:\\demo\\loginuser.txt");
 		Assert.assertTrue(webtest.isTextPresent("请填写内容"));
 	}
 	@Test(enabled=false)
@@ -57,7 +59,7 @@ public class Work_Submit_Test extends BaseTest{
 	}	
 	@Test(enabled=false)
 	public void file_txt() throws Exception  {
-		wsaction.flieSubmit("E:\\8.jpg");
+		wsaction.flieSubmit("D:\\demo\\loginuser.txt");
 		wsaction.workSubmit("提交作业");
 		Assert.assertTrue(webtest.isTextPresent("提交成功"));
 	}
@@ -72,7 +74,7 @@ public class Work_Submit_Test extends BaseTest{
 	@Test(enabled=false)
 	public void code_file() throws Exception  {
 		wsaction.codeSubmit("java");
-		wsaction.flieSubmit("E:\\8.jpg");
+		wsaction.flieSubmit("D:\\demo\\loginuser.txt");
 		Assert.assertTrue(webtest.isTextPresent("提交成功"));
 	}
 	
@@ -82,7 +84,8 @@ public class Work_Submit_Test extends BaseTest{
 		webtest.click("xpath=//i[@class='icon icon-edit']");
 		wsaction.codeSubmit("java");
 		wsaction.workSubmit("javaxiugai");
-		wsaction.flieSubmit("E:\\8.jpg");
+		Thread.sleep(2000);
+		wsaction.flieSubmit("D:\\demo\\loginuser.txt");
 		//Assert.assertTrue(webtest.isTextPresent("已完成"));
 		webtest.click("xpath=//button[@class='btn btn-primary btn-sm td-preview']");
     	webtest.click("xpath=//button[@class='btn btn-primary td-submit']");
@@ -94,9 +97,9 @@ public class Work_Submit_Test extends BaseTest{
 	public void change_Work() throws InterruptedException {
 		webtest.click("xpath=//a[@href='/task/list/finished/']");
 		webtest.click("xpath=//i[@class='icon icon-file-text']");
-		wcsaction.fileEdit("E:\\8.jpg");
+		wcsaction.fileEdit("D:\\demo\\loginuser.txt");
 		Thread.sleep(2000);
-	    wcsaction.workChange("修改作业");
+	    wcsaction.workEdit("修改作业");
 	    Assert.assertTrue(webtest.isTextPresent("已完成"));
 	    webtest.click("xpath=//button[@class='btn btn-primary btn-sm td-preview']");
     	webtest.click("xpath=//button[@class='btn btn-primary td-submit']");

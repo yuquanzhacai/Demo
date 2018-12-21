@@ -16,7 +16,9 @@ import com.edu.core.BaseTest;
 
 import com.edu.models.Login_Action;
 import com.edu.models.Own_Message_Action;
-
+/*
+ * 函瑜的个人主页、设置、退出
+ */
 
 public class Own_Message_Test extends BaseTest{
 
