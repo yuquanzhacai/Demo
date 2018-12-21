@@ -61,7 +61,8 @@ public class Login_Action {
 //			webtest.mouseFloat("//i[@class='icon icon-bell']");
 				webtest.open("http://10.7.10.7/u/teams/");
 				Thread.sleep(3000);
-				webtest.runJs("xpath=//span[@class='notification-box']");
+//				webtest.runJs("xpath=//span[@class='notification-box']");
+				webtest.click("//i[@class='icon icon-bell']");
 				webtest.click("//a[@href='/u/teams/applications/']");
 				webtest.click("//th[@class='check-all check-btn']");
 				webtest.click("//button[contains(.,'批量通过')]");
