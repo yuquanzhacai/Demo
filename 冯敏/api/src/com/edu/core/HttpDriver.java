@@ -2,6 +2,7 @@ package com.edu.core;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.net.URI;
 import java.net.URLEncoder;
 import java.util.List;
 import java.util.Map;
@@ -21,6 +22,8 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.BasicCookieStore;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
+import org.apache.http.impl.cookie.BasicClientCookie;
+import org.apache.http.message.BasicHeader;
 import org.apache.http.util.EntityUtils;
 
 import com.edu.utils.ReadPro;
@@ -45,25 +48,16 @@ public class HttpDriver {
 		return content;
 	}
 	
-	public static String doGet(String url,CookieStore cookie) throws Exception{
-		 
-	        // 将CookieStore设置到httpClient中
-	        httpClient = HttpClients.custom().setDefaultCookieStore(cookie).build();
-	    
-	    
-	   
-//	        List<Cookie> cookies =  CookieStore.getCookies();
-//	        for(Cookie cookie : cookies){
-//	            if(cookie.getName().equalsIgnoreCase(url)){
-//	                return cookie.getValue();
-//	            }
-	      
-	      
+	public static String doGet(String url,CookieStore cookie) throws Exception{	
+		
 	    httpClient=HttpClients.createDefault();
+		
+		RequestConfig gConfig = RequestConfig.custom().
+				setCookieSpec(CookieSpecs.STANDARD).build();
+		CloseableHttpClient  httpClient =HttpClients.custom().
+				setDefaultRequestConfig(gConfig).
+				setDefaultCookieStore(cookie).build();
 		HttpGet get=new HttpGet(url);
-		get.addHeader("Content-Type","aplication/json");
-//		get.setHeader(cookie,"mindsparktb_232530392=true;mindsparktbsupport_232530392=true");
-
 		respone=httpClient.execute(get);
 		HttpEntity entity = respone.getEntity();
 		String content = EntityUtils.toString(entity, "utf-8");
