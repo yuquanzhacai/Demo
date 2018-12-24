@@ -1,0 +1,7 @@
+[FATAL] 2018-10-31 10:22:11,388 com.edu.utils.Checker - expectedValue doesn't match actualValue,actual Value is :璇锋眰澶辫触; expected Value is :success
+[FATAL] 2018-12-19 14:44:50,948 com.edu.utils.Checker - expectedValue doesn't match actualValue,actual Value is :请重新登录; expected Value is :收货地址为空
+[FATAL] 2018-12-19 14:55:17,609 com.edu.utils.Checker - expectedValue doesn't match actualValue,actual Value is :请重新登录; expected Value is :收货地址为空
+[FATAL] 2018-12-19 14:55:17,805 com.edu.utils.Checker - expectedValue doesn't match actualValue,actual Value is :请重新登录; expected Value is :success
+[FATAL] 2018-12-19 14:56:40,464 com.edu.utils.Checker - expectedValue doesn't match actualValue,actual Value is :请重新登录; expected Value is :success
+[FATAL] 2018-12-19 15:30:55,931 com.edu.utils.Checker - expectedValue doesn't match actualValue,actual Value is :403; expected Value is :201
+[FATAL] 2018-12-19 15:30:56,114 com.edu.utils.Checker - expectedValue doesn't match actualValue,actual Value is :请重新登录; expected Value is :success
