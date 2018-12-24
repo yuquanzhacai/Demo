@@ -2,30 +2,30 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2018-12-06T09:58:22Z" name="Default suite" finished-at="2018-12-06T09:59:11Z" duration-ms="49754">
+  <suite started-at="2018-12-12T08:04:13Z" name="Default suite" finished-at="2018-12-12T08:04:41Z" duration-ms="27649">
     <groups>
     </groups>
-    <test started-at="2018-12-06T09:58:22Z" name="Default test" finished-at="2018-12-06T09:59:11Z" duration-ms="49754">
+    <test started-at="2018-12-12T08:04:13Z" name="Default test" finished-at="2018-12-12T08:04:41Z" duration-ms="27649">
       <class name="com.webtest.demo.Xueli">
-        <test-method is-config="true" signature="doBeforeSuite(org.testng.ITestContext)[pri:0, instance:com.webtest.demo.Xueli@5a56cdac]" started-at="2018-12-06T09:58:22Z" name="doBeforeSuite" finished-at="2018-12-06T09:58:22Z" duration-ms="11" status="PASS">
+        <test-method is-config="true" signature="doBeforeSuite(org.testng.ITestContext)[pri:0, instance:com.webtest.demo.Xueli@434a63ab]" started-at="2018-12-12T08:04:07Z" name="doBeforeSuite" finished-at="2018-12-12T08:04:13Z" duration-ms="5809" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@437e951d]]>
+                <![CDATA[org.testng.TestRunner@37ed010a]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doBeforeSuite -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.webtest.demo.Xueli@5a56cdac]" started-at="2018-12-06T09:58:22Z" name="setup" finished-at="2018-12-06T09:58:22Z" duration-ms="1" status="PASS">
+        <test-method signature="talk()[pri:0, instance:com.webtest.demo.Xueli@434a63ab]" started-at="2018-12-12T08:04:13Z" name="talk" finished-at="2018-12-12T08:04:41Z" duration-ms="27633" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="course()[pri:0, instance:com.webtest.demo.Xueli@5a56cdac]" started-at="2018-12-06T09:58:22Z" name="course" finished-at="2018-12-06T09:59:11Z" duration-ms="49725" status="PASS">
+        </test-method> <!-- talk -->
+        <test-method is-config="true" signature="doAfterMethod()[pri:0, instance:com.webtest.demo.Xueli@434a63ab]" started-at="2018-12-12T08:04:41Z" name="doAfterMethod" finished-at="2018-12-12T08:04:42Z" duration-ms="795" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- course -->
+        </test-method> <!-- doAfterMethod -->
       </class> <!-- com.webtest.demo.Xueli -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

@@ -65,6 +65,11 @@ public class WebDriverEngine {
 		driver.switchTo().frame(frameID);
 		Log.info("Entered iframe " + frameID);
 	}
+	public void enterFrame(WebElement frameID) {
+		this.pause(3000);
+		driver.switchTo().frame(frameID);
+		Log.info("Entered iframe " + frameID);
+	}
 	public void enterFrame(int frameID) {
 		this.pause(3000);
 		driver.switchTo().frame(frameID);
@@ -143,6 +148,10 @@ public class WebDriverEngine {
 		}
 	}
 
+	public void click() {
+
+		action.click();
+	}
 	public void clickLonger(String locator) {
 
 		WebElement element = finder.findElement(locator);
@@ -163,7 +172,7 @@ public class WebDriverEngine {
 
 		WebElement element = finder.findElement(locator);
 		if (element != null) {
-			System.out.println(element.isDisplayed());
+			System.out.println("是否显示"+element.isDisplayed());
 		}
 	}
 
@@ -193,7 +202,8 @@ public class WebDriverEngine {
 
 		return finder.findElement(locator).getAttribute("value");
 	}
-
+	
+	
 	public String getUrl() {
 		return driver.getCurrentUrl();
 	}
@@ -251,6 +261,7 @@ public class WebDriverEngine {
 	}
 
 
+
 	public void mouseoverElement(String locator) throws InterruptedException {
 		Actions action = new Actions(driver);
 		action.moveToElement(finder.findElement(locator)).perform();
@@ -272,6 +283,11 @@ public class WebDriverEngine {
 	public void tapClick(){
 	
 		action.sendKeys(Keys.TAB).perform();;
+	}
+	
+	public void enterClick(){
+		
+		action.sendKeys(Keys.ENTER).perform();;
 	}
 	
 	public void tapType(String content){
@@ -305,7 +321,18 @@ public class WebDriverEngine {
 //		return false;
 //	}
 
-	
+	public void runJs(String js,String locator) {
+
+		JavascriptExecutor j = (JavascriptExecutor) driver;
+
+		j.executeScript(js,finder.findElement(locator));
+
+	}
+
+	public char[] getId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 	
 	

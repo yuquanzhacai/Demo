@@ -2,11 +2,12 @@
 <suite name="Suite1" verbose="1">
 <listeners> 
 		<listener class-name="com.webtest.core.WebTestListener" /> 
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
 </listeners>
   <test name="com.webtest.demo" >
     <classes>
-       <class name="com.webtest.demo.Course" />
+       <class name="com.webtest.demo.Xueli" />
     </classes>
   </test>
-
 </suite>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="个人信息"
+           tests="6"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="99.242">
+  <properties />
+  
+  
+            <testcase name="exit" time="4.281" classname="com.edu.test.Own_Message_Test" />
+                <testcase name="edit_PasswordFailed" time="20.623" classname="com.edu.test.Own_Message_Test" />
+                <testcase name="edit_Message" time="29.322" classname="com.edu.test.Own_Message_Test" />
+                <testcase name="own_Message" time="7.197" classname="com.edu.test.Own_Message_Test" />
+                <testcase name="edit_PasswordFailed3" time="18.683" classname="com.edu.test.Own_Message_Test" />
+                <testcase name="edit_PasswordFailed2" time="19.136" classname="com.edu.test.Own_Message_Test" />
+      
+</testsuite>
