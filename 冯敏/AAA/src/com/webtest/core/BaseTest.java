@@ -70,13 +70,13 @@ public class BaseTest {
 	}
 
 
-//	@BeforeClass
-//	public void addListener(ITestContext context)
-//			throws Exception {
+	@BeforeSuite
+	public void addListener(ITestContext context)
+			throws Exception {
 //		TestRunner runner = (TestRunner) context;
 //	    runner.addListener(new WebTestListener());
-//	   
-//	}
+	   
+	}
 
 
 

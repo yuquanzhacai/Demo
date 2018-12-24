@@ -10,6 +10,12 @@ import com.edu.core.BaseTest;
 import com.edu.models.Login_Action;
 import com.edu.models.Work_Change_Action;
 
+<<<<<<< HEAD:王函瑜/XueliProject/src/com/edu/test/Search.java
+/*
+ *玉儿的搜索框 
+ */
+public class Search extends BaseTest {
+=======
 
 /*
  * author:zhangyu
@@ -18,6 +24,7 @@ import com.edu.models.Work_Change_Action;
  */
 
 public class Search_Test extends BaseTest {
+>>>>>>> 1191a5a979de8933a40535de839db9e33a7af004:王函瑜/XueliProject2/src/com/edu/test/Search_Test.java
 	
 	Login_Action action;
 	

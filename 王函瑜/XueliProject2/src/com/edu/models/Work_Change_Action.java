@@ -1,10 +1,18 @@
 package com.edu.models;
+<<<<<<< HEAD:王函瑜/XueliProject/src/com/edu/models/Work_Change_Action.java
+=======
 
 import org.openqa.selenium.By;
+>>>>>>> 1191a5a979de8933a40535de839db9e33a7af004:王函瑜/XueliProject2/src/com/edu/models/Work_Change_Action.java
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
 import com.edu.core.WebDriverEngine;
+<<<<<<< HEAD:王函瑜/XueliProject/src/com/edu/models/Work_Change_Action.java
+/*
+ * 欣然的修改已完成
+*/
+=======
 
 /*
  * author:lixinran
@@ -13,6 +21,7 @@ import com.edu.core.WebDriverEngine;
  * 
  */
 
+>>>>>>> 1191a5a979de8933a40535de839db9e33a7af004:王函瑜/XueliProject2/src/com/edu/models/Work_Change_Action.java
 public class Work_Change_Action {
 	
 	private WebDriverEngine webtest;

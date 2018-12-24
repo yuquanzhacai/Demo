@@ -7,18 +7,17 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import org.testng.ITestContext;
 import org.testng.ITestNGMethod;
 import org.testng.ITestResult;
 import org.testng.TestListenerAdapter;
+
 import com.webtest.utils.Log;
 
 public class WebTestListener extends TestListenerAdapter {
 
 
 	FreemarkerTemplateEngine ft=new FreemarkerTemplateEngine();
-	
 
 	public WebTestListener() {
 		super();
@@ -103,8 +102,14 @@ public class WebTestListener extends TestListenerAdapter {
 			if(ReadProperties.getPropertyValue("enable_email").equals("true"))
 			{
 				String emailContent=this.writeResultToMailTemplate();
-				String emailTitle=ReadProperties.getPropertyValue("mail_title");
-				String toMail=ReadProperties.getPropertyValue("to_mail");
+				String emailTitle=ReadProperties.getPropertyValue("mail_title")+"----"+this.getTime();
+				String toMail = null;
+				try {
+					toMail = ReadProperties.getPropertyValue("to_mail");
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 				try {
 					if(this.getFailedTests()!=null&&this.getFailedTests().size()>0)
 					{
@@ -117,7 +122,7 @@ public class WebTestListener extends TestListenerAdapter {
 					}
 				} catch (UnsupportedEncodingException e) {
 					// TODO Auto-generated catch block
-					   Log.fatal("email send fail :"+e.getMessage());
+					Log.fatal("email send fail :"+e.getMessage());
 				}
 			}
 		} catch (IOException e) {
@@ -127,4 +132,12 @@ public class WebTestListener extends TestListenerAdapter {
 	
 	}
 	
+
+
+    public String getTime()
+    {
+    	java.util.Calendar c=java.util.Calendar.getInstance();    
+        java.text.SimpleDateFormat f=new java.text.SimpleDateFormat("yyyy-MM-dd  hh:mm:ss");    
+       	return  f.format(c.getTime());    
+    }
 }

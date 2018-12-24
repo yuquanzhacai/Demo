@@ -7,12 +7,18 @@ import org.openqa.selenium.WebElement;
 
 import com.edu.core.BaseTest;
 import com.edu.core.WebDriverEngine;
+<<<<<<< HEAD:王函瑜/XueliProject/src/com/edu/models/Own_Message_Action.java
+/*
+ * 函瑜的个人设置
+ */
+=======
 
 /*
  * author:wanghanyu
  * 个人信息及密码修改
  */
 
+>>>>>>> 1191a5a979de8933a40535de839db9e33a7af004:王函瑜/XueliProject2/src/com/edu/models/Own_Message_Action.java
 public class Own_Message_Action {
 	private WebDriverEngine webtest;
 	public Own_Message_Action(WebDriverEngine webtest) {

@@ -28,10 +28,15 @@ import com.edu.models.Login_Action;
 import com.webtest.dataprovider.NSDataProvider;
 
 /*
+<<<<<<< HEAD:王函瑜/XueliProject/src/com/edu/test/Login_Test.java
+ * 玉儿的登录
+*/
+=======
  * author:zhangyu
  * 登录
  * 
  */
+>>>>>>> 1191a5a979de8933a40535de839db9e33a7af004:王函瑜/XueliProject2/src/com/edu/test/Login_Test.java
 
 public class Login_Test extends BaseTest{
 	Login_Action action;
@@ -42,8 +47,14 @@ public class Login_Test extends BaseTest{
 		action=new Login_Action(webtest);
 	}
 
+<<<<<<< HEAD:王函瑜/XueliProject/src/com/edu/test/Login_Test.java
+	//在txt驱动下输入正确的用户名和密码登录2402370100@qq.com,222328happy
+	//(enabled=false)//
+	 @Test(dataProvider="txt",dataProviderClass=NSDataProvider.class)
+=======
 	//在txt驱动下输入正确的用户名和密码登录
 	 @Test(dataProvider="txt",dataProviderClass=NSDataProvider.class,description="TXT驱动登录")
+>>>>>>> 1191a5a979de8933a40535de839db9e33a7af004:王函瑜/XueliProject2/src/com/edu/test/Login_Test.java
 	public void loginSuccess(String s1,String s2) throws Exception  {
 		action.login(s1, s2);			
 		//判断是否登录成功,不成功则输出不成功的信息
@@ -83,7 +94,15 @@ public class Login_Test extends BaseTest{
 		}
 	}
 }
+/*
+ * 用户名	密码
+1336448191@qq.com	ZHANGyu123
+123@126.com	ZHANGyu12
+987@qq.com	ZHANGyu123
 
+ * 
+ * 
+ * */
 
 
 

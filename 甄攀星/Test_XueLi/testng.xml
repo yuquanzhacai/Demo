@@ -1,15 +1,28 @@
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Suite1" verbose="1">
-<listeners> 
-		<!-- listener class-name="com.webtest.core.WebTestListener" /-->
-        <listener class-name="org.uncommons.reportng.HTMLReporter" />
-        <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
-</listeners>
-  <test name="com.webtest.demo" >
-    <classes>
-       <class name="com.webtest.demo.Login"/>
-       <class name="com.webtest.demo.CreateClass"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="test" parallel="tests">
+   <!-- listeners>
+	   <listener class-name="org.uncommons.reportng.HTMLReporter" /> 
+       <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+       <listener class-name="com.edu.core.WebTestListener" />
+       <listener class-name="com.edu.core.WebTestListener2" />
+     
+   </listeners -->
+      	
+   <test name="test" preserver-order="true">
+  	<classes>
+  		<class name="com.edu.teach_test.AddRenwu_Test">
+  			<include name="addRenwu"></include>
+  		</class>
+  		<class name="com.edu.teach_test.CreateClass_Test">
+  			<include name="create_class"></include>
+  		</class>
+  		<class name="com.edu.teach_test.Piyue_Test">
+  			<include name="piyue"></include>
+  		</class>
+  		<class name="com.edu.teach_test.ThroughAudit_Test">
+  			<include name="through_audit"></include>
+  		</class>
     </classes>
-  </test>
-
-</suite>
+   </test>
+ 
+</suite> 
