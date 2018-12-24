@@ -22,6 +22,7 @@ public class Delete {
 		
 		int id1=result.getJSONArray("list").getJSONObject(0).getInt("id");
 		System.out.println(id1);
+		System.out.println(id1);
 		
 		JSONObject addressId = new JSONObject();
 		addressId.element("id", id1);
