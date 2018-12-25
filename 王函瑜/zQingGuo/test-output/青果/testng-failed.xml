@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [青果]">
+  <listeners>
+    <listener class-name="com.edu.core.ApiListener"/>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="查询运费(failed)">
+    <classes>
+      <class name="com.edu.test.TransFeeTest">
+        <methods>
+          <include name="feeTest9"/>
+          <include name="feeTest12"/>
+          <include name="feeTest3"/>
+          <include name="feeTest6"/>
+          <include name="feeTest8"/>
+          <include name="feeTest7"/>
+        </methods>
+      </class> <!-- com.edu.test.TransFeeTest -->
+    </classes>
+  </test> <!-- 查询运费(failed) -->
+</suite> <!-- Failed suite [青果] -->

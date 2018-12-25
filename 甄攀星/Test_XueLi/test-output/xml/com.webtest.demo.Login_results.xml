@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.webtest.demo"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="24.351">
+  <properties />
+  
+  
+            <testcase name="loginSuccess1" time="12.263" classname="com.webtest.demo.Login" />
+                <testcase name="through_audit" time="12.088" classname="com.webtest.demo.Login" />
+      
+</testsuite>

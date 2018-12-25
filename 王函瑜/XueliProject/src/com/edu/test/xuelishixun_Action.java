@@ -16,7 +16,7 @@ import com.edu.core.BaseTest;
 			webtest.open("http://10.7.10.7");
 			webtest.click("xpath=//a[contains(.,'登录')]");
 			webtest.type("name=username", "2240024073@qq.com");
-			webtest.type("name=password","980603");
+//			webtest.type("name=password","980603");
 			webtest.click("xpath=//button[@id='submit']");
 //			webtest.click("xpath=//a[@href='/notifications/']");
 //			
@@ -40,9 +40,5 @@ import com.edu.core.BaseTest;
 			webtest.click("xpath=//a[@href='/u/courses/']");
 			webtest.click("xpath=//a[@href='/u/courses/attention/']");
 			webtest.click("xpath=//a[@href='/u/courses/interest/']");
-			//webtest.runJs("arguments[0].click();","link=课程分类:软件测试");
-			
-			
-			
 		}
 	}

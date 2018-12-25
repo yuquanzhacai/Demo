@@ -23,6 +23,6 @@ public class CreateClass_Test extends BaseTest{
 	@Test(description="测试创建同步课成功界面" )
 	public void create_class()
 	{
-		action.CreateClass("E:\\8.jpg","课程二", "课程二", "10");
+		action.CreateClass("C:\\Users\\zhen\\Desktop\\img1.jpg","课程二", "课程二", "10");
 	}
 }

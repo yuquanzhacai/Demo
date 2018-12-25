@@ -352,7 +352,53 @@ public class WebDriverEngine {
 		JavascriptExecutor j = (JavascriptExecutor) driver;
 
 		j.executeScript(js,finder.findElement(locator));
-
 	}
-
+	//全部通过审核
+	public void through() throws InterruptedException {
+		action.moveToElement(driver.findElement(By.className("notification-box"))).perform();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//a[contains(@href, '/u/teams/applications/')]")).click();
+		driver.findElement(By.xpath("//i[@class='icon-check-empty']")).click();
+		
+//		driver.findElement(By.className("check-all check-btn")).click();
+//		driver.findElement(By.xpath("/html/body/div[0]/div[0]/div[0]/div[1]/div[1]/div[0]/li[@class='icon-check-empty']"));
+		driver.findElement(By.xpath("//button[contains(.,'批量通过')]")).click();
+//		driver.findElement(By.xpath("//a[@title='通过']")).click();
+	}
+	//部分通过审核
+	public void throughSelectAudit(String name) throws InterruptedException
+	{
+		action.moveToElement(driver.findElement(By.className("notification-box"))).perform();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//a[contains(@href, '/u/teams/applications/')]")).click();
+//		webtest.type("//input[@id='id_nickname']", "name");
+		driver.findElement(By.xpath("//input[@id='id_nickname']")).sendKeys(name);
+		driver.findElement(By.xpath("//button[@class='search-button']")).click();
+		driver.findElement(By.xpath("//i[@class='icon-check-empty']")).click();
+		driver.findElement(By.xpath("//button[contains(.,'批量通过')]")).click();
+	}
+	//点击只查看申请同步课的人
+	public void look() throws InterruptedException
+	{
+		action.moveToElement(driver.findElement(By.className("notification-box"))).perform();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//a[contains(@href, '/u/teams/applications/')]")).click();
+	}
+	
+	//任务描述
+	public void taskdescription()
+	{
+		action.sendKeys(Keys.TAB).perform();		
+		driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']")));
+	    driver.findElement(By.tagName("body")).sendKeys("任务描述");
+		driver.switchTo().defaultContent();		
+		action.sendKeys(Keys.TAB).perform();
+		driver.findElement(By.tagName("body")).sendKeys("答案解析");
+	}
+	//批阅作业0分
+	public void grade()
+	{
+		action.sendKeys(Keys.ENTER).perform();
+	}
+	
 }

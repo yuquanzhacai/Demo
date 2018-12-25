@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="课程"
+           tests="4"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="98.304">
+  <properties />
+  
+  
+            <testcase name="course_Search" time="18.504" classname="com.edu.test.Course_Test" />
+                <testcase name="course_Look" time="19.573" classname="com.edu.test.Course_Test" />
+                <testcase name="course_Search3" time="33.650" classname="com.edu.test.Course_Test" />
+                <testcase name="course_Search2" time="26.577" classname="com.edu.test.Course_Test" />
+      
+</testsuite>

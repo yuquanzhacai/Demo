@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
+<head>
+  <title>Test Results Report - three</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="description" content="TestNG unit test results." />
+  <link href="reportng.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="reportng.js"></script>
+</head>
+<body>
+<h1>three</h1>
+<p>
+  Test duration: 0.522s
+</p>
+
+
+
+  <table class="resultsTable">
+    <tr><th colspan="5" class="header failed">Failed Tests</th></tr>
+          <tr>
+         <td colspan="1" class="group">com.edu.test.Transfee_Parameter</td>
+          <td colspan="1" class="group">Duration</td>
+          <td colspan="1" class="group">Log Info</td>
+          <td colspan="1" class="group">Screen Shot</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  <span class="description">feeTest1 (查询运费信息,一个参数)</span>
+      </td>
+  <td class="duration">
+    0.351s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.apache.http.ConnectionClosedException: Premature end of chunk coded message body: closing chunk expected</b></a><br />
+    <div class="stackTrace" id="exception-0">
+              org.apache.http.impl.io.ChunkedInputStream.getChunkSize(ChunkedInputStream.java:266)<br />
+              org.apache.http.impl.io.ChunkedInputStream.nextChunk(ChunkedInputStream.java:225)<br />
+              org.apache.http.impl.io.ChunkedInputStream.read(ChunkedInputStream.java:148)<br />
+              org.apache.http.conn.EofSensorInputStream.read(EofSensorInputStream.java:118)<br />
+              java.base/java.util.zip.CheckedInputStream.read(CheckedInputStream.java:60)<br />
+              java.base/java.util.zip.GZIPInputStream.readUByte(GZIPInputStream.java:267)<br />
+              java.base/java.util.zip.GZIPInputStream.readUShort(GZIPInputStream.java:259)<br />
+              java.base/java.util.zip.GZIPInputStream.readHeader(GZIPInputStream.java:165)<br />
+              java.base/java.util.zip.GZIPInputStream.&lt;init&gt;(GZIPInputStream.java:80)<br />
+              java.base/java.util.zip.GZIPInputStream.&lt;init&gt;(GZIPInputStream.java:92)<br />
+              org.apache.http.client.entity.GZIPInputStreamFactory.create(GZIPInputStreamFactory.java:61)<br />
+              org.apache.http.client.entity.LazyDecompressingInputStream.initWrapper(LazyDecompressingInputStream.java:51)<br />
+              org.apache.http.client.entity.LazyDecompressingInputStream.read(LazyDecompressingInputStream.java:69)<br />
+              java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)<br />
+              java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)<br />
+              java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)<br />
+              java.base/java.io.InputStreamReader.read(InputStreamReader.java:185)<br />
+              java.base/java.io.Reader.read(Reader.java:140)<br />
+              org.apache.http.util.EntityUtils.toString(EntityUtils.java:227)<br />
+              org.apache.http.util.EntityUtils.toString(EntityUtils.java:270)<br />
+              org.apache.http.util.EntityUtils.toString(EntityUtils.java:290)<br />
+              com.edu.core.HttpDriver.doGet(HttpDriver.java:40)<br />
+              com.edu.test.Transfee_Parameter.feeTest1(Transfee_Parameter.java:21)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.base/java.lang.reflect.Method.invoke(Method.java:564)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:580)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:648)<br />
+              org.testng.TestRunner.run(TestRunner.java:505)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:455)<br />
+              org.testng.SuiteRunner.access$000(SuiteRunner.java:40)<br />
+              org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)<br />
+              org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)<br />
+              java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)<br />
+              java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)<br />
+              java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)<br />
+              java.base/java.lang.Thread.run(Thread.java:844)<br />
+                </div>
+      </td>
+  <td class="screenshot">
+              </td>
+</tr>
+      </table>
+
+
+  <table class="resultsTable">
+    <tr><th colspan="5" class="header passed">Passed Tests</th></tr>
+          <tr>
+        <td colspan="1" class="group">com.edu.test.Transfee_Parameter</td>
+          <td colspan="1" class="group">Duration</td>
+          <td colspan="1" class="group">Log Info</td>
+          <td colspan="1" class="group">Screen Shot</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  <span class="description">feeTest2 (查询运费信息,String类型参数)</span>
+      </td>
+  <td class="duration">
+    0.081s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+  <td class="screenshot">
+              </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description">feeTest (查询运费信息,Map传参)</span>
+      </td>
+  <td class="duration">
+    0.090s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+  <td class="screenshot">
+              </td>
+</tr>
+      </table>
+  
+</body>
+</html>

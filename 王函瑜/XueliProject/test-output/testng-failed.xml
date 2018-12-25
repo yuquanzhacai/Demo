@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite parallel="tests" name="Failed suite [test]">
-  <listeners>
-    <listener class-name="com.edu.core.WebTestListener"/>
-    <listener class-name="com.edu.core.WebTestListener2"/>
-  </listeners>
-  <test thread-count="5" parallel="tests" name="test(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.edu.test.Work_Submit_Test">
+      <class name="com.edu.teach_test.ThroughAudit_Test">
         <methods>
           <include name="doAfterMethod"/>
+          <include name="login"/>
+          <include name="through_audit"/>
           <include name="doBeforeSuite"/>
-          <include name="before_Login"/>
-          <include name="code_file_txt"/>
         </methods>
-      </class> <!-- com.edu.test.Work_Submit_Test -->
+      </class> <!-- com.edu.teach_test.ThroughAudit_Test -->
     </classes>
-  </test> <!-- test(failed) -->
-</suite> <!-- Failed suite [test] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

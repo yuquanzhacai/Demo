@@ -25,6 +25,7 @@
 	<classpathentry kind="lib" path="lib/saxon-8.7.jar"/>
 	<classpathentry kind="lib" path="lib/freemarker.jar"/>
 	<classpathentry kind="lib" path="lib/reportng-1.1.5.jar"/>
+	<classpathentry kind="lib" path="lib/reportng-1.1.7.jar"/>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

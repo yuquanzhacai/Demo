@@ -9,7 +9,9 @@ import org.testng.annotations.Test;
 import com.edu.core.BaseTest;
 import com.edu.models.Login_Action;
 import com.edu.models.Work_Change_Action;
-
+/*
+ *欣然的修改已完成
+ */
 public class Work_Change_Test extends BaseTest{
 	
 	
@@ -44,7 +46,7 @@ public class Work_Change_Test extends BaseTest{
 	
 	@Test(enabled=false)
 	public void change_flie() throws InterruptedException {
-	    wsaction.fileEdit("E:\\8.jpg");
+	    wsaction.fileEdit("D:\\demo\\loginuser.txt");
 	    Assert.assertTrue(webtest.isTextPresent("已完成"));
 	}
 	
@@ -62,7 +64,7 @@ public class Work_Change_Test extends BaseTest{
 	
 	@Test(enabled=false)
 	public void add_file() throws InterruptedException {
-		wsaction.Addfile("E:\\8.jpg");
+		wsaction.Addfile("D:\\demo\\loginuser.txt");
 		Assert.assertTrue(webtest.isTextPresent("已完成"));
 	}
 	
