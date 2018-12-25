@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [test]">
+  <listeners>
+    <listener class-name="com.edu.core.WebTestListener2"/>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="test(failed)">
+    <classes>
+<<<<<<< HEAD:王函瑜/XueliProject/test-output/test/testng-failed.xml
+      <class name="com.edu.test.Login_Test">
+=======
+      <class name="com.edu.test.TestA">
+>>>>>>> 1191a5a979de8933a40535de839db9e33a7af004:王函瑜/XueliProject2/test-output/test/testng-failed.xml
+        <methods>
+          <include name="doAfterMethod"/>
+          <include name="setup"/>
+          <include name="doBeforeSuite"/>
+<<<<<<< HEAD:王函瑜/XueliProject/test-output/test/testng-failed.xml
+          <include name="loginSuccess" invocation-numbers="1"/>
+        </methods>
+      </class> <!-- com.edu.test.Login_Test -->
+=======
+          <include name="loginfail"/>
+        </methods>
+      </class> <!-- com.edu.test.TestA -->
+>>>>>>> 1191a5a979de8933a40535de839db9e33a7af004:王函瑜/XueliProject2/test-output/test/testng-failed.xml
+    </classes>
+  </test> <!-- test(failed) -->
+</suite> <!-- Failed suite [test] -->

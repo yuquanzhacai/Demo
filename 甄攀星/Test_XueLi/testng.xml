@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="test" parallel="tests">
+   <!-- listeners>
+	   <listener class-name="org.uncommons.reportng.HTMLReporter" /> 
+       <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+       <listener class-name="com.edu.core.WebTestListener" />
+       <listener class-name="com.edu.core.WebTestListener2" />
+     
+   </listeners -->
+      	
+   <test name="test" preserver-order="true">
+  	<classes>
+  		<class name="com.edu.teach_test.AddRenwu_Test">
+  			<include name="addRenwu"></include>
+  		</class>
+  		<class name="com.edu.teach_test.CreateClass_Test">
+  			<include name="create_class"></include>
+  		</class>
+  		<class name="com.edu.teach_test.Piyue_Test">
+  			<include name="piyue"></include>
+  		</class>
+  		<class name="com.edu.teach_test.ThroughAudit_Test">
+  			<include name="through_audit"></include>
+  		</class>
+    </classes>
+   </test>
+ 
+</suite> 

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+<<<<<<< HEAD:王函瑜/XueliProject/test-output/Default suite/testng-failed.xml
+      <class name="com.edu.teach_test.ThroughAudit_Test">
+        <methods>
+          <include name="doAfterMethod"/>
+          <include name="login"/>
+          <include name="through_audit"/>
+          <include name="doBeforeSuite"/>
+        </methods>
+      </class> <!-- com.edu.teach_test.ThroughAudit_Test -->
+=======
+      <class name="com.edu.test.QieShuo_Test">
+        <methods>
+          <include name="doAfterMethod"/>
+          <include name="doBeforeSuite"/>
+          <include name="setup"/>
+          <include name="commentLong_Fail2"/>
+        </methods>
+      </class> <!-- com.edu.test.QieShuo_Test -->
+>>>>>>> 1191a5a979de8933a40535de839db9e33a7af004:王函瑜/XueliProject2/test-output/Default suite/testng-failed.xml
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
