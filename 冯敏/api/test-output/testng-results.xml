@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2018-12-19T07:46:28Z" name="Default suite" finished-at="2018-12-19T07:46:29Z" duration-ms="939">
+    <groups>
+    </groups>
+    <test started-at="2018-12-19T07:46:28Z" name="Default test" finished-at="2018-12-19T07:46:29Z" duration-ms="939">
+      <class name="test.List">
+        <test-method signature="ff()[pri:0, instance:test.List@2f54a33d]" started-at="2018-12-19T07:46:28Z" name="ff" description="查询收货地址失败" finished-at="2018-12-19T07:46:28Z" duration-ms="706" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ff -->
+        <test-method signature="ss()[pri:0, instance:test.List@2f54a33d]" started-at="2018-12-19T07:46:28Z" name="ss" description="查询收货地址成功" finished-at="2018-12-19T07:46:29Z" duration-ms="198" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ss -->
+      </class> <!-- test.List -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
