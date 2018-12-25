@@ -1,52 +1,35 @@
 package com.edu.test;
 
-import java.io.IOException;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.ParseException;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
-import org.apache.http.util.EntityUtils;
+import org.apache.http.client.CookieStore;
+import org.testng.annotations.Test;
+import com.edu.core.HttpDriver;
+import net.sf.json.JSONObject;
 
-public class Delete{
+public class Delete {
+	@Test
+	public void delete() throws Exception {
+		
+//		CloseableHttpClient httpclient = HttpClients.createDefault();
+		
+		CookieStore cookie=Common.getLoginCookie("20000000000","netease123");
+		String content=HttpDriver.doGetByCookie("http://study-perf.qa.netease.com/fgadmin/address/list",cookie);
+		
+		System.out.println(content);
+		
+		JSONObject json =JSONObject.fromObject(content);
+		JSONObject result=json.getJSONObject("result");	
+		
+		int id1=result.getJSONArray("list").getJSONObject(0).getInt("id");
+		System.out.println(id1);
+		System.out.println(id1);
+		
+		JSONObject addressId = new JSONObject();
+		addressId.element("id", id1);
+		String delete=HttpDriver.doPostByCookie("http://study-perf.qa.netease.com/fgadmin/address/delete",addressId,cookie);
+		System.out.println(delete);
+		
+		
 
-public static void main(String[] args) {
-	CloseableHttpClient httpClient = HttpClients.createDefault();
-	HttpGet httpGet = new HttpGet("http://www.tuicool.com/");
-	CloseableHttpResponse response = null;
-	try {
-		response=httpClient.execute(httpGet);
-	} catch (ClientProtocolException e) {  //http协议异常
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	} catch (IOException e) {	//io异常
-		// TODO Auto-generated catch block
-		e.printStackTrace();
 	}
-	HttpEntity entity=response.getEntity();
-	try {
-		System.out.println("网页内容："+EntityUtils.toString(entity,"utf-8"));
-	} catch (ParseException e) {  //解析异常
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	} catch (IOException e) {	//io异常
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-	try {
-		response.close();
-	} catch (IOException e) {  //io异常
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-	try {
-		httpClient.close();
-	} catch (IOException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-}
 }

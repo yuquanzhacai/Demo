@@ -43,6 +43,23 @@ public class HttpDriver {
 		return content;
 	}
 
+	public static String doGetByCookie(String url,CookieStore cookie) throws Exception {
+		RequestConfig gConfig = RequestConfig.custom().setCookieSpec(CookieSpecs.STANDARD).build();
+		httpClient = HttpClients.custom().setDefaultRequestConfig(gConfig).setDefaultCookieStore(cookie).build();  
+		//创建一个带有cookie信息的httpClient
+//		
+//		httpClient = HttpClients.createDefault();
+		HttpGet get = new HttpGet(url);
+		get.addHeader("Content-Type", "application/json");
+		respone = httpClient.execute(get);
+		HttpEntity entity = respone.getEntity();
+		String content = EntityUtils.toString(entity, "utf-8");
+		EntityUtils.consume(entity);
+		respone.close();
+		httpClient.close();
+		return content;
+	}
+
 	public static String doGet(String url, JSONObject data) throws Exception {
 		String para = URLEncoder.encode(data.toString(), "UTF-8");
 		httpClient = HttpClients.createDefault();
@@ -231,7 +248,6 @@ public class HttpDriver {
 		HttpEntity data = new StringEntity(para.toString());
 		post.setEntity(data);
 		CloseableHttpResponse respone = httpClient.execute(post);
-
 		HttpEntity entity = respone.getEntity();
 		String content = EntityUtils.toString(entity, "utf-8");
 		EntityUtils.consume(entity);
@@ -240,5 +256,26 @@ public class HttpDriver {
 		return content;
 
 	}
-
+	public static String doPostByCookie(String url,JSONObject id,CookieStore cookie) throws Exception {
+		RequestConfig gConfig = RequestConfig.custom().setCookieSpec(CookieSpecs.STANDARD).build();
+		httpClient = HttpClients.custom().setDefaultRequestConfig(gConfig).setDefaultCookieStore(cookie).build();  
+		//创建一个带有cookie信息的httpClient
+//		
+//		httpClient = HttpClients.createDefault();
+		HttpPost post = new HttpPost(url);
+		post.addHeader("Content-Type", "application/json");
+		post.addHeader("csrfToken","csrfToken");
+		StringEntity entity = new StringEntity(id.toString());
+		post.setEntity(entity);
+		respone=httpClient.execute(post);
+		HttpEntity resultentity = respone.getEntity();
+		String content = EntityUtils.toString(resultentity, "utf-8");
+		EntityUtils.consume(resultentity);
+		respone.close();
+		httpClient.close();
+		return content;
+	}
+	
+	
+	
 }

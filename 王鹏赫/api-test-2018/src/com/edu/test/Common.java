@@ -21,11 +21,11 @@ import net.sf.json.JSONObject;
 @Test
 public class Common {
 	public static CookieStore getLoginCookie(String u_name,String u_pwd) throws IOException, Exception {
-		String loginurl="";
+		String loginurl="http://study-perf.qa.netease.com/common/fgadmin/login";
 		JSONObject user = new JSONObject();
 		user.element("phoneArea", "86");
-		user.element("phoneNumber", "20000000000");
-		user.element("password", "netease123");
+		user.element("phoneNumber", u_name);
+		user.element("password", u_pwd);
 		
 		RequestConfig gConfig = RequestConfig.custom().
 				setCookieSpec(CookieSpecs.STANDARD).build();
@@ -48,6 +48,5 @@ public class Common {
 		return cookie;
 		
 	}
-
 
 }
