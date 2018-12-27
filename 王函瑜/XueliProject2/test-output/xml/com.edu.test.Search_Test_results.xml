@@ -4,12 +4,12 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="33.866">
+           time="35.468">
   <properties />
   
   
-            <testcase name="search_success" time="16.323" classname="com.edu.test.Search_Test" />
-                <testcase name="search_fail" time="9.247" classname="com.edu.test.Search_Test" />
-                <testcase name="search_null" time="8.296" classname="com.edu.test.Search_Test" />
+            <testcase name="search_success" time="16.664" classname="com.edu.test.Search_Test" />
+                <testcase name="search_null" time="8.314" classname="com.edu.test.Search_Test" />
+                <testcase name="search_fail" time="10.490" classname="com.edu.test.Search_Test" />
       
 </testsuite>

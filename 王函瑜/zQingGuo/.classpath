@@ -40,5 +40,7 @@
 	<classpathentry kind="lib" path="libs/freemarker.jar"/>
 	<classpathentry kind="lib" path="libs/velocity-dep-1.4.jar"/>
 	<classpathentry kind="lib" path="libs/guice-3.0.jar"/>
+	<classpathentry kind="lib" path="libs/testng.jar"/>
+	<classpathentry kind="lib" path="libs/jcommander.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

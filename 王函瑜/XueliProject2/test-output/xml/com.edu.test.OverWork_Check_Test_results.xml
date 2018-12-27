@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="19.878">
+           time="8.495">
   <properties />
   
   
-            <testcase name="look_work" time="19.878" classname="com.edu.test.OverWork_Check_Test" />
+            <testcase name="look_work" time="8.495" classname="com.edu.test.OverWork_Check_Test" />
       
 </testsuite>

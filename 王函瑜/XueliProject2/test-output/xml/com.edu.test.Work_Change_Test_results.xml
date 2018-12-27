@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="修改作业"
-           tests="6"
+           tests="1"
            failures="0"
            errors="0"
            skipped="0"
-           time="59.698">
+           time="29.456">
   <properties />
   
   
-            <testcase name="add_file" time="0.083" classname="com.edu.test.Work_Change_Test" />
-                <testcase name="change_txt" time="27.361" classname="com.edu.test.Work_Change_Test" />
-                <testcase name="change_txtAll" time="2.054" classname="com.edu.test.Work_Change_Test" />
-                <testcase name="change_flie" time="0.139" classname="com.edu.test.Work_Change_Test" />
-                <testcase name="add_code" time="16.442" classname="com.edu.test.Work_Change_Test" />
-                <testcase name="change_code" time="13.619" classname="com.edu.test.Work_Change_Test" />
+            <testcase name="change_work" time="29.456" classname="com.edu.test.Work_Change_Test" />
       
 </testsuite>
