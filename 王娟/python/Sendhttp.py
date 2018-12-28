@@ -24,6 +24,11 @@ class SendHttp:
             result = self.sent_get(url, paramdata)
         return result
 
+    def sent_get_parabycookies(self, url, data, cookies):
+        # data = json.dumps(paramdata)
+        res = requests.get(Common.baseUrl() + url + "?" + data, cookies=cookies)
+        return res.json()
+
 
 
 

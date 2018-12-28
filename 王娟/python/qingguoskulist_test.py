@@ -36,10 +36,13 @@ class skuList(unittest.TestCase):
         self.assertEqual(result['code'], 201)
         self.assertEqual(result['message'], '商品ID不存在')
 
-    #ID为“1”
+    #ID为“aaa”
     def test_skulist_id4(self):
-        id={"id":"1"}
+        id={"id":"aaa"}
         result = SendHttp().run_http(self.url, "GET",id)
         print(result)
         self.assertEqual(result['code'], 400)
         self.assertEqual(result['message'], '商品ID参数类型不正确')
+
+
+
