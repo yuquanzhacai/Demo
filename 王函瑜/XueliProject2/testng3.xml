@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="雪梨教育测试项目-学生部分" parallel="false">
+
+   <listeners>
+       <listener class-name="com.edu.core.WebTestListener" />
+       <listener class-name="com.edu.core.WebTestListener2" />
+       <listener class-name="org.uncommons.reportng.HTMLReporter" />
+	   <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+       
+   </listeners>
+
+
+
+   <test name="登录1" preserve-order="true" >
+      <classes>         
+          <class name="com.edu.test.Login_Test">
+           <methods>             
+             <include name="loginfail"></include>
+           </methods>
+          </class>
+      </classes>
+   </test>
+
+</suite> <!-- Suite -->
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="通知"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="28.214">
+  <properties />
+  
+  
+            <testcase name="notice" time="0.042" classname="com.edu.test.Notice_Test" />
+                <testcase name="praise" time="2.208" classname="com.edu.test.Notice_Test" />
+                <testcase name="comment" time="25.964" classname="com.edu.test.Notice_Test" />
+      
+</testsuite>

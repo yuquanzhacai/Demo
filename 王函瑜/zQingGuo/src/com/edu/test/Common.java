@@ -27,7 +27,7 @@ public class Common {
 		user.element("password", u_pwd);
 		
 		RequestConfig gConfig = RequestConfig.custom().
-				setCookieSpec(CookieSpecs.STANDARD).build();
+				setCookieSpec(CookieSpecs.STANDARD).build();  
 		CookieStore cookie =new BasicCookieStore();
 		CloseableHttpClient  httpClient =HttpClients.custom().
 				setDefaultRequestConfig(gConfig).
@@ -43,7 +43,7 @@ public class Common {
 		String content = EntityUtils.toString(entity, "utf-8");
 		EntityUtils.consume(entity);
 		respone.close();
-		//httpClient.close();
+		httpClient.close();
 		return cookie;
 		
 	}

@@ -21,7 +21,7 @@ import net.sf.json.JSONObject;
 
 /*
  * author:wanghanyu
- * ¼ÆËãÔË·Ñ
+ * è®¡ç®—è¿è´¹
  */
 
 
@@ -29,92 +29,80 @@ public class TransFeeTest {
 	static String result=null;
 	static String url="http://study-perf.qa.netease.com/common/getTransportFee";
 
-	@Test(description="²éÑ¯ÔË·ÑĞÅÏ¢")
+	@Test(description="è®¡ç®—è¿è´¹")
 	public void feeTest() throws Exception {		
-		result=fee.fee_Map(1,"Õã½­Ê¡_º¼ÖİÊĞ_±õ½­Çø");
+		result=fee.fee_Map(1,"æµ™æ±Ÿçœ_æ­å·å¸‚_æ»¨æ±ŸåŒº");
 		JSONObject json= JSONObject.fromObject(result);
 		Assert.assertEquals(json.getString("message"), "success");
 	}
 	
-	@Test(description="È±ÉÙid²ÎÊı£¬addressDetail²ÎÊıÕıÈ·")
+	@Test(description="ç¼ºå°‘idå‚æ•°ï¼ŒaddressDetailå‚æ•°æ­£ç¡®")
 	public void feeTest2() throws Exception {
-		result=fee.fee_Map_lose("Õã½­Ê¡_º¼ÖİÊĞ_±õ½­Çø");
+		result=fee.fee_Map_lose("æµ™æ±Ÿçœ_æ­å·å¸‚_æ»¨æ±ŸåŒº");
 		JSONObject json= JSONObject.fromObject(result);
-		Assert.assertEquals(json.getString("message"), "ÇëÇóÊ§°Ü");
+		Assert.assertEquals(json.getString("message"), "è¯·æ±‚å¤±è´¥");
 	}
 	
-	@Test(description="È±ÉÙaddressDetail²ÎÊı£¬id²ÎÊıÕıÈ·")
+	@Test(description="ç¼ºå°‘addressDetailå‚æ•°ï¼Œidå‚æ•°æ­£ç¡®")
 	public void feeTest3() throws Exception {
 		result=fee.fee_Map_lose2(1);
 		JSONObject json= JSONObject.fromObject(result);
-		Assert.assertEquals(json.getString("message"), "ÇëÇóÊ§°Ü");
+		Assert.assertEquals(json.getString("message"), "è¯·æ±‚å¤±è´¥");
 	}
 	
-	@Test(description="idÀàĞÍ´íÎó£¬addressDetail²ÎÊıÕıÈ·")
+	@Test(description="idç±»å‹é”™è¯¯ï¼ŒaddressDetailå‚æ•°æ­£ç¡®")
 	public void feeTest4() throws Exception {
-		String para="id='1'&addressDetaile='Õã½­Ê¡_º¼ÖİÊĞ_±õ½­Çø'";
+		String para="id='1'&addressDetaile='æµ™æ±Ÿçœ_æ­å·å¸‚_æ»¨æ±ŸåŒº'";
 		result=HttpDriver.doGet(url,para);
 		JSONObject json= JSONObject.fromObject(result);
-		Assert.assertEquals(json.getString("message"), "ÇëÇóÊ§°Ü");
+		Assert.assertEquals(json.getString("message"), "è¯·æ±‚å¤±è´¥");
 	}
 	
-	@Test(description="addressDetaileÀàĞÍ´íÎó£¬id²ÎÊıÕıÈ·")
+	@Test(description="addressDetaileç±»å‹é”™è¯¯ï¼Œidå‚æ•°æ­£ç¡®")
 	public void feeTest5() throws Exception {
-		String para="id=1&addressDetaile=Õã½­Ê¡_º¼ÖİÊĞ_±õ½­Çø";
+		String para="id=1&addressDetaile=æµ™æ±Ÿçœ_æ­å·å¸‚_æ»¨æ±ŸåŒº";
 		result=HttpDriver.doGet(url,para);
 		JSONObject json= JSONObject.fromObject(result);
-		Assert.assertEquals(json.getString("message"), "ÇëÇóÊ§°Ü");
+		Assert.assertEquals(json.getString("message"), "è¯·æ±‚å¤±è´¥");
 	}
 	
-	//String¿Õ´®
-	@Test(description="addressDetaile²ÎÊıÎª¿Õ´®£¬idÕıÈ·")
+	//Stringç©ºä¸²
+	@Test(description="addressDetaileå‚æ•°ä¸ºç©ºä¸²ï¼Œidæ­£ç¡®")
 	public void feeTest6() throws Exception {
-		String para="id=1&addressDetaile=''";
-		result=HttpDriver.doGet(url,para);
+		result=fee.fee_Map(1,"");
 		JSONObject json= JSONObject.fromObject(result);
-		Assert.assertEquals(json.getString("message"), "ÇëÇóÊ§°Ü");
+		Assert.assertEquals(json.getString("message"), "è¯·æ±‚å¤±è´¥");
 	}
 	
 	 
-	@Test(description="²éÑ¯Ê§°Ü£¬¶ÔÓ¦id²»´æÔÚ")
+	@Test(description="æŸ¥è¯¢å¤±è´¥ï¼Œå¯¹åº”idä¸å­˜åœ¨")
 	public void feeTest7() throws Exception {
-		String para="id=0&addressDetaile='Õã½­Ê¡_º¼ÖİÊĞ_±õ½­Çø'";
-		result=HttpDriver.doGet(url,para);
+		result=fee.fee_Map(0,"æµ™æ±Ÿçœ_æ­å·å¸‚_æ»¨æ±ŸåŒº");
 		JSONObject json= JSONObject.fromObject(result);
-		Assert.assertEquals(json.getString("message"), "ÇëÇóÊ§°Ü");
+		Assert.assertEquals(json.getString("message"), "è¯·æ±‚å¤±è´¥");
 	}
 	
-	@Test(description="²éÑ¯Ê§°Ü£¬¶ÔÓ¦addressDetail²»´æÔÚ")
+	@Test(description="æŸ¥è¯¢å¤±è´¥ï¼Œå¯¹åº”addressDetailä¸å­˜åœ¨")
 	public void feeTest8() throws Exception {
-		String para="id=1&addressDetaile='ºÓ±±Ê¡_º¼ÖİÊĞ_±õ½­Çø'";
-		result=HttpDriver.doGet(url,para);
+		result=fee.fee_Map('1',"æ²³åŒ—çœ_æ­å·å¸‚_æ»¨æ±ŸåŒº");
 		JSONObject json= JSONObject.fromObject(result);
-		Assert.assertEquals(json.getString("message"), "ÇëÇóÊ§°Ü");
+		Assert.assertEquals(json.getString("message"), "è¯·æ±‚å¤±è´¥");
 	}
 	
-//	@Test(description="²éÑ¯Ê§°Ü£¬¶ÔÓ¦addressDetail²ÎÊıÈ±ÉÙÇø")
-//	public void feeTest10() throws Exception {
-//		String para="id=1&addressDetaile='ºÓ±±Ê¡_º¼ÖİÊĞ'";
-//		result=HttpDriver.doGet(url,para);
-//		JSONObject json= JSONObject.fromObject(result);
-//		Assert.assertEquals(json.getString("message"), "ÇëÇóÊ§°Ü");
-//	}
-//	
-//	@Test(description="²éÑ¯Ê§°Ü£¬¶ÔÓ¦addressDetail²»´æÔÚ")
-//	public void feeTest11() throws Exception {
-//		String para="id=1&addressDetaile='ºÓ±±Ê¡_º¼ÖİÊĞ_±õ½­Çø'";
-//		result=HttpDriver.doGet(url,para);
-//		JSONObject json= JSONObject.fromObject(result);
-//		Assert.assertEquals(json.getString("message"), "ÇëÇóÊ§°Ü");
-//	}
-	
-	//²ÎÊıÖµ³¬³öÊı¾İÀàĞÍµÄÈ¡Öµ·¶Î§
-	@Test(description="addressDetaile²ÎÊıÕıÈ·£¬idÈ¡Öµ³¬³öintÈ¡Öµ·¶Î§")
+	@Test(description="æŸ¥è¯¢å¤±è´¥ï¼Œå¯¹åº”addressDetailä¸ºnull")
+	public void feeTest10() throws Exception {
+		result=fee.fee_Map('1',null);
+		JSONObject json= JSONObject.fromObject(result);
+		Assert.assertEquals(json.getString("message"), "è¯·æ±‚å¤±è´¥");
+	}
+
+	//å‚æ•°å€¼è¶…å‡ºæ•°æ®ç±»å‹çš„å–å€¼èŒƒå›´
+	@Test(description="addressDetaileå‚æ•°æ­£ç¡®ï¼Œidå–å€¼è¶…å‡ºintå–å€¼èŒƒå›´")
 	public void feeTest9() throws Exception {
-		String para="id=2147483648&addressDetaile='Õã½­Ê¡_º¼ÖİÊĞ_±õ½­Çø'";
+		String para="id=2147483648&addressDetaile='æµ™æ±Ÿçœ_æ­å·å¸‚_æ»¨æ±ŸåŒº'";
 		result=HttpDriver.doGet(url,para);
 		JSONObject json= JSONObject.fromObject(result);
-		Assert.assertEquals(json.getString("message"), "ÇëÇóÊ§°Ü");
+		Assert.assertEquals(json.getString("message"), "è¯·æ±‚å¤±è´¥");
 	}
 	
 }

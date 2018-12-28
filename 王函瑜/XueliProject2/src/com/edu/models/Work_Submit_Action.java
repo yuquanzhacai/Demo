@@ -1,7 +1,5 @@
 package com.edu.models;
-/*
- *欣然的提交 
- */
+
 import org.openqa.selenium.Keys;
 
 import com.edu.core.WebDriverEngine;
@@ -22,7 +20,7 @@ public class Work_Submit_Action {
 	public void workSubmit(String txt) throws InterruptedException {
 		
     	webtest.click("xpath=//html[contains(@lang,'zh-cn')]");
-    	webtest.click("class=cke_toolbar");
+    	//webtest.click("class=cke_toolbar");
     	webtest.click("class=cke_wysiwyg_frame");
     	webtest.type("tag=body", txt);
     	

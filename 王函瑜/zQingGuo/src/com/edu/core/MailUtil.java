@@ -18,7 +18,7 @@ import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 
-import bsh.This;
+
 
 public class MailUtil {
 	static int port = 25;
@@ -57,21 +57,18 @@ public class MailUtil {
             }
             //msg.setRecipients(Message.RecipientType.TO, toAddress);
             msg.addRecipients(Message.RecipientType.TO, toAddress);
-            msg.setSubject(subject, "UTF-8");   
-            
-          //创建一个MimeBodyPart的对象，以便添加内容
-    		
+            msg.setSubject(subject, "UTF-8");              
+          //创建一个MimeBodyPart的对象，以便添加内容    		
     		//MimeBodyPart对象,存放附件
     		BodyPart mimeBodyPart=new MimeBodyPart();
     		// 设置邮件中附件文件的路径
     		String filename = Zip();
-    		//创建一个datasource对象，并传递文件
+    		//创建一个DataSource对象，并传递文件
     		DataSource source = new FileDataSource(filename);
     		//设置handler
     		mimeBodyPart.setDataHandler(new DataHandler(source));
     		//加载文件
-    		mimeBodyPart.setFileName(filename);
-            
+    		mimeBodyPart.setFileName(filename);        
     		//创建一个MimeBodyPart的对象，以便添加内容
     		BodyPart mimeBodyPart2=new MimeBodyPart();
     		//添加HTML格式邮件正文
