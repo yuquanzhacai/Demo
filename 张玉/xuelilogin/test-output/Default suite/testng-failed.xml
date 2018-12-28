@@ -8,7 +8,7 @@
           <include name="doBeforeSuite"/>
           <include name="setup"/>
           <include name="doAfterMethod"/>
-          <include name="search_incomplete"/>
+          <include name="search_fail"/>
         </methods>
       </class> <!-- com.webtest.demo.Search -->
     </classes>

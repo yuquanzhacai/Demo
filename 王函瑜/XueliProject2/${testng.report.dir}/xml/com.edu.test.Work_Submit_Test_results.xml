@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="任务提交"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="30.538">
+  <properties />
+  
+  
+            <testcase name="code_file_txt" time="30.538" classname="com.edu.test.Work_Submit_Test" />
+      
+</testsuite>

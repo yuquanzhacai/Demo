@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="雪梨教育测试项目-老师部分" parallel="false">
+   <listeners>
+	   <listener class-name="org.uncommons.reportng.HTMLReporter" /> 
+       <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+       <listener class-name="com.edu.core.WebTestListener" />
+       <listener class-name="com.edu.core.WebTestListener2" />
+     
+   </listeners>
+      	
+   <test name="创建同步课" preserver-order="true">
+  	<classes>
+  		<class name="com.edu.teach_test.AddRenwu_Test">
+  			<include name="addRenwu"></include>
+  		</class>
+  	</classes>
+  </test>
+  <test name="通过同步课申请" preserver-order="true">
+     <classes>
+  		<class name="com.edu.teach_test.ThroughAudit_Test">
+  			<include name="through_audit"></include>
+  		</class>
+    </classes>
+  </test>
+  <test name="发布任务" preserver-order="true">
+  	<classes>
+  		<class name="com.edu.teach_test.CreateClass_Test">
+  			<include name="create_class"></include>
+  		</class>
+  	</classes>
+  </test>
+  <test name="批阅作业" preserver-order="true">
+    <classes>
+  		<class name="com.edu.teach_test.Piyue_Test">
+  			<include name="piyue"></include>
+  		</class>
+  	</classes>
+  </test>
+   
+  <suite-files>
+    <suite-file path="testng.xml" />
+  </suite-files>
+
+</suite> 
+

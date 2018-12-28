@@ -57,6 +57,7 @@ public class QieShuo_Action {
 		  webtest.type("tag=body",body);
 		  webtest.click("xpath=//button[contains(.,'预览')]");
 		  webtest.switchWidow(2);
+		  Thread.sleep(3000);
 		  webtest.close();
 		  webtest.switchWidow(1);
 		  Thread.sleep(2000);
@@ -64,11 +65,11 @@ public class QieShuo_Action {
 		  Thread.sleep(2000);
 		  webtest.close();
 		  Thread.sleep(2000);
+		  webtest.switchWidow(0);
 	}
      
      public void fachengwen2(String add,String title,String body) throws InterruptedException {
-    	  webtest.getAllWindowTitles();
-    	  webtest.switchWidow(0);
+
  		  webtest.click("xpath=//a[contains(@href,'/u/gossip/')]");
  		  Thread.sleep(3000);
  		  webtest.click("xpath=//a[@class='gossip-create-article']");
@@ -80,14 +81,17 @@ public class QieShuo_Action {
  		  //webtest.click("id=cke_6_text");
  		  webtest.click("class=cke_wysiwyg_frame");
  		  webtest.type("tag=body",body);
- 		  webtest.click("xpath=//button[contains(.,'预览')]");
- 		
- 		  Thread.sleep(2000);
+ 		  webtest.click("xpath=//button[contains(.,'预览')]");			 
+ 		  Thread.sleep(3000);
+ 		  webtest.close();
+ 		  webtest.switchWidow(0);
  	}
      
      public void fachengwen3(String title,String body) throws InterruptedException {
+    	  webtest.click("xpath=//a[contains(.,'首页')]");
+    	  Thread.sleep(2000);
 		  webtest.click("xpath=//a[contains(@href,'/u/gossip/')]");
-		  Thread.sleep(3000);
+		  Thread.sleep(2000);
 		  webtest.click("xpath=//a[@class='gossip-create-article']");
 		  webtest.getAllWindowTitles();
 		  boolean t = webtest.ifContains("发布长文");
@@ -97,7 +101,8 @@ public class QieShuo_Action {
 		  webtest.click("class=cke_wysiwyg_frame");
 		  webtest.type("tag=body",body);
 		  webtest.click("xpath=//button[contains(.,'预览')]");
-//		  webtest.close();
 		  Thread.sleep(2000);
+		  webtest.close();	 
+		  webtest.switchWidow(0);
 	}
 }

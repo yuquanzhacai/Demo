@@ -11,7 +11,12 @@ public class NSDataProvider {
 	public  Object[][] getTxtData() throws IOException{
 		return new  TxtDataProvider().getTxtUser("data/name.cvs");
 	}
-
+	
+	@DataProvider(name="txt2")
+	public  Object[][] getTxtData2() throws IOException{
+		return new  TxtDataProvider().getTxtUser("data/qgName.cvs");
+	}
+	
 	@DataProvider(name="excel")
 	public Object[][] getExcelDada() throws IOException{
 		return new ExcelDataProvider().getTestDataByExcel("data/user.xlsx","Sheet1");

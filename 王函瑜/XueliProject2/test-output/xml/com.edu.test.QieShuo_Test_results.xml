@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="且说"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="23.319">
+  <properties />
+  
+  
+            <testcase name="commentLong_Fail2" time="23.319" classname="com.edu.test.QieShuo_Test" />
+      
+</testsuite>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [雪梨教育测试项目-老师部分]">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    <listener class-name="com.edu.core.WebTestListener"/>
+    <listener class-name="com.edu.core.WebTestListener2"/>
+  </listeners>
+  <test thread-count="5" name="批阅作业(failed)">
+    <classes>
+      <class name="com.edu.teach_test.Piyue_Test">
+        <methods>
+          <include name="doAfterMethod"/>
+          <include name="doBeforeSuite"/>
+          <include name="piyue"/>
+          <include name="ke"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- com.edu.teach_test.Piyue_Test -->
+    </classes>
+  </test> <!-- 批阅作业(failed) -->
+</suite> <!-- Failed suite [雪梨教育测试项目-老师部分] -->

@@ -11,9 +11,9 @@
       <class name="com.edu.test.TransFeeTest">
         <methods>
           <include name="feeTest9"/>
-          <include name="feeTest12"/>
           <include name="feeTest3"/>
           <include name="feeTest6"/>
+          <include name="feeTest5"/>
           <include name="feeTest8"/>
           <include name="feeTest7"/>
         </methods>
