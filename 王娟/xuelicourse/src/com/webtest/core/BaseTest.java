@@ -81,13 +81,13 @@ public class BaseTest {
 		   
 		}
 	
-	@AfterSuite
-	public void doAfterMethod() {
-		if(this.driver != null){
-			this.driver.quit();
-			}
-		Log.info("Quitted Browser");
-	}
+//	@AfterSuite
+//	public void doAfterMethod() {
+//		if(this.driver != null){
+//			this.driver.quit();
+//			}
+//		Log.info("Quitted Browser");
+//	}
 	
 
 	
