@@ -2,7 +2,6 @@
 
 <suite name="s1" verbose="1" >
 	<listeners> 
-		<listener class-name="com.webtest.core.WebTestListener" />
 		<listener class-name="org.uncommons.reportng.HTMLReporter" />
 		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" /> 
 	</listeners>
