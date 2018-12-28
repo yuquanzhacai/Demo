@@ -77,10 +77,12 @@ public class Work_Change_Test extends BaseTest{
     	webtest.click("xpath=//button[@class='btn btn-primary td-submit']");
 		Assert.assertTrue(webtest.isTextPresent("提交"));
 	}
-	
-	@Test(description="增加附件")
-	public void add_file() throws InterruptedException {
-		wsaction.Addfile("E:\\8.jpg");
+	//增加文件
+	@Test(description="作业修改")
+	public void change_work() throws InterruptedException {
+		wsaction.fileEdit("E:\\8.jpg");
+		 wsaction.workChange("清空作业，重新修改作业");
+		wsaction.codeAdd("javaxiugai");
 		webtest.click("xpath=//button[@class='btn btn-primary btn-sm td-preview']");
     	webtest.click("xpath=//button[@class='btn btn-primary td-submit']");
 		

@@ -165,7 +165,7 @@ public class WebDriverEngine {
 		if (element != null) {
 			runJs("window.scrollTo(0," + element.getLocation().x + ")");
 			element.click();
-//			this.pause(3000);
+			this.pause(3000);
 		}
 	}
 
@@ -367,40 +367,6 @@ public class WebDriverEngine {
 			return false;
 
 	}
-<<<<<<< HEAD:王函瑜/XueliProject/src/com/edu/core/WebDriverEngine.java
-//*审核通过申请课程的同学
-public void through() throws InterruptedException
-{
-//	action.moveToElement("class=notification-box").perform;
-	action.moveToElement(driver.findElement(By.className("notification-box"))).perform();
-//	Thread.sleep(1000);
-	driver.findElement(By.xpath("//a[contains(@href, '/u/teams/applications/')]")).click();
-//	List<WebElement> we=driver.findElements(By.tagName("tr"));
-//	we[1].click();
-	List<WebElement> we=driver.findElements(By.className("media-heading ellipsis"));
-//	List<WebElement> we=driver.findElements(By.xpath("//i[@class='icon-check-empty']"));
-	System.out.println("打印选中");
-	if(we != null && we.size()>= 2){
-		System.out.println("list中第二个元素 "+we.get(1));
-		we.get(1).click();
-	}
-//	System.out.println("打印选中");
-//	List<WebElement> wb=driver.findElements(By.xpath("//a[@title='通过']"));
-//	if(wb!= null && wb.size()>= 2){
-//		System.out.println("list中第二个元素 "+wb.get(1));
-//		wb.get(1).click();
-//	}
-//	List<WebElement> w=driver.findElements(By.xpath("//a[@title='通过']"));
-//	w.get(3).click();
-//	driver.findElement(By.xpath("//a[@title='通过']")).click();
-//	driver.findElement(By.partialLinkText("123")).click();
-//	driver.findElement(By.xpath("//a[@title='通过']")).click();
-//	driver.findElement(By.xpath("//li[contains(.,'批量通过')]"));
-//	driver.findElement(By.xpath("//a[@title='通过']")).doubleClick();
-//	action.click(driver.findElement(By.xpath("//i[@class='icon-check-empty']"))).perform();
-//	action.click(driver.findElement(By.xpath("//a[@title='通过']"))).perform();
-}
-=======
 	
 	
 ///!
@@ -408,6 +374,57 @@ public void through() throws InterruptedException
 		driver.close();
 	}
 	
->>>>>>> 1191a5a979de8933a40535de839db9e33a7af004:王函瑜/XueliProject2/src/com/edu/core/WebDriverEngine.java
+	//全部通过审核
+	public void through() throws InterruptedException {
+		action.moveToElement(driver.findElement(By.className("notification-box"))).perform();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//a[contains(@href, '/u/teams/applications/')]")).click();
+		driver.findElement(By.xpath("//i[@class='icon-check-empty']")).click();
+		
+//		driver.findElement(By.className("check-all check-btn")).click();
+//		driver.findElement(By.xpath("/html/body/div[0]/div[0]/div[0]/div[1]/div[1]/div[0]/li[@class='icon-check-empty']"));
+		driver.findElement(By.xpath("//button[contains(.,'批量通过')]")).click();
+//		driver.findElement(By.xpath("//a[@title='通过']")).click();
+	}
+	//部分通过审核
+	public void throughSelectAudit(String name) throws InterruptedException
+	{
+		action.moveToElement(driver.findElement(By.className("notification-box"))).perform();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//a[contains(@href, '/u/teams/applications/')]")).click();
+//		webtest.type("//input[@id='id_nickname']", "name");
+		driver.findElement(By.xpath("//input[@id='id_nickname']")).sendKeys(name);
+		driver.findElement(By.xpath("//button[@class='search-button']")).click();
+		driver.findElement(By.xpath("//i[@class='icon-check-empty']")).click();
+		driver.findElement(By.xpath("//button[contains(.,'批量通过')]")).click();
+	}
+	//点击只查看申请同步课的人
+	public void look() throws InterruptedException
+	{
+		action.moveToElement(driver.findElement(By.className("notification-box"))).perform();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//a[contains(@href, '/u/teams/applications/')]")).click();
+	}
 	
+	//任务描述
+	public void taskdescription()
+	{
+		action.sendKeys(Keys.TAB).perform();		
+		driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']")));
+	    driver.findElement(By.tagName("body")).sendKeys("任务描述");
+		driver.switchTo().defaultContent();		
+		action.sendKeys(Keys.TAB).perform();
+		driver.findElement(By.tagName("body")).sendKeys("答案解析");
+	}
+	//批阅作业0分
+	public void grade()
+	{
+		action.sendKeys(Keys.ENTER).perform();
+	}	
+	
+	public void click() {
+
+		action.click();
+	}
+
 }

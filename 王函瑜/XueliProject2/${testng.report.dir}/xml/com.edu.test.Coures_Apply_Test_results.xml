@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="同步课"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="86.029">
+  <properties />
+  
+  
+            <testcase name="ownCourse" time="33.970" classname="com.edu.test.Coures_Apply_Test" />
+                <testcase name="course2" time="33.936" classname="com.edu.test.Coures_Apply_Test" />
+                <testcase name="course" time="18.123" classname="com.edu.test.Coures_Apply_Test" />
+      
+</testsuite>

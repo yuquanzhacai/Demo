@@ -1,7 +1,8 @@
 package com.edu.test;
 
+
+
 import org.testng.Assert;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.edu.core.HttpDriver;
@@ -14,27 +15,27 @@ public class Transfee_Parameter {
 	static String result=null;
 	static String url="http://study-perf.qa.netease.com/common/getTransportFee";
 	
-	@Test(description="²éÑ¯ÔË·ÑĞÅÏ¢,Ò»¸ö²ÎÊı")
+	@Test(description="æŸ¥è¯¢è¿è´¹ä¿¡æ¯,ä¸€ä¸ªå‚æ•°")
 	public void feeTest1() throws Exception {
-		String data="id=1&addressDetaile='Õã½­Ê¡_º¼ÖİÊĞ_±õ½­Çø'";
+		String data="id=1&addressDetaile='æµ™æ±Ÿçœ_æ­å·å¸‚_æ»¨æ±ŸåŒº'";
 		String url1=url+"?"+data;
 		result=HttpDriver.doGet(url1);
 		JSONObject json= JSONObject.fromObject(result);
 		Assert.assertEquals(json.getString("message"), "success");
 	}
 	
-	@Test(description="²éÑ¯ÔË·ÑĞÅÏ¢,StringÀàĞÍ²ÎÊı")
+	@Test(description="æŸ¥è¯¢è¿è´¹ä¿¡æ¯,Stringç±»å‹å‚æ•°")
 	public void feeTest2() throws Exception {
-		String data="id=1&addressDetaile='Õã½­Ê¡_º¼ÖİÊĞ_±õ½­Çø'";
+		String data="id=1&addressDetaile='æµ™æ±Ÿçœ_æ­å·å¸‚_æ»¨æ±ŸåŒº'";
 		result=HttpDriver.doGet(url,data);
 		JSONObject json= JSONObject.fromObject(result);
 		Assert.assertEquals(json.getString("message"), "success");
 	}
 	
-	@Test(description="²éÑ¯ÔË·ÑĞÅÏ¢,Map´«²Î")
+	@Test(description="æŸ¥è¯¢è¿è´¹ä¿¡æ¯,Mapä¼ å‚")
 	public void feeTest() throws Exception {
 		
-		result=fee.fee_Map(1,"Õã½­Ê¡_º¼ÖİÊĞ_±õ½­Çø");
+		result=fee.fee_Map(1,"æµ™æ±Ÿçœ_æ­å·å¸‚_æ»¨æ±ŸåŒº");
 		JSONObject json= JSONObject.fromObject(result);
 		Assert.assertEquals(json.getString("message"), "success");
 	}

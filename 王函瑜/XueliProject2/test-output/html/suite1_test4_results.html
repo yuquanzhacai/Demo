@@ -3,26 +3,24 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
 <head>
-  <title>Test Results Report - 课程</title>
+  <title>Test Results Report - 批阅任务</title>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <meta name="description" content="TestNG unit test results." />
   <link href="reportng.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="reportng.js"></script>
 </head>
 <body>
-<h1>课程</h1>
+<h1>批阅任务</h1>
 <p>
-  Test duration: 112.553s
+  Test duration: 37.734s
 </p>
 
 
 
-
-
   <table class="resultsTable">
-    <tr><th colspan="5" class="header passed">Passed Tests</th></tr>
+    <tr><th colspan="5" class="header failed">Failed Tests</th></tr>
           <tr>
-        <td colspan="1" class="group">com.edu.test.Course_Test</td>
+         <td colspan="1" class="group">com.edu.teach_test.Piyue_Test</td>
           <td colspan="1" class="group">Duration</td>
           <td colspan="1" class="group">Log Info</td>
           <td colspan="1" class="group">Screen Shot</td>
@@ -30,69 +28,62 @@
             
 <tr>
   <td class="method">
-                  <span class="description">course_Search (直接搜索课程)</span>
+                  <span class="description">piyue (批阅作业)</span>
       </td>
   <td class="duration">
-    18.504s
+    11.355s
   </td>
   <td class="result">
         
     
-        
-
-      </td>
-  <td class="screenshot">
-              </td>
-</tr>
-<tr>
-  <td class="method">
-                  <span class="description">course_Search2 (搜索分类课程)</span>
-      </td>
-  <td class="duration">
-    26.577s
-  </td>
-  <td class="result">
-        
+            <div class="testOutput">
+                        <br />
+                  </div>
     
-        
 
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: 待验收错误 expected [0] but found [null]</b></a><br />
+    <div class="stackTrace" id="exception-0">
+              org.testng.Assert.fail(Assert.java:96)<br />
+              org.testng.Assert.failNotEquals(Assert.java:776)<br />
+              org.testng.Assert.assertEqualsImpl(Assert.java:132)<br />
+              org.testng.Assert.assertEquals(Assert.java:118)<br />
+              com.edu.teach_test.Piyue_Test.piyue(Piyue_Test.java:45)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.base/java.lang.reflect.Method.invoke(Method.java:564)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:580)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:648)<br />
+              org.testng.TestRunner.run(TestRunner.java:505)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:455)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:364)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1137)<br />
+              org.testng.TestNG.runSuites(TestNG.java:1049)<br />
+              org.testng.TestNG.run(TestNG.java:1017)<br />
+              org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)<br />
+              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)<br />
+              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)<br />
+                </div>
       </td>
   <td class="screenshot">
-              </td>
-</tr>
-<tr>
-  <td class="method">
-                  <span class="description">course_Search3 (搜索具体分类体系课程，并关注)</span>
-      </td>
-  <td class="duration">
-    33.650s
-  </td>
-  <td class="result">
-        
-    
-        
-
-      </td>
-  <td class="screenshot">
-              </td>
-</tr>
-<tr>
-  <td class="method">
-                  <span class="description">course_Look (查看我的课程)</span>
-      </td>
-  <td class="duration">
-    19.573s
-  </td>
-  <td class="result">
-        
-    
-        
-
-      </td>
-  <td class="screenshot">
-              </td>
+                      <div class="screenshotimage">
+                                                      <img src='file:///D:\demo\20181226\20181226-192537.png' onclick='window.open("file:///D:\\demo\\20181226\\20181226-192537.png")'  height='100px' width='100px' /><br />
+                                          </div>
+        </td>
 </tr>
       </table>
+
+
   
 </body>
 </html>

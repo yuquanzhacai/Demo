@@ -1,32 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2018-12-05T09:08:31Z" name="Default suite" finished-at="2018-12-05T09:08:58Z" duration-ms="26507">
+  <suite started-at="2018-12-11T08:55:03Z" name="Default suite" finished-at="2018-12-11T08:56:09Z" duration-ms="65950">
     <groups>
     </groups>
-    <test started-at="2018-12-05T09:08:31Z" name="Default test" finished-at="2018-12-05T09:08:58Z" duration-ms="26507">
+    <test started-at="2018-12-11T08:55:03Z" name="Default test" finished-at="2018-12-11T08:56:09Z" duration-ms="65950">
       <class name="com.webtest.demo.Search">
-        <test-method is-config="true" signature="doBeforeSuite(org.testng.ITestContext)[pri:0, instance:com.webtest.demo.Search@21282ed8]" started-at="2018-12-05T09:08:26Z" name="doBeforeSuite" finished-at="2018-12-05T09:08:31Z" duration-ms="5597" status="PASS">
+        <test-method is-config="true" signature="doBeforeSuite(org.testng.ITestContext)[pri:0, instance:com.webtest.demo.Search@82de64a]" started-at="2018-12-11T08:54:54Z" name="doBeforeSuite" finished-at="2018-12-11T08:55:03Z" duration-ms="8767" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@58b71ceb]]>
+                <![CDATA[org.testng.TestRunner@6c42f2a1]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doBeforeSuite -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.webtest.demo.Search@21282ed8]" started-at="2018-12-05T09:08:31Z" name="setup" finished-at="2018-12-05T09:08:31Z" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.webtest.demo.Search@82de64a]" started-at="2018-12-11T08:55:03Z" name="setup" finished-at="2018-12-11T08:55:03Z" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="search_incomplete()[pri:0, instance:com.webtest.demo.Search@21282ed8]" started-at="2018-12-05T09:08:31Z" name="search_incomplete" finished-at="2018-12-05T09:08:58Z" duration-ms="26479" status="PASS">
+        <test-method signature="search_fail()[pri:0, instance:com.webtest.demo.Search@82de64a]" started-at="2018-12-11T08:55:03Z" name="search_fail" description="拼音全称搜索" finished-at="2018-12-11T08:55:26Z" duration-ms="23293" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at com.webtest.core.WebDriverEngine.panduan2(WebDriverEngine.java:166)
+at com.webtest.demo.Search.search_fail(Search.java:45)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- search_fail -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.webtest.demo.Search@82de64a]" started-at="2018-12-11T08:55:26Z" name="setup" finished-at="2018-12-11T08:55:26Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="search_incomplete()[pri:0, instance:com.webtest.demo.Search@82de64a]" started-at="2018-12-11T08:55:26Z" name="search_incomplete" description="关键字搜索" finished-at="2018-12-11T08:55:43Z" duration-ms="16624" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- search_incomplete -->
-        <test-method is-config="true" signature="doAfterMethod()[pri:0, instance:com.webtest.demo.Search@21282ed8]" started-at="2018-12-05T09:08:58Z" name="doAfterMethod" finished-at="2018-12-05T09:08:59Z" duration-ms="854" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.webtest.demo.Search@82de64a]" started-at="2018-12-11T08:55:43Z" name="setup" finished-at="2018-12-11T08:55:43Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="search_null()[pri:0, instance:com.webtest.demo.Search@82de64a]" started-at="2018-12-11T08:55:43Z" name="search_null" description="空搜索" finished-at="2018-12-11T08:55:51Z" duration-ms="8303" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- search_null -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.webtest.demo.Search@82de64a]" started-at="2018-12-11T08:55:51Z" name="setup" finished-at="2018-12-11T08:55:51Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="search_success()[pri:0, instance:com.webtest.demo.Search@82de64a]" started-at="2018-12-11T08:55:51Z" name="search_success" description="完全吻合的搜索" finished-at="2018-12-11T08:56:09Z" duration-ms="17395" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- search_success -->
+        <test-method is-config="true" signature="doAfterMethod()[pri:0, instance:com.webtest.demo.Search@82de64a]" started-at="2018-12-11T08:56:09Z" name="doAfterMethod" finished-at="2018-12-11T08:56:10Z" duration-ms="1033" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doAfterMethod -->

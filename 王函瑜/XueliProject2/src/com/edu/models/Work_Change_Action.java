@@ -1,18 +1,10 @@
 package com.edu.models;
-<<<<<<< HEAD:王函瑜/XueliProject/src/com/edu/models/Work_Change_Action.java
-=======
 
 import org.openqa.selenium.By;
->>>>>>> 1191a5a979de8933a40535de839db9e33a7af004:王函瑜/XueliProject2/src/com/edu/models/Work_Change_Action.java
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
 import com.edu.core.WebDriverEngine;
-<<<<<<< HEAD:王函瑜/XueliProject/src/com/edu/models/Work_Change_Action.java
-/*
- * 欣然的修改已完成
-*/
-=======
 
 /*
  * author:lixinran
@@ -21,7 +13,6 @@ import com.edu.core.WebDriverEngine;
  * 
  */
 
->>>>>>> 1191a5a979de8933a40535de839db9e33a7af004:王函瑜/XueliProject2/src/com/edu/models/Work_Change_Action.java
 public class Work_Change_Action {
 	
 	private WebDriverEngine webtest;
@@ -31,7 +22,7 @@ public class Work_Change_Action {
 	
 	//在原有基础上进行修改
 	  public void workEdit(String txt) throws InterruptedException {
-		 webtest.click("class=cke_toolbar");
+		 //webtest.click("class=cke_toolbar");
 		  webtest.click("class=cke_wysiwyg_frame");
 		  webtest.type("tag=body", txt);
 
@@ -40,7 +31,7 @@ public class Work_Change_Action {
 	  //将原文本内容删除，进行修改
 	  public void workChange(String txt) throws InterruptedException {
 
-		  webtest.click("class=cke_toolbar");
+		  //webtest.click("class=cke_toolbar");
 		  webtest.click("class=cke_wysiwyg_frame");
 		  webtest.type("tag=body",Keys.chord(Keys.CONTROL+"a"));
 		  Thread.sleep(1000);

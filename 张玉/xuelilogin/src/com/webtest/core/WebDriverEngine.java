@@ -28,7 +28,6 @@ import com.webtest.utils.Log;
 import com.webtest.utils.ReadProperties;
 /**
  * author:lihuanzhen
- * 椤甸潰瀵硅薄鎿嶄綔绫�
  */
 public class WebDriverEngine {
 
@@ -168,10 +167,10 @@ public class WebDriverEngine {
 			return str;
 		}
 	//判断是否存在某要素
-		public boolean panduan3(String locator) {
+		public boolean panduan3(String locator,String str2) {
 			WebElement element = finder.findElement(locator);
 			String str=element.getText();
-			if(str.contains("大学"))
+			if(str.contains(str2))
 				return true;
 			else
 				return false;

@@ -4,13 +4,13 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="98.304">
+           time="101.191">
   <properties />
   
   
-            <testcase name="course_Search" time="18.504" classname="com.edu.test.Course_Test" />
-                <testcase name="course_Look" time="19.573" classname="com.edu.test.Course_Test" />
-                <testcase name="course_Search3" time="33.650" classname="com.edu.test.Course_Test" />
-                <testcase name="course_Search2" time="26.577" classname="com.edu.test.Course_Test" />
+            <testcase name="course_Search3" time="33.308" classname="com.edu.test.Course_Test" />
+                <testcase name="course_Search2" time="28.475" classname="com.edu.test.Course_Test" />
+                <testcase name="course_Look" time="20.493" classname="com.edu.test.Course_Test" />
+                <testcase name="course_Search" time="18.915" classname="com.edu.test.Course_Test" />
       
 </testsuite>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="通过同步课申请"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="36.152">
+  <properties />
+  
+  
+            <testcase name="through_audit2" time="13.959" classname="com.edu.teach_test.ThroughAudit_Test" />
+                <testcase name="through_audit" time="22.193" classname="com.edu.teach_test.ThroughAudit_Test" />
+      
+</testsuite>

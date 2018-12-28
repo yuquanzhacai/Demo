@@ -37,7 +37,7 @@ public class Coures_Apply_Test extends BaseTest{
 		webtest.click("xpath=//a[@href='/team/']");
 		Thread.sleep(2000);
 		//申请加入同步课
-		webtest.click("xpath=//button[@data-team='ke-cheng-444']");
+		webtest.click("xpath=//button[@data-team='tong-bu']");
 		webtest.type("xpath=//input[@maxlength='20']","测试");
 		webtest.click("xpath=//button[contains(.,'申请加入')]");	
 		Thread.sleep(2000);
@@ -51,7 +51,7 @@ public class Coures_Apply_Test extends BaseTest{
 		webtest.click("xpath=//a[@href='/team/']");
 		Thread.sleep(2000);
 		//进入具体同步课申请加入
-		webtest.click("xpath=//h1[contains(.,'课程44******')]");
+		webtest.click("xpath=//h1[contains(.,'同步**')]");
 		webtest.click("xpath=//button[contains(.,'申请加入')]");
 		webtest.type("xpath=//input[@maxlength='20']","测试");
 		webtest.click("xpath=//button[@class='btn btn-primary apply-now']");
