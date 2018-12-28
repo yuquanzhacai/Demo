@@ -27,10 +27,10 @@ public class FileDataProvider {
 		try {
 			fis = new FileInputStream(file);
 			isreader = new InputStreamReader(fis, "UTF-8");
-			// �趨utf-8,ʹ�ô����������ַ�������BufferedReader��ȡ�ļ�����
+			
 			breader = new BufferedReader(isreader);
 			int cols = 0;
-			// ���Ե�һ��
+			
 			record = breader.readLine();
 			if (null == record) {
 				return null;

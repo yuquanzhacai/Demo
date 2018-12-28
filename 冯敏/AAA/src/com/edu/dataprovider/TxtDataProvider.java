@@ -21,7 +21,7 @@ public class TxtDataProvider {
 	
 		File file = new File(fileName);
 		FileInputStream fis = new FileInputStream(file);
-		InputStreamReader isr= new InputStreamReader(fis);
+		InputStreamReader isr= new InputStreamReader(fis,"utf-8");
 		BufferedReader reader = new BufferedReader(isr);
 		int cols=reader.readLine().split("\t").length;
 		

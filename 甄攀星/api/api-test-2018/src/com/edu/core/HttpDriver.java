@@ -248,6 +248,7 @@ public class HttpDriver {
 		return content;
 
 	}
+	//为了获取地址列表
 	public static String doGet(String url,CookieStore cookie) throws Exception{
         // 将CookieStore设置到httpClient中
         httpClient = HttpClients.custom().setDefaultCookieStore(cookie).build();

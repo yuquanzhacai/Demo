@@ -28,12 +28,16 @@
 	<classpathentry kind="lib" path="lib/selenium-server-standalone-3.6.0.jar"/>
 	<classpathentry kind="lib" path="lib/testng.jar"/>
 	<classpathentry kind="lib" path="lib/xmlbeans-3.0.1.jar"/>
-	<classpathentry kind="lib" path="lib/reportng-1.1.5.jar"/>
 	<classpathentry kind="lib" path="lib/velocity-dep-1.4.jar"/>
 	<classpathentry kind="lib" path="lib/guice-3.0.jar"/>
 	<classpathentry kind="lib" path="lib/apache-ant-zip.jar"/>
 	<classpathentry kind="lib" path="lib/log4j-1.2.17.jar"/>
 	<classpathentry kind="lib" path="lib/javax.mail-1.6.2.jar"/>
 	<classpathentry kind="lib" path="lib/freemarker.jar"/>
+	<classpathentry kind="lib" path="lib/commons-lang-2.5.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="lib/activation.jar"/>
+	<classpathentry kind="lib" path="lib/reportng-1.1.7.jar"/>
+	<classpathentry kind="lib" path="lib/javax.mail-1.6.2(1).jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
