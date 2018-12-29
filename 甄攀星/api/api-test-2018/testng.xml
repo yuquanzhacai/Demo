@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="test" parallel="tests">
    <listeners>
-	   <!-- listener class-name="org.uncommons.reportng.HTMLReporter" / --> 
-       <!-- listener class-name="org.uncommons.reportng.JUnitXMLReporter" / -->
+	   <listener class-name="org.uncommons.reportng.HTMLReporter" /> 
+       <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
        <listener class-name="com.edu.core.ApiListener" />
-       <!-- listener class-name="com.edu.core.WebTestListener2" / -->
+       <!-- listener class-name="com.edu.core.WebTestListener2"    preserver-order="true"?/ -->
      
    </listeners>
-  
-   <test name="test" preserver-order="true">
+
+   <test name="青果接口测试" preserver-order="true">
       <classes>
         	<class name="com.edu.scene.test.Login_Test">
         		<method>
@@ -41,6 +41,5 @@
         		</method>
         	</class>
       </classes>
-   </test>
- 
+      </test>
 </suite> 

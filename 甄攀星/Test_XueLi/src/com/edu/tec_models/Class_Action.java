@@ -6,15 +6,15 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 
 import com.webtest.core.WebDriverEngine;
-
+/*
+ * author:甄攀星
+ * */
 public class Class_Action {
 	private WebDriverEngine webtest;
 	public Class_Action(WebDriverEngine webtest) {
 		  this.webtest=webtest;
 	}
 	
-
-
 	public void CreateClass(String pic,String a,String b,String c)
 	{
 		

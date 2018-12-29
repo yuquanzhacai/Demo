@@ -8,9 +8,12 @@ import com.edu.utils.Checker;
 import com.edu.utils.ReadPro;
 
 import net.sf.json.JSONObject;
-
+/*
+ * author：张玉
+ * description:登录接口（数据驱动/原生代码）
+ * */
 public class Login_Test {
-	Checker checker;
+//	Checker checker;
 	public String login(String area,String name,String password) throws Exception
 	{
 		String url="/common/fgadmin/login";		

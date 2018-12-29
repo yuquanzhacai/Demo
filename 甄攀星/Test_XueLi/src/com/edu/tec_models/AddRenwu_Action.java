@@ -11,7 +11,9 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import com.webtest.core.WebDriverEngine;
-
+/**
+ * author：冯敏
+ */
 public class AddRenwu_Action {
 	private WebDriverEngine webtest;
 	public AddRenwu_Action(WebDriverEngine webtest) {

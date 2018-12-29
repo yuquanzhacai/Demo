@@ -8,7 +8,10 @@ import org.testng.annotations.Test;
 import com.webtest.core.BaseTest;
 import com.edu.tec_models.Class_Action;
 import com.edu.tec_models.Login_Action;
-
+/*
+ * author:冯敏
+ * description:老师审核申请同步课的同学
+ * */
 public class ThroughAudit_Test extends BaseTest{
 	 	public Class_Action action=null;
 		public Login_Action laction=null;

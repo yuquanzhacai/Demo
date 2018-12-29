@@ -9,10 +9,9 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import com.webtest.core.WebDriverEngine;
-
-
-
-
+/*
+ * author:张玉
+ * */
 public class Login_Action {
 	private WebDriverEngine webtest;
 	  public Login_Action(WebDriverEngine webtest) {

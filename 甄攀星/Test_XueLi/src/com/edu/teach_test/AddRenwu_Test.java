@@ -19,9 +19,11 @@ import com.edu.tec_models.AddRenwu_Action;
 import com.edu.tec_models.Login_Action;
 //import com.edu.dataprovider.NsDataProvider;
 import com.webtest.core.BaseTest;
-//import com.edu.dataprovider.NSDataProvider;
 
-
+/*
+ * author:冯敏
+ * description:老师发布任务
+ * */
 public class AddRenwu_Test extends BaseTest{
 	public AddRenwu_Action action=null;
 	public Login_Action laction=null;

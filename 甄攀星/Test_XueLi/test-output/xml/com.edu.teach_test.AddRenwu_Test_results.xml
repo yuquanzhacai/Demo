@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="26.654">
+  <properties />
+  
+  
+            <testcase name="addRenwu" time="26.654" classname="com.edu.teach_test.AddRenwu_Test" />
+      
+</testsuite>

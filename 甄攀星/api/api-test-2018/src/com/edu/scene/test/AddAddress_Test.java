@@ -4,11 +4,14 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.edu.core.HttpDriver;
-import com.edu.test.Common;
+import com.edu.spare.Common;
 import com.edu.utils.ReadPro;
 
 import net.sf.json.JSONObject;
-
+/*
+* author：甄攀星
+* description:添加地址接口
+* */
 public class AddAddress_Test {
 	@Test(description="添加新地址")
 	public void addAddress_test() throws Exception

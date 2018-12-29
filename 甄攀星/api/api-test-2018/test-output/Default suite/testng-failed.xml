@@ -3,11 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.edu.test.Add_Address">
+      <class name="com.edu.test.Skulist1">
         <methods>
-          <include name="addAddress_test1"/>
+          <include name="tearDown"/>
+          <include name="TestSkuListById3"/>
+          <include name="setUp"/>
+          <include name="TestSkuListById2"/>
+          <include name="Skulist1"/>
+          <include name="TestSkuListByWrongIdType"/>
+          <include name="TestSkuListById1"/>
         </methods>
-      </class> <!-- com.edu.test.Add_Address -->
+      </class> <!-- com.edu.test.Skulist1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -12,7 +12,10 @@ import org.testng.annotations.Test;
 import com.edu.tec_models.AddRenwu_Action;
 import com.edu.tec_models.Login_Action;
 import com.webtest.core.BaseTest;
-
+/*
+ * author:冯敏
+ * description:老师批阅作业
+ * */
 public class Piyue_Test extends BaseTest{
 	public AddRenwu_Action action=null;
 	public Login_Action laction=null;
