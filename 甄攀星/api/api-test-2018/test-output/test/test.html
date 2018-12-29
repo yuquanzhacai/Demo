@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>5/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>4/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Dec 24 17:07:31 CST 2018</td>
+<td>Started on:</td><td>Fri Dec 28 09:08:14 CST 2018</td>
 </tr>
-<tr><td>Total time:</td><td>1 seconds (1769 ms)</td>
+<tr><td>Total time:</td><td>1 seconds (1581 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,22 +75,22 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.edu.scene.test.AddressList_Test.getAddressList_test()'><b>getAddressList_test</b><br>Test class: com.edu.scene.test.AddressList_Test<br>Test method: 查询收货地址成功</td>
-<td><div><pre>java.lang.AssertionError: expected [success] but found [请重新登录]
-	at com.edu.scene.test.AddressList_Test.getAddressList_test(AddressList_Test.java:34)
+<td title='com.edu.scene.test.AddAddress_Test.addAddress_test()'><b>addAddress_test</b><br>Test class: com.edu.scene.test.AddAddress_Test<br>Test method: 添加新地址</td>
+<td><div><pre>java.lang.AssertionError: expected [success] but found [最多只能添加6个地址]
+	at com.edu.scene.test.AddAddress_Test.addAddress_test(AddAddress_Test.java:29)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
 	at java.base/java.lang.Thread.run(Thread.java:844)
-... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2015082834", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2015082834'><pre>java.lang.AssertionError: expected [success] but found [请重新登录]
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace581782663", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace581782663'><pre>java.lang.AssertionError: expected [success] but found [最多只能添加6个地址]
 	at org.testng.Assert.fail(Assert.java:96)
 	at org.testng.Assert.failNotEquals(Assert.java:776)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 	at org.testng.Assert.assertEquals(Assert.java:118)
 	at org.testng.Assert.assertEquals(Assert.java:453)
 	at org.testng.Assert.assertEquals(Assert.java:463)
-	at com.edu.scene.test.AddressList_Test.getAddressList_test(AddressList_Test.java:34)
+	at com.edu.scene.test.AddAddress_Test.addAddress_test(AddAddress_Test.java:29)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -113,7 +113,47 @@ function toggleAllBoxes() {
 	at java.base/java.lang.Thread.run(Thread.java:844)
 </pre></div></td>
 <td>0</td>
-<td>com.edu.scene.test.AddressList_Test@5552768b</td></tr>
+<td>com.edu.scene.test.AddAddress_Test@1de5f259</td></tr>
+<tr>
+<td title='com.edu.scene.test.AddressList_Test.getAddressList_test()'><b>getAddressList_test</b><br>Test class: com.edu.scene.test.AddressList_Test<br>Test method: 查询收货地址成功</td>
+<td><div><pre>java.lang.AssertionError: expected [success] but found [请重新登录]
+	at com.edu.scene.test.AddressList_Test.getAddressList_test(AddressList_Test.java:22)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1866176594", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1866176594'><pre>java.lang.AssertionError: expected [success] but found [请重新登录]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at com.edu.scene.test.AddressList_Test.getAddressList_test(AddressList_Test.java:22)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+</pre></div></td>
+<td>0</td>
+<td>com.edu.scene.test.AddressList_Test@6404f418</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -123,30 +163,25 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.edu.scene.test.AddAddress_Test.addAddress_test()'><b>addAddress_test</b><br>Test class: com.edu.scene.test.AddAddress_Test<br>Test method: 添加新地址</td>
-<td></td>
-<td>0</td>
-<td>com.edu.scene.test.AddAddress_Test@609db43b</td></tr>
-<tr>
 <td title='com.edu.scene.test.AddressDelete_Test.addressDelete_test()'><b>addressDelete_test</b><br>Test class: com.edu.scene.test.AddressDelete_Test<br>Test method: 删除地址</td>
 <td></td>
 <td>0</td>
-<td>com.edu.scene.test.AddressDelete_Test@55f616cf</td></tr>
+<td>com.edu.scene.test.AddressDelete_Test@729d991e</td></tr>
 <tr>
 <td title='com.edu.scene.test.GetTranspotFee_Test.getFee_test()'><b>getFee_test</b><br>Test class: com.edu.scene.test.GetTranspotFee_Test<br>Test method: 查询运费信息</td>
 <td></td>
 <td>0</td>
-<td>com.edu.scene.test.GetTranspotFee_Test@3c947bc5</td></tr>
+<td>com.edu.scene.test.GetTranspotFee_Test@3e11f9e9</td></tr>
 <tr>
 <td title='com.edu.scene.test.Login_Test.login_test()'><b>login_test</b><br>Test class: com.edu.scene.test.Login_Test<br>Test method: 正常登录情况<br>Parameters: 86, 20000000000, netease123</td>
 <td></td>
 <td>0</td>
-<td>com.edu.scene.test.Login_Test@5f16132a</td></tr>
+<td>com.edu.scene.test.Login_Test@f0da945</td></tr>
 <tr>
 <td title='com.edu.scene.test.SkuList_Test.skulist_test()'><b>skulist_test</b><br>Test class: com.edu.scene.test.SkuList_Test<br>Test method: 查询商品列表</td>
 <td></td>
 <td>0</td>
-<td>com.edu.scene.test.SkuList_Test@671a5887</td></tr>
+<td>com.edu.scene.test.SkuList_Test@316bcf94</td></tr>
 </table><p>
 </body>
 </html>

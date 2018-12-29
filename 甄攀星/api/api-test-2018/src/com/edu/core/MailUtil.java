@@ -62,7 +62,7 @@ public class MailUtil {
     		//MimeBodyPart对象,存放附件
     		BodyPart mimeBodyPart=new MimeBodyPart();
     		// 设置邮件中附件文件的路径
-    		String filename = file;
+    		String filename = file;//2018/12/24file修改为Zip()
     		//创建一个datasource对象，并传递文件
     		DataSource source = new FileDataSource(filename);
     		//设置handler
@@ -91,11 +91,10 @@ public class MailUtil {
         }
     }
 
-    public static String getTime()
-    {
-    	java.util.Calendar c=java.util.Calendar.getInstance();    
-        java.text.SimpleDateFormat f=new java.text.SimpleDateFormat("yyyyMMdd");    
-       	return  f.format(c.getTime());    
-    }
-
+//    public static String getTime()
+//    {
+//    	java.util.Calendar c=java.util.Calendar.getInstance();    
+//        java.text.SimpleDateFormat f=new java.text.SimpleDateFormat("yyyyMMdd");    
+//       	return  f.format(c.getTime());    
+//    }
 }

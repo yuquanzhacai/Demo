@@ -8,7 +8,10 @@ import org.testng.annotations.Test;
 import com.webtest.core.BaseTest;
 import com.edu.tec_models.Class_Action;
 import com.edu.tec_models.Login_Action;
-
+/*
+ * author:冯敏
+ * description:老师创建同步课
+ * */
 public class CreateClass_Test extends BaseTest{
 	
     public Class_Action action=null;

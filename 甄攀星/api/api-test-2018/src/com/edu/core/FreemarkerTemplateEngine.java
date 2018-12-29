@@ -9,10 +9,6 @@ import freemarker.template.Configuration;
 import freemarker.template.DefaultObjectWrapper;
 import freemarker.template.Template;
 
-
-
-
-
 public class FreemarkerTemplateEngine {
 
 
