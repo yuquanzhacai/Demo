@@ -8,38 +8,13 @@
      
    </listeners>
 
-   <test name="青果接口测试" preserver-order="true">
+   <test name="接口场景测试" preserver-order="true">
       <classes>
-        	<class name="com.edu.scene.test.Login_Test">
-        		<method>
-        			<include name="login_test"></include>
-        		</method>
-        	</class> 	
-     		 <class name="com.edu.scene.test.SkuList_Test">
-        		<method>
-        			<include name="skulist_test"></include>
-        		</method>
-        	</class> 
-        	<class name="com.edu.scene.test.AddressList_Test">
-        		<method>
-        			<include name="getAddressList_test"></include>
-        		</method>
-        	</class>
-        	 <class name="com.edu.scene.test.GetTranspotFee_Test">
-        		<method>
-        			<include name="getFee_test"></include>
-        		</method>
-        	</class>
-        	<class name="com.edu.scene.test.AddAddress_Test">
-        		<method>
-        			<include name="addAddress_test"></include>
-        		</method>
-        	</class>
-        	<class name="com.edu.scene.test.AddressDelete_Test">
-        		<method>
-        			<include name="addressDelete_test"></include>
-        		</method>
-        	</class>
+        	<class name="com.edu.scene.test.QingGuoScene1_Test"></class> 
+        	<class name="com.edu.scene.test.QingGuoScene2_Test"></class> 
+        	<class name="com.edu.scene.test.QingGuoScene3_Test"></class>
+        	<class name="com.edu.scene.test.QingGuoScene4_Test"></class> 
       </classes>
-      </test>
+     </test>
+    
 </suite> 

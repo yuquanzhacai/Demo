@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [test]">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    <listener class-name="com.edu.core.ApiListener"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="test(failed)">
+    <classes>
+      <class name="com.edu.scene.test.AddressList_Test">
+        <methods>
+          <include name="getAddressList_test"/>
+        </methods>
+      </class> <!-- com.edu.scene.test.AddressList_Test -->
+      <class name="com.edu.scene.test.AddAddress_Test">
+        <methods>
+          <include name="addAddress_test"/>
+        </methods>
+      </class> <!-- com.edu.scene.test.AddAddress_Test -->
+    </classes>
+  </test> <!-- test(failed) -->
+</suite> <!-- Failed suite [test] -->
