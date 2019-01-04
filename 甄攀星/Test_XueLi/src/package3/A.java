@@ -11,5 +11,7 @@ public class A {
 		SimpleDateFormat sdf = new SimpleDateFormat("MMdd_HHmm");
 		String nowDateTime=sdf.format(new Date());
 		System.out.println(nowDateTime);
+		System.out.println(nowDateTime);
+
 	}
 }

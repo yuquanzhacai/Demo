@@ -8,13 +8,21 @@
      
    </listeners>
 
+<<<<<<< HEAD
    <test name="接口场景测试" preserver-order="true">
+=======
+   <test name="青果接口测试" preserver-order="true">
+>>>>>>> e91f6d47701262d6f587e05897172304ee2fa715
       <classes>
         	<class name="com.edu.scene.test.QingGuoScene1_Test"></class> 
         	<class name="com.edu.scene.test.QingGuoScene2_Test"></class> 
         	<class name="com.edu.scene.test.QingGuoScene3_Test"></class>
         	<class name="com.edu.scene.test.QingGuoScene4_Test"></class> 
       </classes>
+<<<<<<< HEAD
      </test>
     
+=======
+      </test>
+>>>>>>> e91f6d47701262d6f587e05897172304ee2fa715
 </suite> 

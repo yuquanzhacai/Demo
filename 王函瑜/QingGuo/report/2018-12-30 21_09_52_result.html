@@ -1,0 +1,1986 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>System Interface Test Report</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         { }
+
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+	font-size: 16pt;
+	color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+}
+
+a.popup_link:hover {
+    color: red;
+}
+
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #E6E6D6;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 8pt;
+    width: 500px;
+}
+
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+}
+#result_table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #777;
+}
+#header_row {
+    font-weight: bold;
+    color: white;
+    background-color: #777;
+}
+#result_table td {
+    border: 1px solid #777;
+    padding: 2px;
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #6c6; }
+.failClass  { background-color: #c60; }
+.errorClass { background-color: #c00; }
+.passCase   { color: #6c6; }
+.failCase   { color: #c60; font-weight: bold; }
+.errorCase  { color: #c00; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+
+
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+
+</style>
+
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+
+<div class='heading'>
+<h1>System Interface Test Report</h1>
+<p class='attribute'><strong>Start Time:</strong> 2018-12-30 21:09:52</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:44.574000</p>
+<p class='attribute'><strong>Status:</strong> Pass 32 Failure 11 Error 14</p>
+
+<p class='description'>此次测试结果如下: </p>
+</div>
+
+
+
+<p id='show_detail_line'>Show
+<a href='javascript:showCase(0)'>Summary</a>
+<a href='javascript:showCase(1)'>Failed</a>
+<a href='javascript:showCase(2)'>All</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row'>
+    <td>Test Group/Test case</td>
+    <td>Count</td>
+    <td>Pass</td>
+    <td>Fail</td>
+    <td>Error</td>
+    <td>View</td>
+</tr>
+
+<tr class='passClass'>
+    <td>qg_scene1_test.qg1Test</td>
+    <td>4</td>
+    <td>4</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1',4)">Detail</a></td>
+</tr>
+
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_get_sku</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+        pass</a>
+
+    <div id='div_pt1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.1: {'message': 'success', 'result': [{'id': 5, 'searchParamList': [], 'totalNumber': 200000, 'colour': 1, 'skuName': '夜空黑', 'goods': {'id': 2, 'searchParamList': [], 'goodsName': '青果', 'sellChannel': 2}, 'goodsId': 2, 'price': 199.0, 'picUrl': 'https://nos.163.com/yixinpublic/pr_fqizpyyj3qoi7czau3yiig==_1439967375_16285'}, {'id': 4, 'searchParamList': [], 'totalNumber': 200000, 'colour': 0, 'skuName': '青果绿', 'goods': {'id': 2, 'searchParamList': [], 'goodsName': '青果', 'sellChannel': 2}, 'goodsId': 2, 'price': 199.0, 'picUrl': 'https://nos.163.com/yixinpublic/pr_lvlslq5untnm-kymzfhaea==_1439967379_16286'}, {'id': 3, 'searchParamList': [], 'stockId': 74966313, 'totalNumber': 200000, 'colour': 1, 'skuName': '夜空黑', 'goods': {'id': 1, 'searchParamList': [], 'goodsName': '青果', 'sellChannel': 1}, 'goodsId': 1, 'price': 199.0, 'picUrl': 'https://nos.163.com/yixinpublic/pr_fqizpyyj3qoi7czau3yiig==_1439967375_16285'}, {'id': 2, 'searchParamList': [], 'stockId': 74966312, 'totalNumber': 200000, 'colour': 0, 'skuName': '青果绿', 'goods': {'id': 1, 'searchParamList': [], 'goodsName': '青果', 'sellChannel': 1}, 'goodsId': 1, 'price': 199.0, 'picUrl': 'https://nos.163.com/yixinpublic/pr_lvlslq5untnm-\n\nkymzfhaea==_1439967379_16286'}], 'code': 200}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_get_sku_spc</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2')" >
+        pass</a>
+
+    <div id='div_pt1.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.2: {'message': 'success', 'result': [{'id': 3, 'searchParamList': [], 'stockId': 74966313, 'totalNumber': 200000, 'colour': 1, 'skuName': '夜空黑', 'goods': {'id': 1, 'searchParamList': [], 'goodsName': '青果', 'sellChannel': 1}, 'goodsId': 1, 'price': 199.0, 'picUrl': 'https://nos.163.com/yixinpublic/pr_fqizpyyj3qoi7czau3yiig==_1439967375_16285'}, {'id': 2, 'searchParamList': [], 'stockId': 74966312, 'totalNumber': 200000, 'colour': 0, 'skuName': '青果绿', 'goods': {'id': 1, 'searchParamList': [], 'goodsName': '青果', 'sellChannel': 1}, 'goodsId': 1, 'price': 199.0, 'picUrl': 'https://nos.163.com/yixinpublic/pr_lvlslq5untnm-\n\nkymzfhaea==_1439967379_16286'}], 'code': 200}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_get_sku_spc2</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3')" >
+        pass</a>
+
+    <div id='div_pt1.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.3: {'message': 'success', 'result': [{'id': 5, 'searchParamList': [], 'totalNumber': 200000, 'colour': 1, 'skuName': '夜空黑', 'goods': {'id': 2, 'searchParamList': [], 'goodsName': '青果', 'sellChannel': 2}, 'goodsId': 2, 'price': 199.0, 'picUrl': 'https://nos.163.com/yixinpublic/pr_fqizpyyj3qoi7czau3yiig==_1439967375_16285'}, {'id': 4, 'searchParamList': [], 'totalNumber': 200000, 'colour': 0, 'skuName': '青果绿', 'goods': {'id': 2, 'searchParamList': [], 'goodsName': '青果', 'sellChannel': 2}, 'goodsId': 2, 'price': 199.0, 'picUrl': 'https://nos.163.com/yixinpublic/pr_lvlslq5untnm-kymzfhaea==_1439967379_16286'}], 'code': 200}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_get_sku_spc3</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.4')" >
+        pass</a>
+
+    <div id='div_pt1.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.4: {'message': 'success', 'result': [], 'code': 200}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>qg_scene2_test.qg2Test</td>
+    <td>4</td>
+    <td>4</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c2',4)">Detail</a></td>
+</tr>
+
+<tr id='pt2.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_get_address</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.1')" >
+        pass</a>
+
+    <div id='div_pt2.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.1: {'message': 'success', 'result': {'searchParamList': [74966314, 50, 0], 'limit': 50, 'offset': 0, 'total': 5, 'list': [{'id': 82321541, 'searchParamList': [], 'sort': 99, 'province': 'Hebei', 'city': 'Shijiazhuang', 'area': 'Yuhuaqu', 'receiverName': 'receiver456', 'cellPhone': '12345678901', 'addressDetail': 'Hebei_Normal_University', 'fgUserId': 74966314, 'fgUser': {'id': 74966314, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000000', 'createTime': 1454057846653, 'userAccount': '86/20000000000', 'userName': '测试用户20', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82321486, 'searchParamList': [], 'sort': 99, 'province': 'Hebei', 'city': 'Shijiazhuang', 'area': 'Yuhuaqu', 'receiverName': 'receiver', 'cellPhone': '12345678901', 'addressDetail': 'Hebei_Normal_University', 'fgUserId': 74966314, 'fgUser': {'id': 74966314, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000000', 'createTime': 1454057846653, 'userAccount': '86/20000000000', 'userName': '测试用户20', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82320340, 'searchParamList': [], 'sort': 99, 'province': '浙江省', 'city': '杭州市', 'area': '滨江区', 'receiverName': '张三', 'cellPhone': '12615813537', 'addressDetail': '1栋3单元', 'fgUserId': 74966314, 'fgUser': {'id': 74966314, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000000', 'createTime': 1454057846653, 'userAccount': '86/20000000000', 'userName': '测试用户20', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82320037, 'searchParamList': [], 'sort': 99, 'province': '浙江省', 'city': '杭州市', 'area': '滨江区', 'receiverName': 'A好', 'cellPhone': '12345678909', 'addressDetail': '上午', 'fgUserId': 74966314, 'fgUser': {'id': 74966314, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000000', 'createTime': 1454057846653, 'userAccount': '86/20000000000', 'userName': '测试用户20', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82319975, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '??', 'cellPhone': '12345678901', 'addressDetail': '????', 'fgUserId': 74966314, 'fgUser': {'id': 74966314, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000000', 'createTime': 1454057846653, 'userAccount': '86/20000000000', 'userName': '测试用户20', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}], 'prefix': 'A.', 'fgUserId': 74966314}, 'code': 200}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_get_fee</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.2')" >
+        pass</a>
+
+    <div id='div_pt2.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.2: {'message': 'success', 'result': {'searchParamList': [74966314, 50, 0], 'limit': 50, 'offset': 0, 'total': 5, 'list': [{'id': 82321541, 'searchParamList': [], 'sort': 99, 'province': 'Hebei', 'city': 'Shijiazhuang', 'area': 'Yuhuaqu', 'receiverName': 'receiver456', 'cellPhone': '12345678901', 'addressDetail': 'Hebei_Normal_University', 'fgUserId': 74966314, 'fgUser': {'id': 74966314, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000000', 'createTime': 1454057846653, 'userAccount': '86/20000000000', 'userName': '测试用户20', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82321486, 'searchParamList': [], 'sort': 99, 'province': 'Hebei', 'city': 'Shijiazhuang', 'area': 'Yuhuaqu', 'receiverName': 'receiver', 'cellPhone': '12345678901', 'addressDetail': 'Hebei_Normal_University', 'fgUserId': 74966314, 'fgUser': {'id': 74966314, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000000', 'createTime': 1454057846653, 'userAccount': '86/20000000000', 'userName': '测试用户20', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82320340, 'searchParamList': [], 'sort': 99, 'province': '浙江省', 'city': '杭州市', 'area': '滨江区', 'receiverName': '张三', 'cellPhone': '12615813537', 'addressDetail': '1栋3单元', 'fgUserId': 74966314, 'fgUser': {'id': 74966314, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000000', 'createTime': 1454057846653, 'userAccount': '86/20000000000', 'userName': '测试用户20', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82320037, 'searchParamList': [], 'sort': 99, 'province': '浙江省', 'city': '杭州市', 'area': '滨江区', 'receiverName': 'A好', 'cellPhone': '12345678909', 'addressDetail': '上午', 'fgUserId': 74966314, 'fgUser': {'id': 74966314, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000000', 'createTime': 1454057846653, 'userAccount': '86/20000000000', 'userName': '测试用户20', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82319975, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '??', 'cellPhone': '12345678901', 'addressDetail': '????', 'fgUserId': 74966314, 'fgUser': {'id': 74966314, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000000', 'createTime': 1454057846653, 'userAccount': '86/20000000000', 'userName': '测试用户20', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}], 'prefix': 'A.', 'fgUserId': 74966314}, 'code': 200}
+{'message': 'success', 'result': 6.0, 'code': 200}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_login_success</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.3')" >
+        pass</a>
+
+    <div id='div_pt2.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.3: {'message': 'success', 'code': 200}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_submit</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.4')" >
+        pass</a>
+
+    <div id='div_pt2.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.4: {'message': 'success', 'result': {'searchParamList': [74966314, 50, 0], 'limit': 50, 'offset': 0, 'total': 5, 'list': [{'id': 82321541, 'searchParamList': [], 'sort': 99, 'province': 'Hebei', 'city': 'Shijiazhuang', 'area': 'Yuhuaqu', 'receiverName': 'receiver456', 'cellPhone': '12345678901', 'addressDetail': 'Hebei_Normal_University', 'fgUserId': 74966314, 'fgUser': {'id': 74966314, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000000', 'createTime': 1454057846653, 'userAccount': '86/20000000000', 'userName': '测试用户20', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82321486, 'searchParamList': [], 'sort': 99, 'province': 'Hebei', 'city': 'Shijiazhuang', 'area': 'Yuhuaqu', 'receiverName': 'receiver', 'cellPhone': '12345678901', 'addressDetail': 'Hebei_Normal_University', 'fgUserId': 74966314, 'fgUser': {'id': 74966314, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000000', 'createTime': 1454057846653, 'userAccount': '86/20000000000', 'userName': '测试用户20', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82320340, 'searchParamList': [], 'sort': 99, 'province': '浙江省', 'city': '杭州市', 'area': '滨江区', 'receiverName': '张三', 'cellPhone': '12615813537', 'addressDetail': '1栋3单元', 'fgUserId': 74966314, 'fgUser': {'id': 74966314, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000000', 'createTime': 1454057846653, 'userAccount': '86/20000000000', 'userName': '测试用户20', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82320037, 'searchParamList': [], 'sort': 99, 'province': '浙江省', 'city': '杭州市', 'area': '滨江区', 'receiverName': 'A好', 'cellPhone': '12345678909', 'addressDetail': '上午', 'fgUserId': 74966314, 'fgUser': {'id': 74966314, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000000', 'createTime': 1454057846653, 'userAccount': '86/20000000000', 'userName': '测试用户20', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82319975, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '??', 'cellPhone': '12345678901', 'addressDetail': '????', 'fgUserId': 74966314, 'fgUser': {'id': 74966314, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000000', 'createTime': 1454057846653, 'userAccount': '86/20000000000', 'userName': '测试用户20', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}], 'prefix': 'A.', 'fgUserId': 74966314}, 'code': 200}
+{'message': 'success', 'result': {'searchParamList': [74966314, 50, 0], 'limit': 50, 'offset': 0, 'total': 5, 'list': [{'id': 82321541, 'searchParamList': [], 'sort': 99, 'province': 'Hebei', 'city': 'Shijiazhuang', 'area': 'Yuhuaqu', 'receiverName': 'receiver456', 'cellPhone': '12345678901', 'addressDetail': 'Hebei_Normal_University', 'fgUserId': 74966314, 'fgUser': {'id': 74966314, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000000', 'createTime': 1454057846653, 'userAccount': '86/20000000000', 'userName': '测试用户20', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82321486, 'searchParamList': [], 'sort': 99, 'province': 'Hebei', 'city': 'Shijiazhuang', 'area': 'Yuhuaqu', 'receiverName': 'receiver', 'cellPhone': '12345678901', 'addressDetail': 'Hebei_Normal_University', 'fgUserId': 74966314, 'fgUser': {'id': 74966314, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000000', 'createTime': 1454057846653, 'userAccount': '86/20000000000', 'userName': '测试用户20', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82320340, 'searchParamList': [], 'sort': 99, 'province': '浙江省', 'city': '杭州市', 'area': '滨江区', 'receiverName': '张三', 'cellPhone': '12615813537', 'addressDetail': '1栋3单元', 'fgUserId': 74966314, 'fgUser': {'id': 74966314, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000000', 'createTime': 1454057846653, 'userAccount': '86/20000000000', 'userName': '测试用户20', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82320037, 'searchParamList': [], 'sort': 99, 'province': '浙江省', 'city': '杭州市', 'area': '滨江区', 'receiverName': 'A好', 'cellPhone': '12345678909', 'addressDetail': '上午', 'fgUserId': 74966314, 'fgUser': {'id': 74966314, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000000', 'createTime': 1454057846653, 'userAccount': '86/20000000000', 'userName': '测试用户20', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82319975, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '??', 'cellPhone': '12345678901', 'addressDetail': '????', 'fgUserId': 74966314, 'fgUser': {'id': 74966314, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000000', 'createTime': 1454057846653, 'userAccount': '86/20000000000', 'userName': '测试用户20', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}], 'prefix': 'A.', 'fgUserId': 74966314}, 'code': 200}
+{'message': 'success', 'result': 6.0, 'code': 200}
+{'message': 'success', 'result': {'id': 82321542, 'fgUserId': 74966314, 'area': 'Yuhuaqu', 'cellPhone': '12345678901', 'city': 'Shijiazhuang', 'province': 'Hebei', 'receiverName': 'receiver456', 'addressDetail': 'Hebei_Normal_University', 'transportFee': 0.0, 'needInvoice': 0, 'invoiceHead': '', 'totalFee': 398.0, 'createTime': 1546175317075, 'logisticsCompanyId': 1, 'status': 0, 'cancel': 0, 'finish': 0, 'accessSource': 'noSource'}, 'code': 200}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>qg_scene3_test.qg3Test</td>
+    <td>4</td>
+    <td>3</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c3',4)">Detail</a></td>
+</tr>
+
+<tr id='ft3.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_add_address</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.1')" >
+        fail</a>
+
+    <div id='div_ft3.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.1: {'message': '最多只能添加6个地址', 'code': 400}
+Traceback (most recent call last):
+  File "E:\PyCharm\WORK\QingGuo\testcase\qg_scene3_test.py", line 35, in test_add_address
+    self.assertEqual(result['code'], 200, "添加收货地址失败")
+AssertionError: 400 != 200 : 添加收货地址失败
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt3.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_get_address</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.2')" >
+        pass</a>
+
+    <div id='div_pt3.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.2: {'message': 'success', 'result': {'searchParamList': [74966315, 50, 0], 'limit': 50, 'offset': 0, 'total': 6, 'list': [{'id': 82319142, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '', 'cellPhone': '15222223333', 'addressDetail': '????', 'fgUserId': 74966315, 'fgUser': {'id': 74966315, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000001', 'createTime': 1454057846715, 'userAccount': '86/20000000001', 'userName': '测试用户1', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82319141, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '??', 'cellPhone': '15222223333', 'addressDetail': '', 'fgUserId': 74966315, 'fgUser': {'id': 74966315, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000001', 'createTime': 1454057846715, 'userAccount': '86/20000000001', 'userName': '测试用户1', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82319140, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '??', 'cellPhone': '15222223333', 'addressDetail': '?????', 'fgUserId': 74966315, 'fgUser': {'id': 74966315, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000001', 'createTime': 1454057846715, 'userAccount': '86/20000000001', 'userName': '测试用户1', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82319139, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '??', 'cellPhone': '15222223333', 'addressDetail': '?????', 'fgUserId': 74966315, 'fgUser': {'id': 74966315, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000001', 'createTime': 1454057846715, 'userAccount': '86/20000000001', 'userName': '测试用户1', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82319138, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '', 'cellPhone': '15222223333', 'addressDetail': '????', 'fgUserId': 74966315, 'fgUser': {'id': 74966315, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000001', 'createTime': 1454057846715, 'userAccount': '86/20000000001', 'userName': '测试用户1', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82319137, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '??', 'cellPhone': '15222223333', 'addressDetail': '', 'fgUserId': 74966315, 'fgUser': {'id': 74966315, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000001', 'createTime': 1454057846715, 'userAccount': '86/20000000001', 'userName': '测试用户1', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}], 'prefix': 'A.', 'fgUserId': 74966315}, 'code': 200}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt3.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_get_fee</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.3')" >
+        pass</a>
+
+    <div id='div_pt3.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.3: {'message': 'success', 'result': {'searchParamList': [74966315, 50, 0], 'limit': 50, 'offset': 0, 'total': 6, 'list': [{'id': 82319142, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '', 'cellPhone': '15222223333', 'addressDetail': '????', 'fgUserId': 74966315, 'fgUser': {'id': 74966315, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000001', 'createTime': 1454057846715, 'userAccount': '86/20000000001', 'userName': '测试用户1', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82319141, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '??', 'cellPhone': '15222223333', 'addressDetail': '', 'fgUserId': 74966315, 'fgUser': {'id': 74966315, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000001', 'createTime': 1454057846715, 'userAccount': '86/20000000001', 'userName': '测试用户1', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82319140, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '??', 'cellPhone': '15222223333', 'addressDetail': '?????', 'fgUserId': 74966315, 'fgUser': {'id': 74966315, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000001', 'createTime': 1454057846715, 'userAccount': '86/20000000001', 'userName': '测试用户1', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82319139, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '??', 'cellPhone': '15222223333', 'addressDetail': '?????', 'fgUserId': 74966315, 'fgUser': {'id': 74966315, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000001', 'createTime': 1454057846715, 'userAccount': '86/20000000001', 'userName': '测试用户1', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82319138, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '', 'cellPhone': '15222223333', 'addressDetail': '????', 'fgUserId': 74966315, 'fgUser': {'id': 74966315, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000001', 'createTime': 1454057846715, 'userAccount': '86/20000000001', 'userName': '测试用户1', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82319137, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '??', 'cellPhone': '15222223333', 'addressDetail': '', 'fgUserId': 74966315, 'fgUser': {'id': 74966315, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000001', 'createTime': 1454057846715, 'userAccount': '86/20000000001', 'userName': '测试用户1', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}], 'prefix': 'A.', 'fgUserId': 74966315}, 'code': 200}
+{'message': 'success', 'result': 6.0, 'code': 200}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt3.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_submit</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.4')" >
+        pass</a>
+
+    <div id='div_pt3.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.4: {'message': 'success', 'result': {'searchParamList': [74966315, 50, 0], 'limit': 50, 'offset': 0, 'total': 6, 'list': [{'id': 82319142, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '', 'cellPhone': '15222223333', 'addressDetail': '????', 'fgUserId': 74966315, 'fgUser': {'id': 74966315, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000001', 'createTime': 1454057846715, 'userAccount': '86/20000000001', 'userName': '测试用户1', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82319141, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '??', 'cellPhone': '15222223333', 'addressDetail': '', 'fgUserId': 74966315, 'fgUser': {'id': 74966315, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000001', 'createTime': 1454057846715, 'userAccount': '86/20000000001', 'userName': '测试用户1', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82319140, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '??', 'cellPhone': '15222223333', 'addressDetail': '?????', 'fgUserId': 74966315, 'fgUser': {'id': 74966315, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000001', 'createTime': 1454057846715, 'userAccount': '86/20000000001', 'userName': '测试用户1', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82319139, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '??', 'cellPhone': '15222223333', 'addressDetail': '?????', 'fgUserId': 74966315, 'fgUser': {'id': 74966315, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000001', 'createTime': 1454057846715, 'userAccount': '86/20000000001', 'userName': '测试用户1', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82319138, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '', 'cellPhone': '15222223333', 'addressDetail': '????', 'fgUserId': 74966315, 'fgUser': {'id': 74966315, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000001', 'createTime': 1454057846715, 'userAccount': '86/20000000001', 'userName': '测试用户1', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82319137, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '??', 'cellPhone': '15222223333', 'addressDetail': '', 'fgUserId': 74966315, 'fgUser': {'id': 74966315, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000001', 'createTime': 1454057846715, 'userAccount': '86/20000000001', 'userName': '测试用户1', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}], 'prefix': 'A.', 'fgUserId': 74966315}, 'code': 200}
+{'message': 'success', 'result': {'searchParamList': [74966315, 50, 0], 'limit': 50, 'offset': 0, 'total': 6, 'list': [{'id': 82319142, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '', 'cellPhone': '15222223333', 'addressDetail': '????', 'fgUserId': 74966315, 'fgUser': {'id': 74966315, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000001', 'createTime': 1454057846715, 'userAccount': '86/20000000001', 'userName': '测试用户1', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82319141, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '??', 'cellPhone': '15222223333', 'addressDetail': '', 'fgUserId': 74966315, 'fgUser': {'id': 74966315, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000001', 'createTime': 1454057846715, 'userAccount': '86/20000000001', 'userName': '测试用户1', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82319140, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '??', 'cellPhone': '15222223333', 'addressDetail': '?????', 'fgUserId': 74966315, 'fgUser': {'id': 74966315, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000001', 'createTime': 1454057846715, 'userAccount': '86/20000000001', 'userName': '测试用户1', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82319139, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '??', 'cellPhone': '15222223333', 'addressDetail': '?????', 'fgUserId': 74966315, 'fgUser': {'id': 74966315, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000001', 'createTime': 1454057846715, 'userAccount': '86/20000000001', 'userName': '测试用户1', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82319138, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '', 'cellPhone': '15222223333', 'addressDetail': '????', 'fgUserId': 74966315, 'fgUser': {'id': 74966315, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000001', 'createTime': 1454057846715, 'userAccount': '86/20000000001', 'userName': '测试用户1', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82319137, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '??', 'cellPhone': '15222223333', 'addressDetail': '', 'fgUserId': 74966315, 'fgUser': {'id': 74966315, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000001', 'createTime': 1454057846715, 'userAccount': '86/20000000001', 'userName': '测试用户1', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}], 'prefix': 'A.', 'fgUserId': 74966315}, 'code': 200}
+{'message': 'success', 'result': 6.0, 'code': 200}
+{'message': 'success', 'result': {'id': 82321545, 'fgUserId': 74966315, 'area': '???', 'cellPhone': '15222223333', 'city': '???', 'province': '???', 'receiverName': '', 'addressDetail': '????', 'transportFee': 0.0, 'needInvoice': 0, 'invoiceHead': '', 'totalFee': 398.0, 'createTime': 1546175322330, 'logisticsCompanyId': 1, 'status': 0, 'cancel': 0, 'finish': 0, 'accessSource': 'noSource'}, 'code': 200}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='errorClass'>
+    <td>qg_scene_test.qgTest</td>
+    <td>8</td>
+    <td>7</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c4',8)">Detail</a></td>
+</tr>
+
+<tr id='pt4.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_address</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.1')" >
+        pass</a>
+
+    <div id='div_pt4.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.1: {'message': 'success', 'code': 200}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft4.2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_del_address</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.2')" >
+        error</a>
+
+    <div id='div_ft4.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft4.2: {'message': 'success', 'result': {'searchParamList': [74966316, 50, 0], 'limit': 50, 'offset': 0, 'total': 6, 'list': [{'id': 82180438, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '??', 'cellPhone': '123456789111', 'addressDetail': '???599 ?', 'fgUserId': 74966316, 'fgUser': {'id': 74966316, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000002', 'createTime': 1454057846816, 'userAccount': '86/20000000002', 'userName': '测试用户2', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82180434, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '??', 'cellPhone': '123456789111', 'addressDetail': '???599 ?', 'fgUserId': 74966316, 'fgUser': {'id': 74966316, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000002', 'createTime': 1454057846816, 'userAccount': '86/20000000002', 'userName': '测试用户2', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82180412, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '??', 'cellPhone': '123456789111', 'addressDetail': '???599 ?', 'fgUserId': 74966316, 'fgUser': {'id': 74966316, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000002', 'createTime': 1454057846816, 'userAccount': '86/20000000002', 'userName': '测试用户2', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82162804, 'searchParamList': [], 'sort': 99, 'province': '浙江省', 'city': '杭州市', 'area': '滨江区', 'receiverName': '李四', 'cellPhone': '12311111111', 'addressDetail': '1', 'fgUserId': 74966316, 'fgUser': {'id': 74966316, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000002', 'createTime': 1454057846816, 'userAccount': '86/20000000002', 'userName': '测试用户2', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82162801, 'searchParamList': [], 'sort': 99, 'province': '浙江省', 'city': '杭州市', 'area': '滨江区', 'receiverName': '张三', 'cellPhone': '12345678945', 'addressDetail': '123号', 'fgUserId': 74966316, 'fgUser': {'id': 74966316, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000002', 'createTime': 1454057846816, 'userAccount': '86/20000000002', 'userName': '测试用户2', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82124297, 'searchParamList': [], 'sort': 99, 'province': '海南省', 'city': '海口市', 'area': '秀英区', 'receiverName': '12', 'cellPhone': '12345678956', 'addressDetail': '1', 'fgUserId': 74966316, 'fgUser': {'id': 74966316, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000002', 'createTime': 1454057846816, 'userAccount': '86/20000000002', 'userName': '测试用户2', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}], 'prefix': 'A.', 'fgUserId': 74966316}, 'code': 200}
+Traceback (most recent call last):
+  File "E:\PyCharm\WORK\QingGuo\testcase\qg_scene_test.py", line 112, in test_del_address
+    result = SendHttp().run_http_cookies(self.url7, "POST", common.getcookies(user), data)
+  File "E:\PyCharm\WORK\QingGuo\api\SendHttp.py", line 42, in run_http_cookies
+    resu = self.send_post_bycookies(url, cookies,paramdata)
+  File "E:\PyCharm\WORK\QingGuo\api\SendHttp.py", line 24, in send_post_bycookies
+    return res.json()
+  File "E:\Python\Python\lib\site-packages\requests\models.py", line 897, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "E:\Python\Python\lib\json\__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "E:\Python\Python\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "E:\Python\Python\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_get_address</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.3')" >
+        pass</a>
+
+    <div id='div_pt4.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.3: {'message': 'success', 'result': {'searchParamList': [74966316, 50, 0], 'limit': 50, 'offset': 0, 'total': 6, 'list': [{'id': 82180438, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '??', 'cellPhone': '123456789111', 'addressDetail': '???599 ?', 'fgUserId': 74966316, 'fgUser': {'id': 74966316, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000002', 'createTime': 1454057846816, 'userAccount': '86/20000000002', 'userName': '测试用户2', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82180434, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '??', 'cellPhone': '123456789111', 'addressDetail': '???599 ?', 'fgUserId': 74966316, 'fgUser': {'id': 74966316, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000002', 'createTime': 1454057846816, 'userAccount': '86/20000000002', 'userName': '测试用户2', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82180412, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '??', 'cellPhone': '123456789111', 'addressDetail': '???599 ?', 'fgUserId': 74966316, 'fgUser': {'id': 74966316, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000002', 'createTime': 1454057846816, 'userAccount': '86/20000000002', 'userName': '测试用户2', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82162804, 'searchParamList': [], 'sort': 99, 'province': '浙江省', 'city': '杭州市', 'area': '滨江区', 'receiverName': '李四', 'cellPhone': '12311111111', 'addressDetail': '1', 'fgUserId': 74966316, 'fgUser': {'id': 74966316, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000002', 'createTime': 1454057846816, 'userAccount': '86/20000000002', 'userName': '测试用户2', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82162801, 'searchParamList': [], 'sort': 99, 'province': '浙江省', 'city': '杭州市', 'area': '滨江区', 'receiverName': '张三', 'cellPhone': '12345678945', 'addressDetail': '123号', 'fgUserId': 74966316, 'fgUser': {'id': 74966316, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000002', 'createTime': 1454057846816, 'userAccount': '86/20000000002', 'userName': '测试用户2', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82124297, 'searchParamList': [], 'sort': 99, 'province': '海南省', 'city': '海口市', 'area': '秀英区', 'receiverName': '12', 'cellPhone': '12345678956', 'addressDetail': '1', 'fgUserId': 74966316, 'fgUser': {'id': 74966316, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000002', 'createTime': 1454057846816, 'userAccount': '86/20000000002', 'userName': '测试用户2', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}], 'prefix': 'A.', 'fgUserId': 74966316}, 'code': 200}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_get_fee</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.4')" >
+        pass</a>
+
+    <div id='div_pt4.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.4: {'message': 'success', 'result': {'searchParamList': [74966316, 50, 0], 'limit': 50, 'offset': 0, 'total': 6, 'list': [{'id': 82180438, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '??', 'cellPhone': '123456789111', 'addressDetail': '???599 ?', 'fgUserId': 74966316, 'fgUser': {'id': 74966316, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000002', 'createTime': 1454057846816, 'userAccount': '86/20000000002', 'userName': '测试用户2', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82180434, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '??', 'cellPhone': '123456789111', 'addressDetail': '???599 ?', 'fgUserId': 74966316, 'fgUser': {'id': 74966316, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000002', 'createTime': 1454057846816, 'userAccount': '86/20000000002', 'userName': '测试用户2', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82180412, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '??', 'cellPhone': '123456789111', 'addressDetail': '???599 ?', 'fgUserId': 74966316, 'fgUser': {'id': 74966316, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000002', 'createTime': 1454057846816, 'userAccount': '86/20000000002', 'userName': '测试用户2', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82162804, 'searchParamList': [], 'sort': 99, 'province': '浙江省', 'city': '杭州市', 'area': '滨江区', 'receiverName': '李四', 'cellPhone': '12311111111', 'addressDetail': '1', 'fgUserId': 74966316, 'fgUser': {'id': 74966316, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000002', 'createTime': 1454057846816, 'userAccount': '86/20000000002', 'userName': '测试用户2', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82162801, 'searchParamList': [], 'sort': 99, 'province': '浙江省', 'city': '杭州市', 'area': '滨江区', 'receiverName': '张三', 'cellPhone': '12345678945', 'addressDetail': '123号', 'fgUserId': 74966316, 'fgUser': {'id': 74966316, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000002', 'createTime': 1454057846816, 'userAccount': '86/20000000002', 'userName': '测试用户2', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82124297, 'searchParamList': [], 'sort': 99, 'province': '海南省', 'city': '海口市', 'area': '秀英区', 'receiverName': '12', 'cellPhone': '12345678956', 'addressDetail': '1', 'fgUserId': 74966316, 'fgUser': {'id': 74966316, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000002', 'createTime': 1454057846816, 'userAccount': '86/20000000002', 'userName': '测试用户2', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}], 'prefix': 'A.', 'fgUserId': 74966316}, 'code': 200}
+{'message': 'success', 'result': 6.0, 'code': 200}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_get_sku</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.5')" >
+        pass</a>
+
+    <div id='div_pt4.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.5: {'message': 'success', 'result': [{'id': 5, 'searchParamList': [], 'totalNumber': 200000, 'colour': 1, 'skuName': '夜空黑', 'goods': {'id': 2, 'searchParamList': [], 'goodsName': '青果', 'sellChannel': 2}, 'goodsId': 2, 'price': 199.0, 'picUrl': 'https://nos.163.com/yixinpublic/pr_fqizpyyj3qoi7czau3yiig==_1439967375_16285'}, {'id': 4, 'searchParamList': [], 'totalNumber': 200000, 'colour': 0, 'skuName': '青果绿', 'goods': {'id': 2, 'searchParamList': [], 'goodsName': '青果', 'sellChannel': 2}, 'goodsId': 2, 'price': 199.0, 'picUrl': 'https://nos.163.com/yixinpublic/pr_lvlslq5untnm-kymzfhaea==_1439967379_16286'}, {'id': 3, 'searchParamList': [], 'stockId': 74966313, 'totalNumber': 200000, 'colour': 1, 'skuName': '夜空黑', 'goods': {'id': 1, 'searchParamList': [], 'goodsName': '青果', 'sellChannel': 1}, 'goodsId': 1, 'price': 199.0, 'picUrl': 'https://nos.163.com/yixinpublic/pr_fqizpyyj3qoi7czau3yiig==_1439967375_16285'}, {'id': 2, 'searchParamList': [], 'stockId': 74966312, 'totalNumber': 200000, 'colour': 0, 'skuName': '青果绿', 'goods': {'id': 1, 'searchParamList': [], 'goodsName': '青果', 'sellChannel': 1}, 'goodsId': 1, 'price': 199.0, 'picUrl': 'https://nos.163.com/yixinpublic/pr_lvlslq5untnm-\n\nkymzfhaea==_1439967379_16286'}], 'code': 200}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_get_sku_spc</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.6')" >
+        pass</a>
+
+    <div id='div_pt4.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.6: {'message': 'success', 'result': [{'id': 3, 'searchParamList': [], 'stockId': 74966313, 'totalNumber': 200000, 'colour': 1, 'skuName': '夜空黑', 'goods': {'id': 1, 'searchParamList': [], 'goodsName': '青果', 'sellChannel': 1}, 'goodsId': 1, 'price': 199.0, 'picUrl': 'https://nos.163.com/yixinpublic/pr_fqizpyyj3qoi7czau3yiig==_1439967375_16285'}, {'id': 2, 'searchParamList': [], 'stockId': 74966312, 'totalNumber': 200000, 'colour': 0, 'skuName': '青果绿', 'goods': {'id': 1, 'searchParamList': [], 'goodsName': '青果', 'sellChannel': 1}, 'goodsId': 1, 'price': 199.0, 'picUrl': 'https://nos.163.com/yixinpublic/pr_lvlslq5untnm-\n\nkymzfhaea==_1439967379_16286'}], 'code': 200}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_login_success</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.7')" >
+        pass</a>
+
+    <div id='div_pt4.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.7: {'message': 'success', 'code': 200}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_submit</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.8')" >
+        pass</a>
+
+    <div id='div_pt4.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.8: {'message': 'success', 'result': {'searchParamList': [74966316, 50, 0], 'limit': 50, 'offset': 0, 'total': 6, 'list': [{'id': 82180438, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '??', 'cellPhone': '123456789111', 'addressDetail': '???599 ?', 'fgUserId': 74966316, 'fgUser': {'id': 74966316, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000002', 'createTime': 1454057846816, 'userAccount': '86/20000000002', 'userName': '测试用户2', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82180434, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '??', 'cellPhone': '123456789111', 'addressDetail': '???599 ?', 'fgUserId': 74966316, 'fgUser': {'id': 74966316, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000002', 'createTime': 1454057846816, 'userAccount': '86/20000000002', 'userName': '测试用户2', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82180412, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '??', 'cellPhone': '123456789111', 'addressDetail': '???599 ?', 'fgUserId': 74966316, 'fgUser': {'id': 74966316, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000002', 'createTime': 1454057846816, 'userAccount': '86/20000000002', 'userName': '测试用户2', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82162804, 'searchParamList': [], 'sort': 99, 'province': '浙江省', 'city': '杭州市', 'area': '滨江区', 'receiverName': '李四', 'cellPhone': '12311111111', 'addressDetail': '1', 'fgUserId': 74966316, 'fgUser': {'id': 74966316, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000002', 'createTime': 1454057846816, 'userAccount': '86/20000000002', 'userName': '测试用户2', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82162801, 'searchParamList': [], 'sort': 99, 'province': '浙江省', 'city': '杭州市', 'area': '滨江区', 'receiverName': '张三', 'cellPhone': '12345678945', 'addressDetail': '123号', 'fgUserId': 74966316, 'fgUser': {'id': 74966316, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000002', 'createTime': 1454057846816, 'userAccount': '86/20000000002', 'userName': '测试用户2', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82124297, 'searchParamList': [], 'sort': 99, 'province': '海南省', 'city': '海口市', 'area': '秀英区', 'receiverName': '12', 'cellPhone': '12345678956', 'addressDetail': '1', 'fgUserId': 74966316, 'fgUser': {'id': 74966316, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000002', 'createTime': 1454057846816, 'userAccount': '86/20000000002', 'userName': '测试用户2', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}], 'prefix': 'A.', 'fgUserId': 74966316}, 'code': 200}
+{'message': 'success', 'result': {'searchParamList': [74966316, 50, 0], 'limit': 50, 'offset': 0, 'total': 6, 'list': [{'id': 82180438, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '??', 'cellPhone': '123456789111', 'addressDetail': '???599 ?', 'fgUserId': 74966316, 'fgUser': {'id': 74966316, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000002', 'createTime': 1454057846816, 'userAccount': '86/20000000002', 'userName': '测试用户2', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82180434, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '??', 'cellPhone': '123456789111', 'addressDetail': '???599 ?', 'fgUserId': 74966316, 'fgUser': {'id': 74966316, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000002', 'createTime': 1454057846816, 'userAccount': '86/20000000002', 'userName': '测试用户2', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82180412, 'searchParamList': [], 'sort': 99, 'province': '???', 'city': '???', 'area': '???', 'receiverName': '??', 'cellPhone': '123456789111', 'addressDetail': '???599 ?', 'fgUserId': 74966316, 'fgUser': {'id': 74966316, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000002', 'createTime': 1454057846816, 'userAccount': '86/20000000002', 'userName': '测试用户2', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82162804, 'searchParamList': [], 'sort': 99, 'province': '浙江省', 'city': '杭州市', 'area': '滨江区', 'receiverName': '李四', 'cellPhone': '12311111111', 'addressDetail': '1', 'fgUserId': 74966316, 'fgUser': {'id': 74966316, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000002', 'createTime': 1454057846816, 'userAccount': '86/20000000002', 'userName': '测试用户2', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82162801, 'searchParamList': [], 'sort': 99, 'province': '浙江省', 'city': '杭州市', 'area': '滨江区', 'receiverName': '张三', 'cellPhone': '12345678945', 'addressDetail': '123号', 'fgUserId': 74966316, 'fgUser': {'id': 74966316, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000002', 'createTime': 1454057846816, 'userAccount': '86/20000000002', 'userName': '测试用户2', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82124297, 'searchParamList': [], 'sort': 99, 'province': '海南省', 'city': '海口市', 'area': '秀英区', 'receiverName': '12', 'cellPhone': '12345678956', 'addressDetail': '1', 'fgUserId': 74966316, 'fgUser': {'id': 74966316, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000002', 'createTime': 1454057846816, 'userAccount': '86/20000000002', 'userName': '测试用户2', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}], 'prefix': 'A.', 'fgUserId': 74966316}, 'code': 200}
+{'message': 'success', 'result': 6.0, 'code': 200}
+{'message': 'success', 'result': {'id': 82321549, 'fgUserId': 74966316, 'area': '???', 'cellPhone': '123456789111', 'city': '???', 'province': '???', 'receiverName': '??', 'addressDetail': '???599 ?', 'transportFee': 0.0, 'needInvoice': 0, 'invoiceHead': '', 'totalFee': 398.0, 'createTime': 1546175336193, 'logisticsCompanyId': 1, 'status': 0, 'cancel': 0, 'finish': 0, 'accessSource': 'noSource'}, 'code': 200}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='errorClass'>
+    <td>qingguoSubmit_test.Submitorder</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c5',1)">Detail</a></td>
+</tr>
+
+<tr id='ft5.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_submitorder</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft5.1')" >
+        error</a>
+
+    <div id='div_ft5.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft5.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft5.1: Traceback (most recent call last):
+  File "E:\PyCharm\WORK\QingGuo\testcase\qingguoSubmit_test.py", line 19, in test_submitorder
+    submit_result = SendHttp.SendHttp().run_http_cookies(self.url,"POST", sumit_data, common.getcookies(user))
+AttributeError: type object 'SendHttp' has no attribute 'SendHttp'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='errorClass'>
+    <td>qingguoaddaddress_test.AddAddress</td>
+    <td>13</td>
+    <td>1</td>
+    <td>0</td>
+    <td>12</td>
+    <td><a href="javascript:showClassDetail('c6',13)">Detail</a></td>
+</tr>
+
+<tr id='ft6.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_addAddress</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft6.1')" >
+        error</a>
+
+    <div id='div_ft6.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft6.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft6.1: Traceback (most recent call last):
+  File "E:\PyCharm\WORK\QingGuo\testcase\qingguoaddaddress_test.py", line 16, in test_addAddress
+    result=SendHttp(). send_post_bycookies(self.url,newAddress,common.getcookies(user))
+  File "E:\PyCharm\WORK\QingGuo\api\SendHttp.py", line 23, in send_post_bycookies
+    res = requests.post(common.baseUrl() + url, data=json.dumps(paramdata), headers=header,cookies=cookies)
+  File "E:\Python\Python\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "E:\Python\Python\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "E:\Python\Python\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "E:\Python\Python\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type RequestsCookieJar is not JSON serializable
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft6.2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_addAddress0</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft6.2')" >
+        error</a>
+
+    <div id='div_ft6.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft6.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft6.2: Traceback (most recent call last):
+  File "E:\PyCharm\WORK\QingGuo\testcase\qingguoaddaddress_test.py", line 26, in test_addAddress0
+    result = SendHttp().send_post_bycookies(self.url, newAddress, common.getcookies(user))
+  File "E:\PyCharm\WORK\QingGuo\api\SendHttp.py", line 23, in send_post_bycookies
+    res = requests.post(common.baseUrl() + url, data=json.dumps(paramdata), headers=header,cookies=cookies)
+  File "E:\Python\Python\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "E:\Python\Python\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "E:\Python\Python\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "E:\Python\Python\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type RequestsCookieJar is not JSON serializable
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft6.3' class='none'>
+    <td class='errorCase'><div class='testcase'>test_addAddress1</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft6.3')" >
+        error</a>
+
+    <div id='div_ft6.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft6.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft6.3: Traceback (most recent call last):
+  File "E:\PyCharm\WORK\QingGuo\testcase\qingguoaddaddress_test.py", line 37, in test_addAddress1
+    result = SendHttp().send_post_bycookies(self.url, newAddress, common.getcookies(user))
+  File "E:\PyCharm\WORK\QingGuo\api\SendHttp.py", line 23, in send_post_bycookies
+    res = requests.post(common.baseUrl() + url, data=json.dumps(paramdata), headers=header,cookies=cookies)
+  File "E:\Python\Python\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "E:\Python\Python\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "E:\Python\Python\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "E:\Python\Python\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type RequestsCookieJar is not JSON serializable
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft6.4' class='none'>
+    <td class='errorCase'><div class='testcase'>test_addAddress10</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft6.4')" >
+        error</a>
+
+    <div id='div_ft6.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft6.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft6.4: Traceback (most recent call last):
+  File "E:\PyCharm\WORK\QingGuo\testcase\qingguoaddaddress_test.py", line 93, in test_addAddress10
+    result=SendHttp(). send_post_bycookies(self.url,newAddress,common.getcookies(user))
+  File "E:\PyCharm\WORK\QingGuo\api\SendHttp.py", line 23, in send_post_bycookies
+    res = requests.post(common.baseUrl() + url, data=json.dumps(paramdata), headers=header,cookies=cookies)
+  File "E:\Python\Python\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "E:\Python\Python\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "E:\Python\Python\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "E:\Python\Python\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type RequestsCookieJar is not JSON serializable
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft6.5' class='none'>
+    <td class='errorCase'><div class='testcase'>test_addAddress11</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft6.5')" >
+        error</a>
+
+    <div id='div_ft6.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft6.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft6.5: Traceback (most recent call last):
+  File "E:\PyCharm\WORK\QingGuo\testcase\qingguoaddaddress_test.py", line 102, in test_addAddress11
+    result=SendHttp(). send_post_bycookies(self.url,newAddress,common.getcookies(user))
+  File "E:\PyCharm\WORK\QingGuo\api\SendHttp.py", line 23, in send_post_bycookies
+    res = requests.post(common.baseUrl() + url, data=json.dumps(paramdata), headers=header,cookies=cookies)
+  File "E:\Python\Python\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "E:\Python\Python\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "E:\Python\Python\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "E:\Python\Python\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type RequestsCookieJar is not JSON serializable
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft6.6' class='none'>
+    <td class='errorCase'><div class='testcase'>test_addAddress2</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft6.6')" >
+        error</a>
+
+    <div id='div_ft6.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft6.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft6.6: Traceback (most recent call last):
+  File "E:\PyCharm\WORK\QingGuo\testcase\qingguoaddaddress_test.py", line 47, in test_addAddress2
+    result = SendHttp().send_post_bycookies(self.url, newAddress, common.getcookies(user))
+  File "E:\PyCharm\WORK\QingGuo\api\SendHttp.py", line 23, in send_post_bycookies
+    res = requests.post(common.baseUrl() + url, data=json.dumps(paramdata), headers=header,cookies=cookies)
+  File "E:\Python\Python\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "E:\Python\Python\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "E:\Python\Python\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "E:\Python\Python\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type RequestsCookieJar is not JSON serializable
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft6.7' class='none'>
+    <td class='errorCase'><div class='testcase'>test_addAddress3</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft6.7')" >
+        error</a>
+
+    <div id='div_ft6.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft6.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft6.7: Traceback (most recent call last):
+  File "E:\PyCharm\WORK\QingGuo\testcase\qingguoaddaddress_test.py", line 57, in test_addAddress3
+    result = SendHttp().send_post_bycookies(self.url, newAddress, common.getcookies(user))
+  File "E:\PyCharm\WORK\QingGuo\api\SendHttp.py", line 23, in send_post_bycookies
+    res = requests.post(common.baseUrl() + url, data=json.dumps(paramdata), headers=header,cookies=cookies)
+  File "E:\Python\Python\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "E:\Python\Python\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "E:\Python\Python\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "E:\Python\Python\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type RequestsCookieJar is not JSON serializable
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft6.8' class='none'>
+    <td class='errorCase'><div class='testcase'>test_addAddress4</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft6.8')" >
+        error</a>
+
+    <div id='div_ft6.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft6.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft6.8: Traceback (most recent call last):
+  File "E:\PyCharm\WORK\QingGuo\testcase\qingguoaddaddress_test.py", line 66, in test_addAddress4
+    result = SendHttp().send_post_bycookies(self.url, newAddress, common.getcookies(user))
+  File "E:\PyCharm\WORK\QingGuo\api\SendHttp.py", line 23, in send_post_bycookies
+    res = requests.post(common.baseUrl() + url, data=json.dumps(paramdata), headers=header,cookies=cookies)
+  File "E:\Python\Python\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "E:\Python\Python\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "E:\Python\Python\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "E:\Python\Python\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type RequestsCookieJar is not JSON serializable
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft6.9' class='none'>
+    <td class='errorCase'><div class='testcase'>test_addAddress5</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft6.9')" >
+        error</a>
+
+    <div id='div_ft6.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft6.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft6.9: Traceback (most recent call last):
+  File "E:\PyCharm\WORK\QingGuo\testcase\qingguoaddaddress_test.py", line 75, in test_addAddress5
+    result = SendHttp().send_post_bycookies(self.url, newAddress, common.getcookies(user))
+  File "E:\PyCharm\WORK\QingGuo\api\SendHttp.py", line 23, in send_post_bycookies
+    res = requests.post(common.baseUrl() + url, data=json.dumps(paramdata), headers=header,cookies=cookies)
+  File "E:\Python\Python\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "E:\Python\Python\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "E:\Python\Python\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "E:\Python\Python\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type RequestsCookieJar is not JSON serializable
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft6.10' class='none'>
+    <td class='errorCase'><div class='testcase'>test_addAddress6</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft6.10')" >
+        error</a>
+
+    <div id='div_ft6.10' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft6.10').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft6.10: Traceback (most recent call last):
+  File "E:\PyCharm\WORK\QingGuo\testcase\qingguoaddaddress_test.py", line 84, in test_addAddress6
+    result = SendHttp().send_post_bycookies(self.url, newAddress, common.getcookies(user))
+  File "E:\PyCharm\WORK\QingGuo\api\SendHttp.py", line 23, in send_post_bycookies
+    res = requests.post(common.baseUrl() + url, data=json.dumps(paramdata), headers=header,cookies=cookies)
+  File "E:\Python\Python\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "E:\Python\Python\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "E:\Python\Python\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "E:\Python\Python\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type RequestsCookieJar is not JSON serializable
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.11' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_addAddress7</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.11')" >
+        pass</a>
+
+    <div id='div_pt6.11' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.11').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.11: {'message': '请重新登录', 'code': 403}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft6.12' class='none'>
+    <td class='errorCase'><div class='testcase'>test_addAddress8</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft6.12')" >
+        error</a>
+
+    <div id='div_ft6.12' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft6.12').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft6.12: Traceback (most recent call last):
+  File "E:\PyCharm\WORK\QingGuo\testcase\qingguoaddaddress_test.py", line 122, in test_addAddress8
+    result = SendHttp().send_post_bycookies(self.url, newAddress, common.getcookies(user))
+  File "E:\PyCharm\WORK\QingGuo\api\SendHttp.py", line 23, in send_post_bycookies
+    res = requests.post(common.baseUrl() + url, data=json.dumps(paramdata), headers=header,cookies=cookies)
+  File "E:\Python\Python\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "E:\Python\Python\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "E:\Python\Python\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "E:\Python\Python\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type RequestsCookieJar is not JSON serializable
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft6.13' class='none'>
+    <td class='errorCase'><div class='testcase'>test_addAddress9</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft6.13')" >
+        error</a>
+
+    <div id='div_ft6.13' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft6.13').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft6.13: Traceback (most recent call last):
+  File "E:\PyCharm\WORK\QingGuo\testcase\qingguoaddaddress_test.py", line 132, in test_addAddress9
+    result = SendHttp().send_post_bycookies(self.url, newAddress, common.getcookies(user))
+  File "E:\PyCharm\WORK\QingGuo\api\SendHttp.py", line 23, in send_post_bycookies
+    res = requests.post(common.baseUrl() + url, data=json.dumps(paramdata), headers=header,cookies=cookies)
+  File "E:\Python\Python\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "E:\Python\Python\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "E:\Python\Python\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "E:\Python\Python\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type RequestsCookieJar is not JSON serializable
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>qingguoaddress_test.addressList</td>
+    <td>2</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c7',2)">Detail</a></td>
+</tr>
+
+<tr id='ft7.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_list_fail</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft7.1')" >
+        fail</a>
+
+    <div id='div_ft7.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft7.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft7.1: Traceback (most recent call last):
+  File "E:\PyCharm\WORK\QingGuo\testcase\qingguoaddress_test.py", line 21, in test_list_fail
+    self.assertEqual(result['code'], 201)
+AssertionError: 200 != 201
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt7.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_list_success</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt7.2')" >
+        pass</a>
+
+    <div id='div_pt7.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt7.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt7.2: {'message': 'success', 'result': {'searchParamList': [74966318, 50, 0], 'limit': 50, 'offset': 0, 'total': 3, 'list': [{'id': 82321548, 'searchParamList': [], 'sort': 99, 'province': '浙江省', 'city': '杭州市', 'area': '滨江区', 'receiverName': 'A好', 'cellPhone': '12345678909', 'addressDetail': '上午', 'fgUserId': 74966318, 'fgUser': {'id': 74966318, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000004', 'createTime': 1454057846912, 'userAccount': '86/20000000004', 'userName': '测试用户4', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82321406, 'searchParamList': [], 'sort': 99, 'province': '河北省', 'city': '石家庄市', 'area': '裕华区', 'receiverName': 'Tom', 'cellPhone': '18032430000', 'addressDetail': '南二环东路', 'fgUserId': 74966318, 'fgUser': {'id': 74966318, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000004', 'createTime': 1454057846912, 'userAccount': '86/20000000004', 'userName': '测试用户4', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}, {'id': 82321405, 'searchParamList': [], 'sort': 99, 'province': '河北省', 'city': '石家庄市', 'area': '裕华区', 'receiverName': 'Tom', 'cellPhone': '18032430000', 'addressDetail': '南二环东路', 'fgUserId': 74966318, 'fgUser': {'id': 74966318, 'searchParamList': [], 'phoneArea': '86', 'phoneNumber': '20000000004', 'createTime': 1454057846912, 'userAccount': '86/20000000004', 'userName': '测试用户4', 'platform': 0, 'next1': 0, 'next2': 0, 'createTimeStr': '2016-01-29 16:57:26', 'platformDescribe': '手机'}}], 'prefix': 'A.', 'fgUserId': 74966318}, 'code': 200}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>qingguologin_test.qgLoginTest</td>
+    <td>8</td>
+    <td>8</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c8',8)">Detail</a></td>
+</tr>
+
+<tr id='pt8.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_login_NullArea</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.1')" >
+        pass</a>
+
+    <div id='div_pt8.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt8.1: {'message': '用户名或者密码错误', 'code': 400}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt8.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_login_NullName</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.2')" >
+        pass</a>
+
+    <div id='div_pt8.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt8.2: {'message': '用户名或者密码错误', 'code': 400}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt8.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_login_NullPSW</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.3')" >
+        pass</a>
+
+    <div id='div_pt8.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt8.3: {'message': '用户名或者密码错误', 'code': 400}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt8.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_login_by_para</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.4')" >
+        pass</a>
+
+    <div id='div_pt8.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt8.4: {'message': 'success', 'code': 200}
+{'message': 'success', 'code': 200}
+{'message': 'success', 'code': 200}
+{'message': 'success', 'code': 200}
+{'message': 'success', 'code': 200}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt8.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_login_failArea</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.5')" >
+        pass</a>
+
+    <div id='div_pt8.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt8.5: {'message': '用户名或者密码错误', 'code': 400}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt8.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_login_failName</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.6')" >
+        pass</a>
+
+    <div id='div_pt8.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt8.6: {'message': '用户名或者密码错误', 'code': 400}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt8.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_login_failPSD</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.7')" >
+        pass</a>
+
+    <div id='div_pt8.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt8.7: {'message': '用户名或者密码错误', 'code': 400}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt8.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_login_success</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.8')" >
+        pass</a>
+
+    <div id='div_pt8.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt8.8: {'message': 'success', 'code': 200}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>qingguoskulist_test.skuList</td>
+    <td>5</td>
+    <td>2</td>
+    <td>3</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c9',5)">Detail</a></td>
+</tr>
+
+<tr id='pt9.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_skulist</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.1')" >
+        pass</a>
+
+    <div id='div_pt9.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt9.1: {'message': 'success', 'result': [{'id': 5, 'searchParamList': [], 'totalNumber': 200000, 'colour': 1, 'skuName': '夜空黑', 'goods': {'id': 2, 'searchParamList': [], 'goodsName': '青果', 'sellChannel': 2}, 'goodsId': 2, 'price': 199.0, 'picUrl': 'https://nos.163.com/yixinpublic/pr_fqizpyyj3qoi7czau3yiig==_1439967375_16285'}, {'id': 4, 'searchParamList': [], 'totalNumber': 200000, 'colour': 0, 'skuName': '青果绿', 'goods': {'id': 2, 'searchParamList': [], 'goodsName': '青果', 'sellChannel': 2}, 'goodsId': 2, 'price': 199.0, 'picUrl': 'https://nos.163.com/yixinpublic/pr_lvlslq5untnm-kymzfhaea==_1439967379_16286'}, {'id': 3, 'searchParamList': [], 'stockId': 74966313, 'totalNumber': 200000, 'colour': 1, 'skuName': '夜空黑', 'goods': {'id': 1, 'searchParamList': [], 'goodsName': '青果', 'sellChannel': 1}, 'goodsId': 1, 'price': 199.0, 'picUrl': 'https://nos.163.com/yixinpublic/pr_fqizpyyj3qoi7czau3yiig==_1439967375_16285'}, {'id': 2, 'searchParamList': [], 'stockId': 74966312, 'totalNumber': 200000, 'colour': 0, 'skuName': '青果绿', 'goods': {'id': 1, 'searchParamList': [], 'goodsName': '青果', 'sellChannel': 1}, 'goodsId': 1, 'price': 199.0, 'picUrl': 'https://nos.163.com/yixinpublic/pr_lvlslq5untnm-\n\nkymzfhaea==_1439967379_16286'}], 'code': 200}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt9.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_skulist_id1</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.2')" >
+        pass</a>
+
+    <div id='div_pt9.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt9.2: {'message': 'success', 'result': [], 'code': 200}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft9.3' class='none'>
+    <td class='failCase'><div class='testcase'>test_skulist_id2</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft9.3')" >
+        fail</a>
+
+    <div id='div_ft9.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft9.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft9.3: {'message': 'success', 'result': [], 'code': 200}
+Traceback (most recent call last):
+  File "E:\PyCharm\WORK\QingGuo\testcase\qingguoskulist_test.py", line 27, in test_skulist_id2
+    self.assertEqual(result['code'], 400)
+AssertionError: 200 != 400
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft9.4' class='none'>
+    <td class='failCase'><div class='testcase'>test_skulist_id3</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft9.4')" >
+        fail</a>
+
+    <div id='div_ft9.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft9.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft9.4: {'message': 'success', 'result': [], 'code': 200}
+Traceback (most recent call last):
+  File "E:\PyCharm\WORK\QingGuo\testcase\qingguoskulist_test.py", line 35, in test_skulist_id3
+    self.assertEqual(result['code'], 201)
+AssertionError: 200 != 201
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft9.5' class='none'>
+    <td class='failCase'><div class='testcase'>test_skulist_id4</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft9.5')" >
+        fail</a>
+
+    <div id='div_ft9.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft9.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft9.5: {'message': 'success', 'result': [], 'code': 200}
+Traceback (most recent call last):
+  File "E:\PyCharm\WORK\QingGuo\testcase\qingguoskulist_test.py", line 43, in test_skulist_id4
+    self.assertEqual(result['code'], 400)
+AssertionError: 200 != 400
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>qingguotransportfee_test.getFee</td>
+    <td>8</td>
+    <td>2</td>
+    <td>6</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c10',8)">Detail</a></td>
+</tr>
+
+<tr id='ft10.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_get_fee_fail</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft10.1')" >
+        fail</a>
+
+    <div id='div_ft10.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft10.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft10.1: {'message': 'success', 'result': 0.0, 'code': 200}
+Traceback (most recent call last):
+  File "E:\PyCharm\WORK\QingGuo\testcase\qingguotransportfee_test.py", line 22, in test_get_fee_fail
+    self.assertEqual(result['code'], 400,"缺少addressDetail参数情况")
+AssertionError: 200 != 400 : 缺少addressDetail参数情况
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt10.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_get_fee_fail2</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt10.2')" >
+        pass</a>
+
+    <div id='div_pt10.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt10.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt10.2: {'code': 400, 'message': '请求失败'}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft10.3' class='none'>
+    <td class='failCase'><div class='testcase'>test_get_fee_fail3</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft10.3')" >
+        fail</a>
+
+    <div id='div_ft10.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft10.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft10.3: {'message': 'success', 'result': 6.0, 'code': 200}
+Traceback (most recent call last):
+  File "E:\PyCharm\WORK\QingGuo\testcase\qingguotransportfee_test.py", line 36, in test_get_fee_fail3
+    self.assertEqual(result['code'], 400,"id参数类型不正确情况")
+AssertionError: 200 != 400 : id参数类型不正确情况
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft10.4' class='none'>
+    <td class='failCase'><div class='testcase'>test_get_fee_fail4</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft10.4')" >
+        fail</a>
+
+    <div id='div_ft10.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft10.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft10.4: {'message': 'success', 'result': 0.0, 'code': 200}
+Traceback (most recent call last):
+  File "E:\PyCharm\WORK\QingGuo\testcase\qingguotransportfee_test.py", line 43, in test_get_fee_fail4
+    self.assertEqual(result['code'],400,"addressDetail为空串情况")
+AssertionError: 200 != 400 : addressDetail为空串情况
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft10.5' class='none'>
+    <td class='failCase'><div class='testcase'>test_get_fee_fail5</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft10.5')" >
+        fail</a>
+
+    <div id='div_ft10.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft10.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft10.5: {'message': 'success', 'result': 0.0, 'code': 200}
+Traceback (most recent call last):
+  File "E:\PyCharm\WORK\QingGuo\testcase\qingguotransportfee_test.py", line 50, in test_get_fee_fail5
+    self.assertEqual(result['code'],400,"对应id不存在情况")
+AssertionError: 200 != 400 : 对应id不存在情况
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft10.6' class='none'>
+    <td class='failCase'><div class='testcase'>test_get_fee_fail6</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft10.6')" >
+        fail</a>
+
+    <div id='div_ft10.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft10.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft10.6: {'message': 'success', 'result': 6.0, 'code': 200}
+Traceback (most recent call last):
+  File "E:\PyCharm\WORK\QingGuo\testcase\qingguotransportfee_test.py", line 57, in test_get_fee_fail6
+    self.assertEqual(result['code'],400,"对应addressDetail不存在情况")
+AssertionError: 200 != 400 : 对应addressDetail不存在情况
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft10.7' class='none'>
+    <td class='failCase'><div class='testcase'>test_get_fee_fail7</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft10.7')" >
+        fail</a>
+
+    <div id='div_ft10.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft10.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft10.7: {'message': 'success', 'result': 0.0, 'code': 200}
+Traceback (most recent call last):
+  File "E:\PyCharm\WORK\QingGuo\testcase\qingguotransportfee_test.py", line 64, in test_get_fee_fail7
+    self.assertEqual(result['code'], 400,"参数值超出数据类型的取值范围情况")
+AssertionError: 200 != 400 : 参数值超出数据类型的取值范围情况
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt10.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_get_fee_success</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt10.8')" >
+        pass</a>
+
+    <div id='div_pt10.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt10.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt10.8: {'message': 'success', 'result': 6.0, 'code': 200}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='total_row'>
+    <td>Total</td>
+    <td>57</td>
+    <td>32</td>
+    <td>11</td>
+    <td>14</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+
+</body>
+</html>

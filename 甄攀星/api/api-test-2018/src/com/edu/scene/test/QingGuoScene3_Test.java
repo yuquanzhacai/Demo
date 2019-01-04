@@ -10,6 +10,7 @@ import com.edu.model.fee;
 import com.edu.spare.Common;
 import com.edu.utils.ReadPro;
 
+<<<<<<< HEAD
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
@@ -23,6 +24,19 @@ public class QingGuoScene3_Test {
 		String result=HttpDriver.doGet1(Common.getLoginCookie("20000000000","netease123"));
 		JSONObject json=JSONObject.fromObject(result);
 		Assert.assertEquals(json.getString("code"), "200");
+=======
+import net.sf.json.JSONObject;
+
+/*
+ * description:1、查询收货地址——2、添加收货地址——3、计算运费——4、获取地址列表——5、提交订单
+ * */
+public class QingGuoScene3_Test {
+	@Test(description="查询收货地址",priority=1)
+	public void getAddressList_test1() throws IOException, Exception
+	{
+		String result=HttpDriver.doGet1(Common.getLoginCookie("20000000000","netease123"));
+	
+>>>>>>> e91f6d47701262d6f587e05897172304ee2fa715
 	}
 
 	   @Test(description="添加新地址",priority=2)
@@ -37,6 +51,7 @@ public class QingGuoScene3_Test {
 			info.element("city","Shijiazhuang");
 			info.element("area","Yuhuaqu");
 			String result=HttpDriver.doPost(ReadPro.getPropValue("BaseUrl")+url, info,Common.getLoginCookie("20000000000","netease123","http://study-perf.qa.netease.com//common/fgadmin/login"));
+<<<<<<< HEAD
 			JSONObject json= JSONObject.fromObject(result);
 			Assert.assertEquals(json.getString("code"), "400");
 		}
@@ -59,11 +74,19 @@ public class QingGuoScene3_Test {
 	 }
 
 			@Test(description="查询收货地址",priority=4)
+=======
+			
+			JSONObject json= JSONObject.fromObject(result);
+			Assert.assertEquals(json.getString("code"), "200");
+		}
+	   @Test(description="查询收货地址",priority=4)
+>>>>>>> e91f6d47701262d6f587e05897172304ee2fa715
 			public void getAddressList_test2() throws IOException, Exception
 			{
 				String result=HttpDriver.doGet1(Common.getLoginCookie("20000000000","netease123"));
 			
 			}
+<<<<<<< HEAD
 			@Test(description="提交订单",priority=5)//打印3行提交的不是张三的订单
 			public void submit_test() throws IOException, Exception
 			{
@@ -103,5 +126,40 @@ public class QingGuoScene3_Test {
 				JSONObject json= JSONObject.fromObject(result1);
 				Assert.assertEquals(json.getString("code"), "200");
 			}
+=======
+	   @Test(description="查询运费信息",priority=3)
+		public static void feeTest() throws Exception {	
+			String url="/common/getTransportFee";
+			String result=HttpDriver.fee_Map(ReadPro.getPropValue("BaseUrl")+url,HttpDriver.id,HttpDriver.address);
+			System.out.println(result);
+			JSONObject json= JSONObject.fromObject(result);
+			Assert.assertEquals(json.getString("message"), "success");
+		}
+	   @Test(description="提交订单",priority=5)//提交的是张三的订单"id":82321514
+		public void submit_test() throws IOException, Exception
+		{
+			String url="/fgadmin/orders/submit";
+			JSONObject info=new JSONObject();
+			info.element("skuIds","2,3");
+			info.element("skuNumbers","1,1");
+			info.element("stockIds","74966312,74966313");
+			info.element("receiverName","张三");
+			info.element("cellPhone","12615813537");
+			info.element("addressDetail","1 栋 3 单元");
+			info.element( "province","浙江省");
+			info.element( "city","杭州市");
+			info.element("area","滨江区");
+			info.element("voiceStatus",0);
+			info.element("needInvoice",0);
+			info.element("invoiceHead","");
+			info.element("transportFee",0);
+			info.element("logisticsCompanyId",1);
+			info.element("accessSource","noSource");
+			info.element("accessDevice",0);
+			String result=HttpDriver.doPost(ReadPro.getPropValue("BaseUrl")+url, info, Common.getLoginCookie("20000000000","netease123","http://study-perf.qa.netease.com//common/fgadmin/login"));
+			JSONObject json= JSONObject.fromObject(result);
+			Assert.assertEquals(json.getString("code"), "200");
+		}
+>>>>>>> e91f6d47701262d6f587e05897172304ee2fa715
 
 }

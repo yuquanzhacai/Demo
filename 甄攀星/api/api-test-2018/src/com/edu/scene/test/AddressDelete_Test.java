@@ -21,7 +21,11 @@ public class AddressDelete_Test {
 	{
 		String url="/fgadmin/address/delete";
 		JSONObject json=new JSONObject();
+<<<<<<< HEAD
 		json.element("id","82321612");
+=======
+		json.element("id","82321493");
+>>>>>>> e91f6d47701262d6f587e05897172304ee2fa715
 		String result=HttpDriver.doPost(ReadPro.getPropValue("BaseUrl")+url,json,
 		Common.getLoginCookie("20000000000","netease123","http://study-perf.qa.netease.com//common/fgadmin/login"));
 		JSONObject json1= JSONObject.fromObject(result);

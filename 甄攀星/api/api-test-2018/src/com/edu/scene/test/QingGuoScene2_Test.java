@@ -24,7 +24,11 @@ import net.sf.json.JSONObject;
  * description：1、登录成功——2、查询收货地址——3、计算运费——4、提交订单
  * */
 public class QingGuoScene2_Test {
+<<<<<<< HEAD
 	@Test(description="正常登录情况",dataProvider="login",dataProviderClass=NSDataProvider.class,priority=1)
+=======
+	@Test(description="正常登录情况",dataProvider="login",dataProviderClass=NSDataProvider.class,priority=0)
+>>>>>>> e91f6d47701262d6f587e05897172304ee2fa715
 	public void login_test(String a,String b,String c) 
 	{
 		String url="/common/fgadmin/login";
@@ -37,6 +41,7 @@ public class QingGuoScene2_Test {
 		Assert.assertEquals(json1.getInt("code"), 200);
 
 	}
+<<<<<<< HEAD
 	@Test(description="查询收货地址",priority=2)//打印两行
 	public void getAddressList_test1() throws IOException, Exception
 	{
@@ -106,4 +111,48 @@ public class QingGuoScene2_Test {
 			JSONObject json= JSONObject.fromObject(result1);
 			Assert.assertEquals(json.getString("code"), "200");
 		}
+=======
+
+	@Test(description="查询收货地址",priority=1)
+	public void getAddressList_test() throws IOException, Exception
+	{
+		String result=HttpDriver.doGet1(Common.getLoginCookie("20000000000","netease123"));
+	
+	}
+
+		@Test(description="查询运费信息",priority=2)
+		public static void feeTest() throws Exception {	
+			String url="/common/getTransportFee";
+			String result=HttpDriver.fee_Map(ReadPro.getPropValue("BaseUrl")+url,HttpDriver.id,HttpDriver.address);
+			System.out.println(result);
+			JSONObject json= JSONObject.fromObject(result);
+			Assert.assertEquals(json.getString("message"), "success");
+		}
+		@Test(description="提交订单",priority=3)//提交的不是是张三的订单{"message":"may not be null","code":400}
+		public void submit_test() throws IOException, Exception
+		{
+			String url="/fgadmin/orders/submit";
+			JSONObject info=new JSONObject();
+			info.element("skuIds","2,3");
+			info.element("skuNumbers","1,1");
+			info.element("stockIds","74966312,74966313");
+			info.element("receiverName",HttpDriver.receiver);
+			info.element("cellPhone",HttpDriver.cellPhone);
+			info.element("addressDetail",HttpDriver.address);
+			info.element( "province",HttpDriver.province);
+			info.element( "city",HttpDriver.city);
+			info.element("area",HttpDriver.area);
+			info.element("voiceStatus",0);
+			info.element("needInvoice",0);
+			info.element("invoiceHead","");
+			info.element("transportFee",HttpDriver.fee);
+			info.element("logisticsCompanyId",1);
+			info.element("accessSource","noSource");
+			info.element("accessDevice",0);
+			String result=HttpDriver.doPost(ReadPro.getPropValue("BaseUrl")+url, info, Common.getLoginCookie("20000000000","netease123","http://study-perf.qa.netease.com//common/fgadmin/login"));
+			JSONObject json= JSONObject.fromObject(result);
+			Assert.assertEquals(json.getString("code"), "400");
+		}
+	
+>>>>>>> e91f6d47701262d6f587e05897172304ee2fa715
 }

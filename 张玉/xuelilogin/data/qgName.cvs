@@ -1,0 +1,7 @@
+{\"phoneArea\":\"86\",\"phoneNumber\":\"20000000000\",\"password\":\"netease123\"}
+{\"phoneArea\":86,\"phoneNumber\":\"20000000000\",\"password\":\"netease123\"}
+{\"phoneArea\":\"86\",\"phoneNumber\":20000000000,\"password\":\"netease123\"}
+{\"phoneArea\":\"86\",\"phoneNumber\":20000000000,\"password\":netease123}
+{\"phoneArea\":\"86\",\"password\":\"netease123\"}
+{\"phoneNumber\":\"20000000000\",\"password\":\"netease123\"}
+{\"phoneArea\":\"86\",\"phoneNumber\":\"20000000000\"}

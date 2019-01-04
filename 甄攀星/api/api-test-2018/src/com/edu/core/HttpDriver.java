@@ -251,6 +251,7 @@ public class HttpDriver {
 
 	}
 
+<<<<<<< HEAD
 
 	public static String doGet1(CookieStore cookie) throws Exception
 	{
@@ -291,10 +292,29 @@ public class HttpDriver {
 		String content = EntityUtils.toString(entity, "utf-8");
 			System.out.println(content);
 		}
+=======
+	//为了获取地址列表
+	public static String content;
+	public static String doGet(String url,CookieStore cookie) throws Exception{
+        // 将CookieStore设置到httpClient中
+		RequestConfig gConfig = RequestConfig.custom().setCookieSpec(CookieSpecs.STANDARD).build();
+		httpClient = HttpClients.custom().setDefaultRequestConfig(gConfig).setDefaultCookieStore(cookie).build();
+        httpClient=HttpClients.createDefault();
+        HttpGet get=new HttpGet(url);
+        get.addHeader("Content-Type","aplication/json");
+//		get.setHeader(cookie,"mindsparktb_232530392=true;mindsparktbsupport_232530392=true");
+        respone=httpClient.execute(get);
+    	HttpEntity entity = respone.getEntity();
+    	if(entity!=null) {
+    	String content = EntityUtils.toString(entity, "utf-8");
+    		System.out.println(content);
+    	}
+>>>>>>> e91f6d47701262d6f587e05897172304ee2fa715
 		EntityUtils.consume(entity);
 		respone.close();
 		httpClient.close();
 		return content;		
+<<<<<<< HEAD
 	} 
 String url="http://study-perf.qa.netease.com/common/getTransportFee";
 public static String fee_Map(String url,int id,String addressDetail) throws Exception 
@@ -321,10 +341,78 @@ public static String fee_Map(String url,int id,String addressDetail) throws Exce
 //public static String cellPhone;
 //public static String receiver;
 //public static JSONObject json;
+=======
+} 
+	public static String address;
+	public static String addrResult;
+	public static double fee;
+	public static int id;
+	public static String area;
+	public static String city;
+	public static String province;
+	public static int fgUserId;
+	public static String cellPhone;
+	public static String receiver;
+	public static JSONObject json;
+	public static String doGet1(CookieStore cookie) throws Exception
+	{
+		RequestConfig gConfig = RequestConfig.custom().setCookieSpec(CookieSpecs.STANDARD).build();
+		httpClient = HttpClients.custom().setDefaultRequestConfig(gConfig).setDefaultCookieStore(cookie).build();
+		HttpGet get=new HttpGet("http://study-perf.qa.netease.com/fgadmin/address/list");
+		CloseableHttpResponse response=httpClient.execute(get);
+		HttpEntity entity=response.getEntity();
+		if(entity!=null)
+		{
+			String address=EntityUtils.toString(entity,"utf-8");
+			System.out.println(address);
+			JSONObject json=JSONObject.fromObject(address);
+			JSONObject addrResult=json.getJSONObject("result");
+			System.out.println(addrResult);
+			JSONArray addlist=addrResult.getJSONArray("list");
+			System.out.println(addlist);
+			JSONObject list1=addlist.getJSONObject(0);
+			System.out.println(list1);
+			String province=list1.getString("province");
+			System.out.println(province);
+			String city=list1.getString("city");
+			System.out.println(city);
+			String area=list1.getString("area");
+			System.out.println(area);
+			address=province+"_"+city+"_"+area;
+			System.out.println(address);
+			id=list1.getInt("id");
+			System.out.println(id);
+			fgUserId=list1.getInt("fgUserId");
+			cellPhone=list1.getString("cellPhone");
+			System.out.println(cellPhone);
+			receiver=list1.getString("receiverName");
+			System.out.println(receiver);
+			
+			
+		}
+		EntityUtils.consume(entity);
+		response.close();
+		return addrResult;
+	}
+	
+String url="http://study-perf.qa.netease.com/common/getTransportFee";
+public static String fee_Map(String url,int id,String addressDetail) throws Exception {
+	Map map = new HashMap();
+	map.put("url",url);
+	map.put("id", id);
+	map.put("addressDetail",addressDetail);
+	String result = HttpDriver.doGet(url,map);
+	return result;
+}
+
+
+}
+>>>>>>> e91f6d47701262d6f587e05897172304ee2fa715
 //List<Cookie> cookies =  CookieStore.getCookies();
 //for(Cookie cookie : cookies){
 //  if(cookie.getName().equalsIgnoreCase(url)){
 //      return cookie.getValue();
+<<<<<<< HEAD
 //  }
 //System.out.println(list1);
 //String province=list1.getString("province");
@@ -342,3 +430,6 @@ public static String fee_Map(String url,int id,String addressDetail) throws Exce
 //System.out.println(cell/Phone);
 //receiver=list1.getString("receiverName");
 //System.out.println(recei/ver);
+=======
+//  }
+>>>>>>> e91f6d47701262d6f587e05897172304ee2fa715
