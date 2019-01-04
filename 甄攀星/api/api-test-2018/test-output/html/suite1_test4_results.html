@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
+<head>
+  <title>Test Results Report - scene4</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="description" content="TestNG unit test results." />
+  <link href="reportng.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="reportng.js"></script>
+</head>
+<body>
+<h1>scene4</h1>
+<p>
+  Test duration: 2.897s
+</p>
+
+
+
+  <table class="resultsTable">
+    <tr><th colspan="5" class="header failed">Failed Tests</th></tr>
+          <tr>
+         <td colspan="1" class="group">com.edu.scene.test.QingGuoScene4_Test</td>
+          <td colspan="1" class="group">Duration</td>
+          <td colspan="1" class="group">Log Info</td>
+          <td colspan="1" class="group">Screen Shot</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  <span class="description">submit_test (提交订单)</span>
+      </td>
+  <td class="duration">
+    0.185s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.IllegalStateException: Connection pool shut down</b></a><br />
+    <div class="stackTrace" id="exception-0">
+              org.apache.http.util.Asserts.check(Asserts.java:34)<br />
+              org.apache.http.pool.AbstractConnPool.lease(AbstractConnPool.java:191)<br />
+              org.apache.http.impl.conn.PoolingHttpClientConnectionManager.requestConnection(PoolingHttpClientConnectionManager.java:267)<br />
+              org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:176)<br />
+              org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)<br />
+              org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)<br />
+              org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:111)<br />
+              org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)<br />
+              org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)<br />
+              org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:108)<br />
+              com.edu.core.HttpDriver.doGet1(HttpDriver.java:291)<br />
+              com.edu.scene.test.QingGuoScene4_Test.submit_test(QingGuoScene4_Test.java:108)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.base/java.lang.reflect.Method.invoke(Method.java:564)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:580)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:648)<br />
+              org.testng.TestRunner.run(TestRunner.java:505)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:455)<br />
+              org.testng.SuiteRunner.access$000(SuiteRunner.java:40)<br />
+              org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)<br />
+              org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)<br />
+              java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)<br />
+              java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)<br />
+              java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)<br />
+              java.base/java.lang.Thread.run(Thread.java:844)<br />
+                </div>
+      </td>
+  <td class="screenshot">
+              </td>
+</tr>
+      </table>
+
+
+  <table class="resultsTable">
+    <tr><th colspan="5" class="header passed">Passed Tests</th></tr>
+          <tr>
+        <td colspan="1" class="group">com.edu.scene.test.QingGuoScene4_Test</td>
+          <td colspan="1" class="group">Duration</td>
+          <td colspan="1" class="group">Log Info</td>
+          <td colspan="1" class="group">Screen Shot</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  <span class="description">login_test (正常登录情况)</span>
+      </td>
+  <td class="duration">
+    0.685s
+  </td>
+  <td class="result">
+        
+          <i>Method arguments: </i><span class="arguments">"86", "20000000000", "netease123"</span><br />
+    
+        
+
+      </td>
+  <td class="screenshot">
+              </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description">getAddressList_test1 (查询收货地址)</span>
+      </td>
+  <td class="duration">
+    0.286s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+  <td class="screenshot">
+              </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description">addressDelete_test (删除地址)</span>
+      </td>
+  <td class="duration">
+    0.676s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+  <td class="screenshot">
+              </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description">addAddress_test (添加新地址)</span>
+      </td>
+  <td class="duration">
+    0.320s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+  <td class="screenshot">
+              </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description">getAddressList_test2 (查询收货地址)</span>
+      </td>
+  <td class="duration">
+    0.271s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+  <td class="screenshot">
+              </td>
+</tr>
+<tr>
+  <td class="method">
+                  <span class="description">feeTest (查询运费信息)</span>
+      </td>
+  <td class="duration">
+    0.474s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+  <td class="screenshot">
+              </td>
+</tr>
+      </table>
+  
+</body>
+</html>

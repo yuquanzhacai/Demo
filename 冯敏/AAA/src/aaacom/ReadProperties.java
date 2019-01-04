@@ -17,7 +17,6 @@ public class ReadProperties {
 		FileInputStream fis = new FileInputStream(filePath);
 		prop.load(fis);
 		fis.close();
-		return prop.getProperty(key);
-		
+		return prop.getProperty(key);		
 	}
 }

@@ -1,46 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="test" parallel="tests">
    <listeners>
-	   <!-- listener class-name="org.uncommons.reportng.HTMLReporter" / --> 
-       <!-- listener class-name="org.uncommons.reportng.JUnitXMLReporter" / -->
+	   <listener class-name="org.uncommons.reportng.HTMLReporter" /> 
+       <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
        <listener class-name="com.edu.core.ApiListener" />
-       <!-- listener class-name="com.edu.core.WebTestListener2" / -->
+       <!-- listener class-name="com.edu.core.WebTestListener2"    preserver-order="true"?/ -->
      
    </listeners>
-  
-   <test name="test" preserver-order="true">
+
+<<<<<<< HEAD
+   <test name="接口场景测试" preserver-order="true">
+=======
+   <test name="青果接口测试" preserver-order="true">
+>>>>>>> e91f6d47701262d6f587e05897172304ee2fa715
       <classes>
-        	<class name="com.edu.scene.test.Login_Test">
-        		<method>
-        			<include name="login_test"></include>
-        		</method>
-        	</class> 	
-     		 <class name="com.edu.scene.test.SkuList_Test">
-        		<method>
-        			<include name="skulist_test"></include>
-        		</method>
-        	</class> 
-        	<class name="com.edu.scene.test.AddressList_Test">
-        		<method>
-        			<include name="getAddressList_test"></include>
-        		</method>
-        	</class>
-        	 <class name="com.edu.scene.test.GetTranspotFee_Test">
-        		<method>
-        			<include name="getFee_test"></include>
-        		</method>
-        	</class>
-        	<class name="com.edu.scene.test.AddAddress_Test">
-        		<method>
-        			<include name="addAddress_test"></include>
-        		</method>
-        	</class>
-        	<class name="com.edu.scene.test.AddressDelete_Test">
-        		<method>
-        			<include name="addressDelete_test"></include>
-        		</method>
-        	</class>
+        	<class name="com.edu.scene.test.QingGuoScene1_Test"></class> 
+        	<class name="com.edu.scene.test.QingGuoScene2_Test"></class> 
+        	<class name="com.edu.scene.test.QingGuoScene3_Test"></class>
+        	<class name="com.edu.scene.test.QingGuoScene4_Test"></class> 
       </classes>
-   </test>
- 
+<<<<<<< HEAD
+     </test>
+    
+=======
+      </test>
+>>>>>>> e91f6d47701262d6f587e05897172304ee2fa715
 </suite> 

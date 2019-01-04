@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
+<testsuite name="青果接口测试"
+=======
+<testsuite name="test2"
+>>>>>>> e91f6d47701262d6f587e05897172304ee2fa715
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+<<<<<<< HEAD
+           time="0.183">
+  <properties />
+  
+  
+            <testcase name="skulist_test" time="0.183" classname="com.edu.scene.test.SkuList_Test" />
+=======
+           time="0.688">
+  <properties />
+  
+  
+            <testcase name="skulist_test" time="0.688" classname="com.edu.scene.test.SkuList_Test" />
+>>>>>>> e91f6d47701262d6f587e05897172304ee2fa715
+      
+</testsuite>

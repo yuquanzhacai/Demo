@@ -6,11 +6,14 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.edu.core.HttpDriver;
-import com.edu.test.Common;
+import com.edu.spare.Common;
 import com.edu.utils.ReadPro;
 
 import net.sf.json.JSONObject;
-
+/*
+* author：李欣然
+* description:提交订单接口
+* */
 public class Submit_Test {
 	@Test(description="提交订单")
 	public void submit_test() throws IOException, Exception

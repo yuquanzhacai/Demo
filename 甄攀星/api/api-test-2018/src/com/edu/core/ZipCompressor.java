@@ -12,12 +12,6 @@ import org.apache.log4j.Logger;
 import org.apache.tools.zip.ZipEntry;
 import org.apache.tools.zip.ZipOutputStream;
 
-
-
-
-
-
-   
   
 /** 
  * @ClassName: ZipCompressor 

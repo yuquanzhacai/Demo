@@ -7,7 +7,10 @@ import com.edu.core.HttpDriver;
 import com.edu.model.fee;
 
 import net.sf.json.JSONObject;
-
+/*
+* author：王函瑜
+* description:获取运费接口
+* */
 public class GetTranspotFee_Test {
 	static String result=null;
 	static String url="http://study-perf.qa.netease.com/common/getTransportFee";

@@ -108,13 +108,21 @@
              <include name="comment"></include>
              <include name="commentCode"></include>
              <include name="comment2"></include>
-             <include name="commentPic"></include>
-                                
+             <include name="commentPic"></include>                                
              <include name="commentLong"></include>
              <include name="commentLong_Fail1"></include>
-             <include name="commentLong_Fail3"></include>
-              
+             <include name="commentLong_Fail3"></include>              
              <include name="commentLong_Fail2"></include>
+           </methods>
+         </class>
+         </classes>
+   </test>
+   
+   <test name="社区" preserve-order="true" >  
+        <classes>        
+         <class name="com.edu.test.Community_Test">
+           <methods>       
+             <include name="community"></include>             
            </methods>
          </class>
          </classes>

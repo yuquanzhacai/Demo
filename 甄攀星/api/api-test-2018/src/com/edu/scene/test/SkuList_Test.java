@@ -7,7 +7,10 @@ import com.edu.core.HttpDriver;
 import com.edu.utils.ReadPro;
 
 import net.sf.json.JSONObject;
-
+/*
+* author：王娟
+* description:获取商品列表接口
+* */
 public class SkuList_Test {
 	@Test(description="查询商品列表")//"message":"success"
 	public void skulist_test() throws Exception

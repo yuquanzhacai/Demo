@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="接口场景测试"
+           tests="5"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="19.125">
+  <properties />
+  
+  
+            <testcase name="addAddress_test" time="4.785" classname="com.edu.scene.test.QingGuoScene3_Test" />
+                <testcase name="feeTest" time="3.651" classname="com.edu.scene.test.QingGuoScene3_Test" />
+                <testcase name="getAddressList_test2" time="0.307" classname="com.edu.scene.test.QingGuoScene3_Test" />
+                <testcase name="submit_test" time="9.677" classname="com.edu.scene.test.QingGuoScene3_Test" />
+                <testcase name="getAddressList_test1" time="0.705" classname="com.edu.scene.test.QingGuoScene3_Test" />
+      
+</testsuite>
