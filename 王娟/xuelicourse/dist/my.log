@@ -112,3 +112,17 @@
 [ERROR] 2018-12-07 08:38:31,433 com.webtest.utils.Log - com.webtest.demo.Xueli@5a56cdac-course运行失败，需要截屏
 [ERROR] 2018-12-07 08:59:50,818 com.webtest.utils.Log - com.webtest.demo.Front_Login1@485966cc-testSearch运行失败，需要截屏
 [ERROR] 2018-12-07 09:04:59,942 com.webtest.utils.Log - com.webtest.demo.Xueli@485966cc-course运行失败，需要截屏
+[ERROR] 2018-12-18 16:50:36,087 com.webtest.utils.Log - com.webtest.demo.Community@6440112d-talk运行失败，需要截屏
+[ERROR] 2018-12-18 17:39:41,717 com.webtest.utils.Log - com.webtest.demo.Community@6c284af-talk运行失败，需要截屏
+[ERROR] 2018-12-18 17:55:00,793 com.webtest.utils.Log - com.webtest.demo.Course@5890e879-course运行失败，需要截屏
+[ERROR] 2018-12-18 17:55:10,553 com.webtest.utils.Log - com.webtest.demo.Course@5890e879-course运行失败，需要截屏
+[ERROR] 2018-12-18 18:00:32,241 com.webtest.utils.Log - com.webtest.demo.Course@5890e879-course运行失败，需要截屏
+[ERROR] 2018-12-18 18:03:32,585 com.webtest.utils.Log - com.webtest.demo.Course@5890e879-course运行失败，需要截屏
+[ERROR] 2018-12-18 18:07:50,676 com.webtest.utils.Log - com.webtest.demo.Course@5890e879-course运行失败，需要截屏
+[ERROR] 2018-12-28 11:17:58,991 com.webtest.utils.Log - com.webtest.demo.Course@6c284af-course运行失败，需要截屏
+[ERROR] 2018-12-28 11:22:50,664 com.webtest.utils.Log - com.webtest.demo.Course@6c284af-course运行失败，需要截屏
+[ERROR] 2018-12-28 11:26:15,689 com.webtest.utils.Log - com.webtest.demo.Course@6c284af-course运行失败，需要截屏
+[ERROR] 2018-12-28 11:29:52,164 com.webtest.utils.Log - com.webtest.demo.Course@6c284af-course运行失败，需要截屏
+[ERROR] 2018-12-28 11:34:43,158 com.webtest.utils.Log - com.webtest.demo.Course@6c284af-course运行失败，需要截屏
+[ERROR] 2018-12-28 11:41:18,010 com.webtest.utils.Log - com.webtest.demo.Course@6c284af-course运行失败，需要截屏
+[ERROR] 2018-12-28 11:41:18,030 com.webtest.utils.Log - com.webtest.demo.Course@6c284af-course运行失败，需要截屏

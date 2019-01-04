@@ -11,10 +11,10 @@ public class Login_Action {
 	  public void login(String email,String password) 
 	  {
 	
-			webtest.click("link=登录");
-			webtest.type("name=username", "qingdao01");
-			webtest.type("name=password", "123456");
-			webtest.click("xpath=//input[@value='马上登录']");
+			webtest.open("http://10.7.10.7/login");
+			webtest.type("name=username", email);
+			webtest.type("name=password", password);
+			webtest.click("xpath=//button[contains(.,'登录')]");
 		
 	  }
 	  
