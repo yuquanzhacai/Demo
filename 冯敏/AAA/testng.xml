@@ -2,17 +2,10 @@
 
 <suite name="s1" verbose="1" >
 	<listeners> 
-<<<<<<< HEAD
-		 <listener class-name="com.webtest.core.WebTestListener" /> 
-		<listener class-name="aaacom.WebTestListener" />
-		     <!--  <listener class-name="org.uncommons.reportng.HTMLReporter" />
-        <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />-->
-=======
 		 <listener class-name="com.webtest.core.WebTestListener" />  
 		 <listener class-name="aaacom.WebTestListener" /> 
 		     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
         <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
->>>>>>> 4c8c38473de561f95f2a2630e1721d377664a99e
 	</listeners>
 	<test name="test1">
 		<classes>

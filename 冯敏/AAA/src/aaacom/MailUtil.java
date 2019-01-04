@@ -28,11 +28,7 @@ public class MailUtil {
     static String from = "冯敏";
 
     static String user = "2680326511@qq.com";
-<<<<<<< HEAD
-    static String password = "tljzxmmobydrebhb";
-=======
     static String password = "nsnwmwvqgyijeaii";
->>>>>>> 4c8c38473de561f95f2a2630e1721d377664a99e
     static String file=nihao();
     
 
@@ -99,16 +95,8 @@ public class MailUtil {
     		msg.setContent(mimeMultipart);
             msg.saveChanges();
             transport.sendMessage(msg, msg.getAllRecipients());
-<<<<<<< HEAD
-            MimeMultipart message = new MimeMultipart();
-    		MimeBodyPart message2=new MimeBodyPart();
-    	    message2.attachFile(file);		  
-    	    message.addBodyPart(message2);
-    	    Transport.send(msg);
-=======
      
             
->>>>>>> 4c8c38473de561f95f2a2630e1721d377664a99e
         } catch (NoSuchProviderException e) {
             e.printStackTrace();
         } catch (MessagingException e) {
@@ -116,15 +104,9 @@ public class MailUtil {
         }
     }
     public static String nihao(){  
-<<<<<<< HEAD
-        ZipCompressor zc = new  ZipCompressor("D:\\eclipse-workspace\\AAA\\test-output\\test.zip");  
-        zc.compressExe("D:\\eclipse-workspace\\AAA\\test-output");
-        String file="test.zip";
-=======
         ZipCompressor zc = new  ZipCompressor("D:\\eclipse-workspace\\AAA\\test.zip");  
         zc.compressExe("D:\\eclipse-workspace\\AAA\\test-output\\html");
         String file="D:\\eclipse-workspace\\AAA\\test.zip";
->>>>>>> 4c8c38473de561f95f2a2630e1721d377664a99e
         return file;
     }
 	
